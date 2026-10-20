@@ -1,0 +1,2292 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+		<ChildItems>
+			<Button name="СохранитьПарыКнопка" id="917">
+				<Type>UsualButton</Type>
+				<Representation>Text</Representation>
+				<CommandName>Form.Command.СохранитьПары</CommandName>
+				<ExtendedTooltip name="СохранитьПарыКнопкаРасширеннаяПодсказка" id="918"/>
+			</Button>
+			<Button name="ЗапроситьРеестрЗаПериодКнопка" id="923">
+				<Type>UsualButton</Type>
+				<Representation>Text</Representation>
+				<CommandName>Form.Command.ЗапроситьРеестрЗаПериод</CommandName>
+				<ExtendedTooltip name="ЗапроситьРеестрЗаПериодКнопкаРасширеннаяПодсказка" id="924"/>
+			</Button>
+			<Button name="СоздатьНоменклатуруУТКнопка" id="919">
+				<Type>UsualButton</Type>
+				<Representation>Text</Representation>
+				<CommandName>Form.Command.СоздатьНоменклатуруУТ</CommandName>
+				<ExtendedTooltip name="СоздатьНоменклатуруУТКнопкаРасширеннаяПодсказка" id="920"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="OnClose">ПриЗакрытии</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="Группа2" id="111">
+			<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="112"/>
+			<ChildItems>
+				<UsualGroup name="Группа1" id="109">
+					<Visible>false</Visible>
+					<Group>Vertical</Group>
+					<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="110"/>
+					<ChildItems>
+						<UsualGroup name="ДопИнформация" id="78">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Доп информация</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Доп информация</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<ExtendedTooltip name="ДопИнформацияРасширеннаяПодсказка" id="79"/>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="Группа4" id="107">
+					<ExtendedTooltip name="Группа4РасширеннаяПодсказка" id="108"/>
+					<ChildItems>
+						<UsualGroup name="Группа3" id="105">
+							<Group>Vertical</Group>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Группа3РасширеннаяПодсказка" id="106"/>
+							<ChildItems>
+								<UsualGroup name="Управление" id="156">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Управление</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Управление</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>AlwaysHorizontal</Group>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="УправлениеРасширеннаяПодсказка" id="157"/>
+									<ChildItems>
+										<CheckBoxField name="АвтоПодписания" id="201">
+											<DataPath>АвтоПодписания</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Автоотправка в СБИС: сошлось - «Ожидают отправки» - подпись в фоне</v8:content>
+												</v8:item>
+											</Title>
+											<TitleLocation>Right</TitleLocation>
+											<CheckBoxType>CheckBox</CheckBoxType>
+											<ContextMenu name="АвтоПодписанияКонтекстноеМеню" id="202"/>
+											<ExtendedTooltip name="АвтоПодписанияРасширеннаяПодсказка" id="203">
+												<Title formatted="false">
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Та же настройка, что в форме «Ожидают отправки». Сошедшиеся УПД и УКД («Готов к утверждению») сами ставятся «К отправке» и в очередь, и пока форма открыта, уходят в СБИС пачками по 5 в фоне - подписантом этого рабочего места. По умолчанию выключено.</v8:content>
+													</v8:item>
+												</Title>
+											</ExtendedTooltip>
+											<Events>
+												<Event name="OnChange">АвтоПодписанияПриИзменении</Event>
+											</Events>
+										</CheckBoxField>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="УПДСбис" id="74">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>УПД Сбис</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>УПДСбис</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>Vertical</Group>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="УПДСбисРасширеннаяПодсказка" id="75"/>
+									<ChildItems>
+										<UsualGroup name="ГруппаПериодУПД" id="310">
+											<Group>AlwaysHorizontal</Group>
+											<Behavior>Usual</Behavior>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаПериодУПДРасширеннаяПодсказка" id="311"/>
+											<ChildItems>
+												<InputField name="ДатаУПДС" id="312">
+													<DataPath>ДатаУПДС</DataPath>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Показывать УПД с этой даты документа. По умолчанию - последние 3 дня. Пусто - без ограничения</v8:content>
+														</v8:item>
+													</ToolTip>
+													<ContextMenu name="ДатаУПДСКонтекстноеМеню" id="313"/>
+													<ExtendedTooltip name="ДатаУПДСРасширеннаяПодсказка" id="314"/>
+													<Events>
+														<Event name="OnChange">ПериодУПДПриИзменении</Event>
+													</Events>
+												</InputField>
+												<InputField name="ДатаУПДПо" id="315">
+													<DataPath>ДатаУПДПо</DataPath>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Показывать УПД по эту дату документа включительно. Пусто - без ограничения</v8:content>
+														</v8:item>
+													</ToolTip>
+													<ContextMenu name="ДатаУПДПоКонтекстноеМеню" id="316"/>
+													<ExtendedTooltip name="ДатаУПДПоРасширеннаяПодсказка" id="317"/>
+													<Events>
+														<Event name="OnChange">ПериодУПДПриИзменении</Event>
+													</Events>
+												</InputField>
+												<InputField name="ОтборСтатусаПодписания" id="324">
+													<DataPath>ОтборСтатусаПодписания</DataPath>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Показывать УПД только с этим статусом подписания. «Все статусы» - без отбора</v8:content>
+														</v8:item>
+													</ToolTip>
+													<ListChoiceMode>true</ListChoiceMode>
+													<ContextMenu name="ОтборСтатусаПодписанияКонтекстноеМеню" id="325"/>
+													<ExtendedTooltip name="ОтборСтатусаПодписанияРасширеннаяПодсказка" id="326"/>
+													<Events>
+														<Event name="OnChange">ОтборСтатусаПодписанияПриИзменении</Event>
+													</Events>
+												</InputField>
+												<InputField name="ПогрешностьКопеек" id="3018">
+													<DataPath>ПогрешностьКопеек</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Погрешность, коп.</v8:content>
+														</v8:item>
+													</Title>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>На сколько копеек итог УПД и прихода может разъехаться. В допуске УПД готова к утверждению по сумме. Работает, когда галочка «Точно» снята</v8:content>
+														</v8:item>
+													</ToolTip>
+													<ContextMenu name="ПогрешностьКопеекКонтекстноеМеню" id="3019"/>
+													<ExtendedTooltip name="ПогрешностьКопеекРасширеннаяПодсказка" id="3020"/>
+													<Events>
+														<Event name="OnChange">ПогрешностьКопеекПриИзменении</Event>
+													</Events>
+												</InputField>
+												<CheckBoxField name="Точно" id="3021">
+													<DataPath>Точно</DataPath>
+													<TitleLocation>Right</TitleLocation>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Суммы УПД и прихода должны совпасть до копейки. Снята - допускается погрешность в копейках</v8:content>
+														</v8:item>
+													</ToolTip>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="ТочноКонтекстноеМеню" id="3022"/>
+													<ExtendedTooltip name="ТочноРасширеннаяПодсказка" id="3023"/>
+													<Events>
+														<Event name="OnChange">ТочноПриИзменении</Event>
+													</Events>
+												</CheckBoxField>
+												<CheckBoxField name="НеПоказыватьАннулированные" id="3015">
+													<DataPath>НеПоказыватьАннулированные</DataPath>
+													<TitleLocation>Right</TitleLocation>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Скрыть УПД, закрытые в СБИС: аннулированные, удалённые и отозванные</v8:content>
+														</v8:item>
+													</ToolTip>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="НеПоказыватьАннулированныеКонтекстноеМеню" id="3016"/>
+													<ExtendedTooltip name="НеПоказыватьАннулированныеРасширеннаяПодсказка" id="3017"/>
+													<Events>
+														<Event name="OnChange">НеПоказыватьАннулированныеПриИзменении</Event>
+													</Events>
+												</CheckBoxField>
+												<CheckBoxField name="АннулированныеБезЗамены" id="3027">
+													<DataPath>АннулированныеБезЗамены</DataPath>
+													<TitleLocation>Right</TitleLocation>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Показать только аннулированные УПД, взамен которых новая ещё не пришла: их приходные ждут замену</v8:content>
+														</v8:item>
+													</ToolTip>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="АннулированныеБезЗаменыКонтекстноеМеню" id="3028"/>
+													<ExtendedTooltip name="АннулированныеБезЗаменыРасширеннаяПодсказка" id="3029"/>
+													<Events>
+														<Event name="OnChange">АннулированныеБезЗаменыПриИзменении</Event>
+													</Events>
+												</CheckBoxField>
+												<InputField name="ОтборСтатусаПриходной" id="327">
+													<DataPath>ОтборСтатусаПриходной</DataPath>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Показывать УПД только с этим статусом приходной Далиона. «Все» - без отбора</v8:content>
+														</v8:item>
+													</ToolTip>
+													<ListChoiceMode>true</ListChoiceMode>
+													<ContextMenu name="ОтборСтатусаПриходнойКонтекстноеМеню" id="328"/>
+													<ExtendedTooltip name="ОтборСтатусаПриходнойРасширеннаяПодсказка" id="329"/>
+													<Events>
+														<Event name="OnChange">ОтборСтатусаПриходнойПриИзменении</Event>
+													</Events>
+												</InputField>
+											</ChildItems>
+										</UsualGroup>
+										<LabelDecoration name="СтатистикаУПД" id="307">
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<HorizontalStretch>true</HorizontalStretch>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>УПД: статистика загружается...</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="СтатистикаУПДКонтекстноеМеню" id="308"/>
+											<ExtendedTooltip name="СтатистикаУПДРасширеннаяПодсказка" id="309"/>
+										</LabelDecoration>
+										<UsualGroup name="Группа7" id="194">
+											<ExtendedTooltip name="Группа7РасширеннаяПодсказка" id="195"/>
+											<ChildItems>
+												<Table name="Список" id="1">
+													<Representation>List</Representation>
+													<CommandBarLocation>Top</CommandBarLocation>
+													<DefaultItem>true</DefaultItem>
+													<ChangeRowSet>false</ChangeRowSet>
+													<ChangeRowOrder>false</ChangeRowOrder>
+													<DataPath>Список</DataPath>
+													<RowPictureDataPath>Список.DefaultPicture</RowPictureDataPath>
+													<AutoRefresh>false</AutoRefresh>
+													<AutoRefreshPeriod>120</AutoRefreshPeriod>
+													<Period>
+														<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+														<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+														<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+													</Period>
+													<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+													<RestoreCurrentRow>true</RestoreCurrentRow>
+													<TopLevelParent xsi:nil="true"/>
+													<ShowRoot>true</ShowRoot>
+													<AllowRootChoice>false</AllowRootChoice>
+													<UpdateOnDataChange>DontUpdate</UpdateOnDataChange>
+													<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+													<ContextMenu name="СписокКонтекстноеМеню" id="2">
+														<ChildItems>
+															<Button name="СписокОтправитьУКД" id="3008">
+																<Type>CommandBarButton</Type>
+																<CommandName>Form.Command.ОтправитьУКД</CommandName>
+																<ExtendedTooltip name="СписокОтправитьУКДРасширеннаяПодсказка" id="3009"/>
+															</Button>
+															<Button name="СписокПолучитьПриходнуюПоНомеру" id="3004">
+																<Type>CommandBarButton</Type>
+																<CommandName>Form.Command.ПолучитьПриходнуюПоНомеру</CommandName>
+																<ExtendedTooltip name="СписокПолучитьПриходнуюПоНомеруРасширеннаяПодсказка" id="3005"/>
+															</Button>
+															<Button name="СписокЗапроситьДоговорДалион" id="3043">
+																<Type>CommandBarButton</Type>
+																<CommandName>Form.Command.ЗапроситьДоговорДалион</CommandName>
+																<ExtendedTooltip name="СписокЗапроситьДоговорДалионРасширеннаяПодсказка" id="3044"/>
+															</Button>
+															<Button name="СписокИзменитьПриходную" id="3010">
+																<Type>CommandBarButton</Type>
+																<CommandName>Form.Command.ИзменитьПриходную</CommandName>
+																<ExtendedTooltip name="СписокИзменитьПриходнуюРасширеннаяПодсказка" id="3011"/>
+															</Button>
+														</ChildItems>
+													</ContextMenu>
+													<AutoCommandBar name="СписокКоманднаяПанель" id="3">
+														<ChildItems>
+															<Button name="ПолучитьУПДКнопка" id="4">
+																<Type>UsualButton</Type>
+																<Representation>Text</Representation>
+																<DefaultButton>true</DefaultButton>
+																<AutoMaxWidth>false</AutoMaxWidth>
+																<PlacementArea>mainCmdsLeft</PlacementArea>
+																<CommandName>Form.Command.ПолучитьУПД</CommandName>
+																<Title>
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>Загрузить из СБИС</v8:content>
+																	</v8:item>
+																</Title>
+																<RepresentationInContextMenu>None</RepresentationInContextMenu>
+																<ExtendedTooltip name="ПолучитьУПДКнопкаРасширеннаяПодсказка" id="5"/>
+															</Button>
+															<Button name="ПодписатьИУтвердитьСБИСКнопка" id="206">
+																<Type>UsualButton</Type>
+																<Representation>Text</Representation>
+																<AutoMaxWidth>false</AutoMaxWidth>
+																<PlacementArea>mainCmdsLeft</PlacementArea>
+																<CommandName>Form.Command.ПодписатьИУтвердитьСБИС</CommandName>
+																<Title>
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>Отправить УПД</v8:content>
+																	</v8:item>
+																</Title>
+																<RepresentationInContextMenu>None</RepresentationInContextMenu>
+																<ExtendedTooltip name="ПодписатьИУтвердитьСБИСКнопкаРасширеннаяПодсказка" id="207"/>
+															</Button>
+															<Button name="ОтправитьУКДКнопка" id="3006">
+																<Type>UsualButton</Type>
+																<Representation>Text</Representation>
+																<AutoMaxWidth>false</AutoMaxWidth>
+																<PlacementArea>mainCmdsLeft</PlacementArea>
+																<CommandName>Form.Command.ОтправитьУКД</CommandName>
+																<Title>
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>Отправить УКД</v8:content>
+																	</v8:item>
+																</Title>
+																<RepresentationInContextMenu>None</RepresentationInContextMenu>
+																<ExtendedTooltip name="ОтправитьУКДКнопкаРасширеннаяПодсказка" id="3007"/>
+															</Button>
+															<Button name="ОтправитьЭТрНКнопка" id="300">
+																<Type>UsualButton</Type>
+																<Representation>Text</Representation>
+																<AutoMaxWidth>false</AutoMaxWidth>
+																<PlacementArea>mainCmdsLeft</PlacementArea>
+																<CommandName>Form.Command.ОтправитьЭТрН</CommandName>
+																<Title>
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>Отправить ЭТрН</v8:content>
+																	</v8:item>
+																</Title>
+																<RepresentationInContextMenu>None</RepresentationInContextMenu>
+																<ExtendedTooltip name="ОтправитьЭТрНКнопкаРасширеннаяПодсказка" id="301"/>
+															</Button>
+															<Button name="ПолучитьНакладныеДалионКнопка" id="196">
+																<Type>UsualButton</Type>
+																<Representation>Text</Representation>
+																<AutoMaxWidth>false</AutoMaxWidth>
+																<CommandName>Form.Command.ПолучитьНакладныеДалион</CommandName>
+																<Title>
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>Накладные Далиона</v8:content>
+																	</v8:item>
+																</Title>
+																<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+																<ExtendedTooltip name="ПолучитьНакладныеДалионКнопкаРасширеннаяПодсказка" id="197"/>
+															</Button>
+															<Button name="ЗапроситьДоговорДалионКнопка" id="3045">
+																<Type>UsualButton</Type>
+																<Representation>Text</Representation>
+																<AutoMaxWidth>false</AutoMaxWidth>
+																<CommandName>Form.Command.ЗапроситьДоговорДалион</CommandName>
+																<Title>
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>Запросить договор в Далионе</v8:content>
+																	</v8:item>
+																</Title>
+																<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+																<ExtendedTooltip name="ЗапроситьДоговорДалионКнопкаРасширеннаяПодсказка" id="3046"/>
+															</Button>
+															<Button name="ПросмотретьАрхивКнопка" id="910">
+																<Type>UsualButton</Type>
+																<Representation>Text</Representation>
+																<AutoMaxWidth>false</AutoMaxWidth>
+																<CommandName>Form.Command.ПросмотретьАрхив</CommandName>
+																<Title>
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>Просмотреть архив</v8:content>
+																	</v8:item>
+																</Title>
+																<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+																<ExtendedTooltip name="ПросмотретьАрхивКнопкаРасширеннаяПодсказка" id="911"/>
+															</Button>
+															<Button name="ДозапроситьУПДКнопка" id="334">
+																<Type>UsualButton</Type>
+																<Representation>Text</Representation>
+																<AutoMaxWidth>false</AutoMaxWidth>
+																<CommandName>Form.Command.ДозапроситьУПД</CommandName>
+																<Title>
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>Запросить УПД к приходным</v8:content>
+																	</v8:item>
+																</Title>
+																<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+																<ExtendedTooltip name="ДозапроситьУПДКнопкаРасширеннаяПодсказка" id="335"/>
+															</Button>
+															<Button name="СверкаКорректировкиКнопка" id="225">
+																<Type>UsualButton</Type>
+																<Representation>Text</Representation>
+																<AutoMaxWidth>false</AutoMaxWidth>
+																<CommandName>Form.Command.СверкаКорректировки</CommandName>
+																<Title>
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>Сверка корректировки</v8:content>
+																	</v8:item>
+																</Title>
+																<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+																<ExtendedTooltip name="СверкаКорректировкиКнопкаРасширеннаяПодсказка" id="226"/>
+															</Button>
+															<Button name="КодыМаркировкиКнопка" id="246">
+																<Type>UsualButton</Type>
+																<Representation>Text</Representation>
+																<AutoMaxWidth>false</AutoMaxWidth>
+																<CommandName>Form.Command.КодыМаркировки</CommandName>
+																<Title>
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>Коды маркировки и GTIN</v8:content>
+																	</v8:item>
+																</Title>
+																<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+																<ExtendedTooltip name="КодыМаркировкиКнопкаРасширеннаяПодсказка" id="247"/>
+															</Button>
+															<Button name="ГрафикЦенКнопка" id="260">
+																<Type>UsualButton</Type>
+																<Representation>Text</Representation>
+																<AutoMaxWidth>false</AutoMaxWidth>
+																<CommandName>Form.Command.ГрафикЦен</CommandName>
+																<Title>
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>График цен</v8:content>
+																	</v8:item>
+																</Title>
+																<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+																<ExtendedTooltip name="ГрафикЦенКнопкаРасширеннаяПодсказка" id="261"/>
+															</Button>
+															<Button name="АлкогольЕГАИСКнопка" id="290">
+																<Type>UsualButton</Type>
+																<Representation>Text</Representation>
+																<AutoMaxWidth>false</AutoMaxWidth>
+																<CommandName>Form.Command.АлкогольЕГАИС</CommandName>
+																<Title>
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>Алкоголь ЕГАИС</v8:content>
+																	</v8:item>
+																</Title>
+																<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+																<ExtendedTooltip name="АлкогольЕГАИСКнопкаРасширеннаяПодсказка" id="291"/>
+															</Button>
+															<Button name="УтвердитьВОчередьКнопка" id="302">
+																<Type>UsualButton</Type>
+																<Representation>Text</Representation>
+																<AutoMaxWidth>false</AutoMaxWidth>
+																<CommandName>Form.Command.УтвердитьВОчередь</CommandName>
+																<Title>
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>Утвердить</v8:content>
+																	</v8:item>
+																</Title>
+																<ExtendedTooltip name="УтвердитьВОчередьКнопкаРасширеннаяПодсказка" id="303"/>
+															</Button>
+															<Button name="ОткрытьНастройкиКнопка" id="320">
+																<Type>UsualButton</Type>
+																<Representation>Text</Representation>
+																<AutoMaxWidth>false</AutoMaxWidth>
+																<CommandName>Form.Command.ОткрытьНастройки</CommandName>
+																<Title>
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>Настройки СБИС и обмена</v8:content>
+																	</v8:item>
+																</Title>
+																<ExtendedTooltip name="ОткрытьНастройкиКнопкаРасширеннаяПодсказка" id="321"/>
+															</Button>
+															<Button name="УдалитьДублиУПДКнопка" id="330">
+																<Type>UsualButton</Type>
+																<Representation>Text</Representation>
+																<AutoMaxWidth>false</AutoMaxWidth>
+																<CommandName>Form.Command.УдалитьДублиУПД</CommandName>
+																<ExtendedTooltip name="УдалитьДублиУПДКнопкаРасширеннаяПодсказка" id="331"/>
+															</Button>
+															<Button name="ШтрихкодыВРегистрКнопка" id="332">
+																<Type>UsualButton</Type>
+																<Representation>Text</Representation>
+																<AutoMaxWidth>false</AutoMaxWidth>
+																<CommandName>Form.Command.ШтрихкодыВРегистр</CommandName>
+																<ExtendedTooltip name="ШтрихкодыВРегистрКнопкаРасширеннаяПодсказка" id="333"/>
+															</Button>
+														</ChildItems>
+													</AutoCommandBar>
+													<ExtendedTooltip name="СписокРасширеннаяПодсказка" id="6"/>
+													<SearchStringAddition name="СписокСтрокаПоиска" id="7">
+														<AdditionSource>
+															<Item>Список</Item>
+															<Type>SearchStringRepresentation</Type>
+														</AdditionSource>
+														<ContextMenu name="СписокСтрокаПоискаКонтекстноеМеню" id="8"/>
+														<ExtendedTooltip name="СписокСтрокаПоискаРасширеннаяПодсказка" id="9"/>
+													</SearchStringAddition>
+													<ViewStatusAddition name="СписокСостояниеПросмотра" id="10">
+														<AdditionSource>
+															<Item>Список</Item>
+															<Type>ViewStatusRepresentation</Type>
+														</AdditionSource>
+														<ContextMenu name="СписокСостояниеПросмотраКонтекстноеМеню" id="11"/>
+														<ExtendedTooltip name="СписокСостояниеПросмотраРасширеннаяПодсказка" id="12"/>
+													</ViewStatusAddition>
+													<SearchControlAddition name="СписокУправлениеПоиском" id="13">
+														<AdditionSource>
+															<Item>Список</Item>
+															<Type>SearchControl</Type>
+														</AdditionSource>
+														<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="14"/>
+														<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="15"/>
+													</SearchControlAddition>
+													<Events>
+														<Event name="Selection">СписокВыбор</Event>
+														<Event name="OnActivateRow">СписокПриАктивизацииСтроки</Event>
+													</Events>
+													<ChildItems>
+														<InputField name="Дата" id="19">
+															<DataPath>Список.Дата</DataPath>
+															<DefaultItem>true</DefaultItem>
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Дата</v8:content>
+																</v8:item>
+															</Title>
+															<ContextMenu name="ДатаКонтекстноеМеню" id="20"/>
+															<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="21"/>
+														</InputField>
+														<InputField name="Представление" id="22">
+															<DataPath>Список.Представление</DataPath>
+															<DefaultItem>true</DefaultItem>
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Документ</v8:content>
+																</v8:item>
+															</Title>
+															<ContextMenu name="ПредставлениеКонтекстноеМеню" id="23"/>
+															<ExtendedTooltip name="ПредставлениеРасширеннаяПодсказка" id="24"/>
+														</InputField>
+														<CheckBoxField name="Аннулирована" id="3012">
+															<DataPath>Список.Аннулирована</DataPath>
+															<ReadOnly>true</ReadOnly>
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Аннулирована</v8:content>
+																</v8:item>
+															</Title>
+															<ToolTip>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>УПД закрыта в СБИС: аннулирована, удалена или отозвана. Надпись документа зачёркнута</v8:content>
+																</v8:item>
+															</ToolTip>
+															<CheckBoxType>Auto</CheckBoxType>
+															<ContextMenu name="АннулированаКонтекстноеМеню" id="3013"/>
+															<ExtendedTooltip name="АннулированаРасширеннаяПодсказка" id="3014"/>
+														</CheckBoxField>
+														<CheckBoxField name="ОжидаетАннулирования" id="3024">
+															<DataPath>Список.ОжидаетАннулирования</DataPath>
+															<ReadOnly>true</ReadOnly>
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Ждёт аннулир.</v8:content>
+																</v8:item>
+															</Title>
+															<ToolTip>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Аннулирование запрошено, решения ещё нет (код 27 или этап «Аннулирование» в СБИС). Утверждать нельзя - решите в СБИС</v8:content>
+																</v8:item>
+															</ToolTip>
+															<CheckBoxType>Auto</CheckBoxType>
+															<ContextMenu name="ОжидаетАннулированияКонтекстноеМеню" id="3025"/>
+															<ExtendedTooltip name="ОжидаетАннулированияРасширеннаяПодсказка" id="3026"/>
+														</CheckBoxField>
+														<InputField name="СтатусПодписания" id="230">
+															<DataPath>Список.СтатусПодписания</DataPath>
+															<DefaultItem>true</DefaultItem>
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Статус</v8:content>
+																</v8:item>
+															</Title>
+															<ContextMenu name="СтатусПодписанияКонтекстноеМеню" id="231"/>
+															<ExtendedTooltip name="СтатусПодписанияРасширеннаяПодсказка" id="232"/>
+														</InputField>
+														<CheckBoxField name="КОтправке" id="240">
+															<DataPath>Список.КОтправке</DataPath>
+															<DefaultItem>true</DefaultItem>
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>К отпр.</v8:content>
+																</v8:item>
+															</Title>
+															<ToolTip>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>К отправке: документ поставлен на утверждение и стоит в очереди</v8:content>
+																</v8:item>
+															</ToolTip>
+															<CheckBoxType>Auto</CheckBoxType>
+															<ContextMenu name="КОтправкеКонтекстноеМеню" id="241"/>
+															<ExtendedTooltip name="КОтправкеРасширеннаяПодсказка" id="242"/>
+														</CheckBoxField>
+														<CheckBoxField name="Утверждено" id="210">
+															<DataPath>Список.Утверждено</DataPath>
+															<DefaultItem>true</DefaultItem>
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Утв.</v8:content>
+																</v8:item>
+															</Title>
+															<ToolTip>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Утверждено: утверждение ушло в СБИС</v8:content>
+																</v8:item>
+															</ToolTip>
+															<CheckBoxType>Auto</CheckBoxType>
+															<ContextMenu name="УтвержденоКонтекстноеМеню" id="211"/>
+															<ExtendedTooltip name="УтвержденоРасширеннаяПодсказка" id="212"/>
+														</CheckBoxField>
+														<CheckBoxField name="Подписано" id="213">
+															<DataPath>Список.Подписано</DataPath>
+															<DefaultItem>true</DefaultItem>
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Подп.</v8:content>
+																</v8:item>
+															</Title>
+															<ToolTip>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Подписано: СБИС подтвердил подпись</v8:content>
+																</v8:item>
+															</ToolTip>
+															<CheckBoxType>Auto</CheckBoxType>
+															<ContextMenu name="ПодписаноКонтекстноеМеню" id="214"/>
+															<ExtendedTooltip name="ПодписаноРасширеннаяПодсказка" id="215"/>
+														</CheckBoxField>
+														<CheckBoxField name="ЭТрН" id="243">
+															<DataPath>Список.ЕстьЭТрН</DataPath>
+															<DefaultItem>true</DefaultItem>
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>ЭТрН</v8:content>
+																</v8:item>
+															</Title>
+															<ToolTip>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Есть ЭТрН к этой УПД</v8:content>
+																</v8:item>
+															</ToolTip>
+															<CheckBoxType>Auto</CheckBoxType>
+															<ContextMenu name="ЭТрНКонтекстноеМеню" id="244"/>
+															<ExtendedTooltip name="ЭТрНРасширеннаяПодсказка" id="245"/>
+														</CheckBoxField>
+														<CheckBoxField name="УКД" id="284">
+															<DataPath>Список.ЕстьУКД</DataPath>
+															<DefaultItem>true</DefaultItem>
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>УКД</v8:content>
+																</v8:item>
+															</Title>
+															<ToolTip>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Есть корректировка (УКД)</v8:content>
+																</v8:item>
+															</ToolTip>
+															<CheckBoxType>Auto</CheckBoxType>
+															<ContextMenu name="УКДКонтекстноеМеню" id="285"/>
+															<ExtendedTooltip name="УКДРасширеннаяПодсказка" id="286"/>
+														</CheckBoxField>
+														<CheckBoxField name="РасхожденийНет" id="222">
+															<DataPath>Список.РасхожденийНет</DataPath>
+															<DefaultItem>true</DefaultItem>
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Сошл.</v8:content>
+																</v8:item>
+															</Title>
+															<ToolTip>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Расхождений нет: УПД сошлась с приходной Далиона строками и суммой</v8:content>
+																</v8:item>
+															</ToolTip>
+															<CheckBoxType>Auto</CheckBoxType>
+															<ContextMenu name="РасхожденийНетКонтекстноеМеню" id="223"/>
+															<ExtendedTooltip name="РасхожденийНетРасширеннаяПодсказка" id="224"/>
+														</CheckBoxField>
+														<InputField name="Контрагент" id="25">
+															<DataPath>Список.Контрагент</DataPath>
+															<DefaultItem>true</DefaultItem>
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Контрагент</v8:content>
+																</v8:item>
+															</Title>
+															<Width>45</Width>
+															<AutoMaxWidth>false</AutoMaxWidth>
+															<HorizontalStretch>true</HorizontalStretch>
+															<ContextMenu name="КонтрагентКонтекстноеМеню" id="26"/>
+															<ExtendedTooltip name="КонтрагентРасширеннаяПодсказка" id="27"/>
+														</InputField>
+														<InputField name="Формат" id="28">
+															<DataPath>Список.Формат</DataPath>
+															<Visible>false</Visible>
+															<DefaultItem>true</DefaultItem>
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Формат</v8:content>
+																</v8:item>
+															</Title>
+															<ContextMenu name="ФорматКонтекстноеМеню" id="29"/>
+															<ExtendedTooltip name="ФорматРасширеннаяПодсказка" id="30"/>
+														</InputField>
+														<InputField name="НомерОснования" id="227">
+															<DataPath>Список.НомерОснования</DataPath>
+															<Visible>false</Visible>
+															<DefaultItem>true</DefaultItem>
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Исходная УПД</v8:content>
+																</v8:item>
+															</Title>
+															<ContextMenu name="НомерОснованияКонтекстноеМеню" id="228"/>
+															<ExtendedTooltip name="НомерОснованияРасширеннаяПодсказка" id="229"/>
+														</InputField>
+														<InputField name="Состояние" id="31">
+															<DataPath>Список.Состояние</DataPath>
+															<DefaultItem>true</DefaultItem>
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Состояние</v8:content>
+																</v8:item>
+															</Title>
+															<ContextMenu name="СостояниеКонтекстноеМеню" id="32"/>
+															<ExtendedTooltip name="СостояниеРасширеннаяПодсказка" id="33"/>
+														</InputField>
+														<InputField name="ТипРеестра" id="34">
+															<DataPath>Список.ТипРеестра</DataPath>
+															<Visible>false</Visible>
+															<DefaultItem>true</DefaultItem>
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Реестр</v8:content>
+																</v8:item>
+															</Title>
+															<ContextMenu name="ТипРеестраКонтекстноеМеню" id="35"/>
+															<ExtendedTooltip name="ТипРеестраРасширеннаяПодсказка" id="36"/>
+														</InputField>
+														<InputField name="ДатаЗагрузки" id="37">
+															<DataPath>Список.ДатаЗагрузки</DataPath>
+															<Visible>false</Visible>
+															<DefaultItem>true</DefaultItem>
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Загружен</v8:content>
+																</v8:item>
+															</Title>
+															<ContextMenu name="ДатаЗагрузкиКонтекстноеМеню" id="38"/>
+															<ExtendedTooltip name="ДатаЗагрузкиРасширеннаяПодсказка" id="39"/>
+														</InputField>
+														<CheckBoxField name="Пломба" id="198">
+															<DataPath>Список.Пломба</DataPath>
+															<DefaultItem>true</DefaultItem>
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Пломба</v8:content>
+																</v8:item>
+															</Title>
+															<ToolTip>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Пломба Далиона поставлена</v8:content>
+																</v8:item>
+															</ToolTip>
+															<CheckBoxType>Auto</CheckBoxType>
+															<ContextMenu name="ПломбаКонтекстноеМеню" id="199"/>
+															<ExtendedTooltip name="ПломбаРасширеннаяПодсказка" id="200"/>
+														</CheckBoxField>
+														<InputField name="ИдентификаторСБИС" id="40">
+															<DataPath>Список.ИдентификаторСБИС</DataPath>
+															<Visible>false</Visible>
+															<DefaultItem>true</DefaultItem>
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Идентификатор СБИС</v8:content>
+																</v8:item>
+															</Title>
+															<ContextMenu name="ИдентификаторСБИСКонтекстноеМеню" id="41"/>
+															<ExtendedTooltip name="ИдентификаторСБИСРасширеннаяПодсказка" id="42"/>
+														</InputField>
+														<CheckBoxField name="ОтправленоВБух" id="3030">
+															<DataPath>Список.ОтправленоВБух</DataPath>
+															<ReadOnly>true</ReadOnly>
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>В БП</v8:content>
+																</v8:item>
+															</Title>
+															<ToolTip>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Отправлено в БП: БП ответила, что документ у неё есть (создан сейчас или был раньше). Что создано - колонка «Документ в БП»</v8:content>
+																</v8:item>
+															</ToolTip>
+															<CheckBoxType>Auto</CheckBoxType>
+															<ContextMenu name="ОтправленоВБухКонтекстноеМеню" id="3031"/>
+															<ExtendedTooltip name="ОтправленоВБухРасширеннаяПодсказка" id="3032"/>
+														</CheckBoxField>
+														<CheckBoxField name="ПроведенВБух" id="3036">
+															<DataPath>Список.ПроведенВБух</DataPath>
+															<ReadOnly>true</ReadOnly>
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Проведён в БП</v8:content>
+																</v8:item>
+															</Title>
+															<ToolTip>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>БП ответила, что документ у неё проведён</v8:content>
+																</v8:item>
+															</ToolTip>
+															<CheckBoxType>Auto</CheckBoxType>
+															<ContextMenu name="ПроведенВБухКонтекстноеМеню" id="3037"/>
+															<ExtendedTooltip name="ПроведенВБухРасширеннаяПодсказка" id="3038"/>
+														</CheckBoxField>
+														<InputField name="ДокументБух" id="3033">
+															<DataPath>Список.ДокументБух</DataPath>
+															<ReadOnly>true</ReadOnly>
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Документ в БП</v8:content>
+																</v8:item>
+															</Title>
+															<ToolTip>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Ответ БП: что создано по документу или почему не создано</v8:content>
+																</v8:item>
+															</ToolTip>
+															<ContextMenu name="ДокументБухКонтекстноеМеню" id="3034"/>
+															<ExtendedTooltip name="ДокументБухРасширеннаяПодсказка" id="3035"/>
+														</InputField>
+														<InputField name="ДатаОплаты" id="3040">
+															<DataPath>Список.ДатаОплаты</DataPath>
+															<ReadOnly>true</ReadOnly>
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Дата оплаты</v8:content>
+																</v8:item>
+															</Title>
+															<ToolTip>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Дата УПД + срок оплаты договора поставщика в УТ (календарные дни). Пусто: нет договора поставщика - запросите в Далионе (команда «Запросить договор в Далионе»)</v8:content>
+																</v8:item>
+															</ToolTip>
+															<Format>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>ДЛФ=D</v8:content>
+																</v8:item>
+															</Format>
+															<ContextMenu name="ДатаОплатыКонтекстноеМеню" id="3041"/>
+															<ExtendedTooltip name="ДатаОплатыРасширеннаяПодсказка" id="3042"/>
+														</InputField>
+														<InputField name="ВозвратВБух" id="3047">
+															<DataPath>Список.ВозвратВБух</DataPath>
+															<ReadOnly>true</ReadOnly>
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Возврат в Бух</v8:content>
+																</v8:item>
+															</Title>
+															<ToolTip>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Возврат поставщику, найденный в БП по этой УПД (номер, дата, сумма). Пусто - возвратов нет. Заполняется сверкой с БП раз в 3 часа</v8:content>
+																</v8:item>
+															</ToolTip>
+															<ContextMenu name="ВозвратВБухКонтекстноеМеню" id="3048"/>
+															<ExtendedTooltip name="ВозвратВБухРасширеннаяПодсказка" id="3049"/>
+														</InputField>
+													</ChildItems>
+												</Table>
+											</ChildItems>
+										</UsualGroup>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="ГруппаЦепочкаДокументов" id="76">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Товары выбранной УПД</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>УПД, ЭТрН, УКД и приход Далиона по выбранной строке</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>Vertical</Group>
+									<ExtendedTooltip name="ГруппаЦепочкаДокументовРасширеннаяПодсказка" id="77"/>
+									<ChildItems>
+										<Table name="ЦепочкаДокументов" id="113">
+											<Representation>Tree</Representation>
+											<CommandBarLocation>None</CommandBarLocation>
+											<ChangeRowSet>false</ChangeRowSet>
+											<ChangeRowOrder>false</ChangeRowOrder>
+											<DataPath>ЦепочкаДокументов</DataPath>
+											<ContextMenu name="ЦепочкаДокументовКонтекстноеМеню" id="114"/>
+											<AutoCommandBar name="ЦепочкаДокументовКоманднаяПанель" id="115"/>
+											<ExtendedTooltip name="ЦепочкаДокументовРасширеннаяПодсказка" id="116"/>
+											<SearchStringAddition name="ЦепочкаДокументовСтрокаПоиска" id="117">
+												<AdditionSource>
+													<Item>ЦепочкаДокументов</Item>
+													<Type>SearchStringRepresentation</Type>
+												</AdditionSource>
+												<ContextMenu name="ЦепочкаДокументовСтрокаПоискаКонтекстноеМеню" id="118"/>
+												<ExtendedTooltip name="ЦепочкаДокументовСтрокаПоискаРасширеннаяПодсказка" id="119"/>
+											</SearchStringAddition>
+											<ViewStatusAddition name="ЦепочкаДокументовСостояниеПросмотра" id="120">
+												<AdditionSource>
+													<Item>ЦепочкаДокументов</Item>
+													<Type>ViewStatusRepresentation</Type>
+												</AdditionSource>
+												<ContextMenu name="ЦепочкаДокументовСостояниеПросмотраКонтекстноеМеню" id="121"/>
+												<ExtendedTooltip name="ЦепочкаДокументовСостояниеПросмотраРасширеннаяПодсказка" id="122"/>
+											</ViewStatusAddition>
+											<SearchControlAddition name="ЦепочкаДокументовУправлениеПоиском" id="123">
+												<AdditionSource>
+													<Item>ЦепочкаДокументов</Item>
+													<Type>SearchControl</Type>
+												</AdditionSource>
+												<ContextMenu name="ЦепочкаДокументовУправлениеПоискомКонтекстноеМеню" id="124"/>
+												<ExtendedTooltip name="ЦепочкаДокументовУправлениеПоискомРасширеннаяПодсказка" id="125"/>
+											</SearchControlAddition>
+											<Events>
+												<Event name="BeforeRowChange">ЦепочкаДокументовПередНачаломИзменения</Event>
+											</Events>
+											<ChildItems>
+												<InputField name="ЦепочкаДокументовНоменклатура" id="126">
+													<DataPath>ЦепочкаДокументов.Номенклатура</DataPath>
+													<ReadOnly>true</ReadOnly>
+													<EditMode>EnterOnInput</EditMode>
+													<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+													<ContextMenu name="ЦепочкаДокументовНоменклатураКонтекстноеМеню" id="127"/>
+													<ExtendedTooltip name="ЦепочкаДокументовНоменклатураРасширеннаяПодсказка" id="128"/>
+												</InputField>
+												<CheckBoxField name="ЦепочкаДокументовЕстьВУТ" id="3001">
+													<DataPath>ЦепочкаДокументов.ЕстьВУТ</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Есть в УТ</v8:content>
+														</v8:item>
+													</Title>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>По штрихкоду строки в УТ уже есть карточка номенклатуры. Можно изменить вручную</v8:content>
+														</v8:item>
+													</ToolTip>
+													<EditMode>EnterOnInput</EditMode>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="ЦепочкаДокументовЕстьВУТКонтекстноеМеню" id="3002"/>
+													<ExtendedTooltip name="ЦепочкаДокументовЕстьВУТРасширеннаяПодсказка" id="3003"/>
+												</CheckBoxField>
+												<InputField name="ЦепочкаДокументовДокумент" id="129">
+													<DataPath>ЦепочкаДокументов.Документ</DataPath>
+													<Visible>false</Visible>
+													<ReadOnly>true</ReadOnly>
+													<EditMode>EnterOnInput</EditMode>
+													<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+													<ContextMenu name="ЦепочкаДокументовДокументКонтекстноеМеню" id="130"/>
+													<ExtendedTooltip name="ЦепочкаДокументовДокументРасширеннаяПодсказка" id="131"/>
+												</InputField>
+												<InputField name="ЦепочкаДокументовНоменклатураДалион" id="914">
+													<DataPath>ЦепочкаДокументов.НоменклатураДалион</DataPath>
+													<Visible>false</Visible>
+													<ReadOnly>true</ReadOnly>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Номенклатура Далиона</v8:content>
+														</v8:item>
+													</Title>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="ЦепочкаДокументовНоменклатураДалионКонтекстноеМеню" id="915"/>
+													<ExtendedTooltip name="ЦепочкаДокументовНоменклатураДалионРасширеннаяПодсказка" id="916"/>
+												</InputField>
+												<InputField name="ЦепочкаДокументовКоличество" id="135">
+													<DataPath>ЦепочкаДокументов.Количество</DataPath>
+													<ReadOnly>true</ReadOnly>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>УПД кол-во</v8:content>
+														</v8:item>
+													</Title>
+													<EditMode>EnterOnInput</EditMode>
+													<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+													<ContextMenu name="ЦепочкаДокументовКоличествоКонтекстноеМеню" id="136"/>
+													<ExtendedTooltip name="ЦепочкаДокументовКоличествоРасширеннаяПодсказка" id="137"/>
+												</InputField>
+												<InputField name="ЦепочкаДокументовЦена" id="138">
+													<DataPath>ЦепочкаДокументов.Цена</DataPath>
+													<ReadOnly>true</ReadOnly>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>УПД цена</v8:content>
+														</v8:item>
+													</Title>
+													<EditMode>EnterOnInput</EditMode>
+													<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+													<ContextMenu name="ЦепочкаДокументовЦенаКонтекстноеМеню" id="139"/>
+													<ExtendedTooltip name="ЦепочкаДокументовЦенаРасширеннаяПодсказка" id="140"/>
+												</InputField>
+												<InputField name="ЦепочкаДокументовСумма" id="158">
+													<DataPath>ЦепочкаДокументов.Сумма</DataPath>
+													<ReadOnly>true</ReadOnly>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>УПД сумма</v8:content>
+														</v8:item>
+													</Title>
+													<EditMode>EnterOnInput</EditMode>
+													<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+													<ContextMenu name="ЦепочкаДокументовСуммаКонтекстноеМеню" id="159"/>
+													<ExtendedTooltip name="ЦепочкаДокументовСуммаРасширеннаяПодсказка" id="160"/>
+												</InputField>
+												<InputField name="ЦепочкаДокументовКолЭТрН" id="340">
+													<DataPath>ЦепочкаДокументов.КолЭТрН</DataPath>
+													<ReadOnly>true</ReadOnly>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>ЭТрН кол-во</v8:content>
+														</v8:item>
+													</Title>
+													<EditMode>EnterOnInput</EditMode>
+													<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+													<ContextMenu name="ЦепочкаДокументовКолЭТрНКонтекстноеМеню" id="341"/>
+													<ExtendedTooltip name="ЦепочкаДокументовКолЭТрНРасширеннаяПодсказка" id="342"/>
+												</InputField>
+												<InputField name="ЦепочкаДокументовКолДалион" id="343">
+													<DataPath>ЦепочкаДокументов.КолДалион</DataPath>
+													<ReadOnly>true</ReadOnly>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Далион кол-во</v8:content>
+														</v8:item>
+													</Title>
+													<EditMode>EnterOnInput</EditMode>
+													<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+													<ContextMenu name="ЦепочкаДокументовКолДалионКонтекстноеМеню" id="344"/>
+													<ExtendedTooltip name="ЦепочкаДокументовКолДалионРасширеннаяПодсказка" id="345"/>
+												</InputField>
+												<InputField name="ЦепочкаДокументовЦенаДалион" id="346">
+													<DataPath>ЦепочкаДокументов.ЦенаДалион</DataPath>
+													<ReadOnly>true</ReadOnly>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Далион цена</v8:content>
+														</v8:item>
+													</Title>
+													<EditMode>EnterOnInput</EditMode>
+													<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+													<ContextMenu name="ЦепочкаДокументовЦенаДалионКонтекстноеМеню" id="347"/>
+													<ExtendedTooltip name="ЦепочкаДокументовЦенаДалионРасширеннаяПодсказка" id="348"/>
+												</InputField>
+												<InputField name="ЦепочкаДокументовСуммаДалион" id="349">
+													<DataPath>ЦепочкаДокументов.СуммаДалион</DataPath>
+													<ReadOnly>true</ReadOnly>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Далион сумма</v8:content>
+														</v8:item>
+													</Title>
+													<EditMode>EnterOnInput</EditMode>
+													<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+													<ContextMenu name="ЦепочкаДокументовСуммаДалионКонтекстноеМеню" id="350"/>
+													<ExtendedTooltip name="ЦепочкаДокументовСуммаДалионРасширеннаяПодсказка" id="351"/>
+												</InputField>
+												<InputField name="ЦепочкаДокументовСтавкаНДС" id="161">
+													<DataPath>ЦепочкаДокументов.СтавкаНДС</DataPath>
+													<Visible>false</Visible>
+													<ReadOnly>true</ReadOnly>
+													<EditMode>EnterOnInput</EditMode>
+													<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+													<ContextMenu name="ЦепочкаДокументовСтавкаНДСКонтекстноеМеню" id="162"/>
+													<ExtendedTooltip name="ЦепочкаДокументовСтавкаНДСРасширеннаяПодсказка" id="163"/>
+												</InputField>
+												<InputField name="ЦепочкаДокументовСуммаНДС" id="164">
+													<DataPath>ЦепочкаДокументов.СуммаНДС</DataPath>
+													<Visible>false</Visible>
+													<ReadOnly>true</ReadOnly>
+													<EditMode>EnterOnInput</EditMode>
+													<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+													<ContextMenu name="ЦепочкаДокументовСуммаНДСКонтекстноеМеню" id="165"/>
+													<ExtendedTooltip name="ЦепочкаДокументовСуммаНДСРасширеннаяПодсказка" id="166"/>
+												</InputField>
+												<InputField name="ЦепочкаДокументовРасхождение" id="144">
+													<DataPath>ЦепочкаДокументов.Расхождение</DataPath>
+													<ReadOnly>true</ReadOnly>
+													<EditMode>EnterOnInput</EditMode>
+													<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+													<ContextMenu name="ЦепочкаДокументовРасхождениеКонтекстноеМеню" id="145"/>
+													<ExtendedTooltip name="ЦепочкаДокументовРасхождениеРасширеннаяПодсказка" id="146"/>
+												</InputField>
+												<CheckBoxField name="ЦепочкаДокументовСвереноВручную" id="352">
+													<DataPath>ЦепочкаДокументов.СвереноВручную</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Проверено</v8:content>
+														</v8:item>
+													</Title>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Отметить строку товара УПД проверенной вручную (с комментарием «почему»). Снятие галочки возвращает настоящее расхождение</v8:content>
+														</v8:item>
+													</ToolTip>
+													<EditMode>EnterOnInput</EditMode>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="ЦепочкаДокументовСвереноВручнуюКонтекстноеМеню" id="353"/>
+													<ExtendedTooltip name="ЦепочкаДокументовСвереноВручнуюРасширеннаяПодсказка" id="354"/>
+													<Events>
+														<Event name="OnChange">ЦепочкаДокументовСвереноВручнуюПриИзменении</Event>
+													</Events>
+												</CheckBoxField>
+												<InputField name="ЦепочкаДокументовРасхождения" id="248">
+													<DataPath>ЦепочкаДокументов.Расхождения</DataPath>
+													<Visible>false</Visible>
+													<ReadOnly>true</ReadOnly>
+													<EditMode>EnterOnInput</EditMode>
+													<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+													<ContextMenu name="ЦепочкаДокументовРасхожденияКонтекстноеМеню" id="249"/>
+													<ExtendedTooltip name="ЦепочкаДокументовРасхожденияРасширеннаяПодсказка" id="250"/>
+												</InputField>
+												<InputField name="ЦепочкаДокументовАлкоголь" id="287">
+													<DataPath>ЦепочкаДокументов.Алкоголь</DataPath>
+													<Visible>false</Visible>
+													<ReadOnly>true</ReadOnly>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="ЦепочкаДокументовАлкогольКонтекстноеМеню" id="288"/>
+													<ExtendedTooltip name="ЦепочкаДокументовАлкогольРасширеннаяПодсказка" id="289"/>
+												</InputField>
+												<InputField name="ЦепочкаДокументовПараПрихода" id="304">
+													<DataPath>ЦепочкаДокументов.ПараПрихода</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Пара в приходе</v8:content>
+														</v8:item>
+													</Title>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Строке УПД без пары выберите строку прихода Далиона: связь запишется в штрихкоды поставщиков и цепочка пересверится</v8:content>
+														</v8:item>
+													</ToolTip>
+													<EditMode>EnterOnInput</EditMode>
+													<ListChoiceMode>true</ListChoiceMode>
+													<ChoiceListButton>true</ChoiceListButton>
+													<ContextMenu name="ЦепочкаДокументовПараПриходаКонтекстноеМеню" id="305"/>
+													<ExtendedTooltip name="ЦепочкаДокументовПараПриходаРасширеннаяПодсказка" id="306"/>
+													<Events>
+														<Event name="OnChange">ЦепочкаДокументовПараПриходаПриИзменении</Event>
+													</Events>
+												</InputField>
+											</ChildItems>
+										</Table>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Список" id="1">
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<UseAlways>
+				<Field>Список.ИдентификаторСБИС</Field>
+				<Field>Список.НомерДокументаДалион</Field>
+				<Field>Список.ТекстСверки</Field>
+			</UseAlways>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>false</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<MainTable>InformationRegister.ЭАрМ_УПД_Входящий</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="ЦепочкаДокументов" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Цепочка документов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTree</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Номенклатура" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Номенклатура</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Документ" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Документ</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Количество" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Количество</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Цена" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Цена с НДС</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Сумма" id="8">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сумма</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="СтавкаНДС" id="9">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ставка НДС</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="СуммаНДС" id="10">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сумма НДС</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Расхождение" id="7">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Расхождение</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Расходится" id="11">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Расходится</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Расхождения" id="12">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Расхождения (УКД)</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Сверена" id="13">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сверена</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Алкоголь" id="14">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Алкоголь (ЕГАИС)</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>300</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ПараПрихода" id="15">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Пара в приходе</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="БезПары" id="16">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Без пары</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ШтрихкодыСтроки" id="17">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Штрихкоды строки</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="КлючиНоменклатуры" id="18">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ключи номенклатуры Далиона</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="КодПоставщика" id="19">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Код товара поставщика</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ВариантПары" id="20">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Вариант пары</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Позиции" id="21">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Позиции УПД</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="СвереноВручную" id="22">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сверено вручную</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ИндексПрихода" id="23">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Индекс пары в приходе</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="КолДалион" id="24">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Кол-во Далион</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ЦенаДалион" id="25">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Цена Далион</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="СуммаДалион" id="26">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сумма Далион</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="КолЭТрН" id="27">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Кол-во ЭТрН</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="НоменклатураДалион" id="28">
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ПараОжидает" id="29">
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ЕстьВУТ" id="30">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Есть в УТ</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="АвтоПодписания" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Авто</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ДатаУПДС" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>УПД с</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ДатаУПДПо" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>по</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ЗамерыВключены" id="10">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ОтборСтатусаПодписания" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Статус</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>50</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПогрешностьКопеек" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Погрешность, коп.</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>6</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Точно" id="16">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Точно</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="НеПоказыватьАннулированные" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Не показывать аннулированные</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="АннулированныеБезЗамены" id="17">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Аннулированные без замены</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ОтборСтатусаПриходной" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Приходная</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>50</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПриходДалиона" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Строки прихода Далиона (для выбора пары)</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Вариант" id="1">
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Номенклатура" id="2">
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ШтрихкодыСтроки" id="3">
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="КлючиНоменклатуры" id="4">
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Количество" id="5">
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>15</v8:Digits>
+							<v8:FractionDigits>3</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ПолучитьУПД" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить из СБИС</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Перечитать из СБИС только выбранную УПД: статус, дату поступления и товары</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПолучитьУПД</Action>
+			<CurrentRowUse>Use</CurrentRowUse>
+		</Command>
+		<Command name="ПолучитьНакладныеДалион" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Получить накладные Далиона</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Прочитать приходные накладные из папки обмена</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПолучитьНакладныеДалион</Action>
+			<CurrentRowUse>Use</CurrentRowUse>
+		</Command>
+		<Command name="ИзменитьПриходную" id="925">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Изменить приходную</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть подбор приходной: номер УПД и дата плюс-минус дней. После выбора УПД сразу сверяется</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ИзменитьПриходную</Action>
+			<CurrentRowUse>Use</CurrentRowUse>
+		</Command>
+		<Command name="ЗапроситьДоговорДалион" id="924">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Запросить договор в Далионе</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>По выделенным УПД собрать ИНН поставщиков и запросить у Далиона их договоры (срок оплаты нужен для даты оплаты и для создания документа в БП). Ответ придёт регламентом приёма пакетов</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗапроситьДоговорДалион</Action>
+			<CurrentRowUse>Use</CurrentRowUse>
+		</Command>
+		<Command name="ПолучитьПриходнуюПоНомеру" id="923">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Получить приходную накладную</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Запросить у Далиона приходную накладную с номером выбранной УПД</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПолучитьПриходнуюПоНомеру</Action>
+			<CurrentRowUse>Use</CurrentRowUse>
+		</Command>
+		<Command name="ПодготовитьДействиеСБИС" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подготовить действие (СБИС)</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показать сырой ответ СБИС на подготовку действия по текущей УПД</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПодготовитьДействиеСБИС</Action>
+			<CurrentRowUse>Use</CurrentRowUse>
+		</Command>
+		<Command name="ПодписатьИУтвердитьСБИС" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отправить УПД</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подписать выбранную УПД и отправить утверждение в СБИС</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПодписатьИУтвердитьСБИС</Action>
+			<CurrentRowUse>Use</CurrentRowUse>
+		</Command>
+		<Command name="ОтправитьУКД" id="24">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отправить УКД</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подписать УКД выбранной УПД и отправить утверждение в СБИС. Если корректировок несколько - спросит, какую отправить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОтправитьУКД</Action>
+			<CurrentRowUse>Use</CurrentRowUse>
+		</Command>
+		<Command name="ОтправитьЭТрН" id="16">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отправить ЭТрН</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подписать связанную ЭТрН выбранной УПД и отправить в СБИС. После отправки колонка ЭТрН и строка в реестре ЭТрН становятся зелёными</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОтправитьЭТрН</Action>
+			<CurrentRowUse>Use</CurrentRowUse>
+		</Command>
+		<Command name="СверкаКорректировки" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сверка корректировки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сверить УПД и её корректировки (УКД) с приходной накладной Далиона</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СверкаКорректировки</Action>
+			<CurrentRowUse>Use</CurrentRowUse>
+		</Command>
+		<Command name="КодыМаркировки" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Коды маркировки и GTIN</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Раскрыть GTIN строк и коды маркировки УПД (Честный знак, SSCC, ЕГАИС)</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КодыМаркировки</Action>
+			<CurrentRowUse>Use</CurrentRowUse>
+		</Command>
+		<Command name="ГрафикЦен" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>График цен</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Динамика цен УПД и прихода по сверке цепочки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ГрафикЦен</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ПоказатьСертификатыПодписи" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сертификаты подписи</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показать сертификаты, доступные для подписания на этом компьютере</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПоказатьСертификатыПодписи</Action>
+		</Command>
+		<Command name="УстановитьПломбуТест" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить пломбу (тест)</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ручной запрос пломбы в Далион по выбранной УПД, без проверки сверки и подписи</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>УстановитьПломбуТест</Action>
+			<CurrentRowUse>Use</CurrentRowUse>
+		</Command>
+		<Command name="АлкогольЕГАИС" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Алкоголь ЕГАИС</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пересчитать признак алкоголя строк текущей УПД и показать, что нужно для ЕГАИС</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>АлкогольЕГАИС</Action>
+			<CurrentRowUse>Use</CurrentRowUse>
+		</Command>
+		<Command name="УтвердитьВОчередь" id="17">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Утвердить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Поставить выделенные УПД на утверждение: «К отправке» в реестре и строка с отметкой «Отправить» в очереди «Ожидаемые подтверждения ЭДО». В СБИС ничего не отправляет. Снять - двойной клик по колонке «К отправке»</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>УтвердитьВОчередь</Action>
+			<CurrentRowUse>Use</CurrentRowUse>
+		</Command>
+		<Command name="ПроверитьЭП" id="18">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проверка ЭП</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проверить электронную подпись без отправки: настройки подписанта, сертификат и срок действия, программу криптографии, тестовую подпись, готовность текущей УПД и вход в СБИС. Результат - в отдельном окне</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПроверитьЭП</Action>
+		</Command>
+		<Command name="ОткрытьНастройки" id="19">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройки СБИС и обмена</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть настройки ЭДО: подключение к СБИС, подписант, папка и FTP обмена с Далионом, сверка цепочки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОткрытьНастройки</Action>
+		</Command>
+		<Command name="ПоказатьПодписантов" id="20">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подписанты</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Все данные подписантов ЭДО: ФИО, ИНН, должность, отпечаток из настроек и сертификат на этом компьютере (владелец, издатель, срок действия, ИНН)</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПоказатьПодписантов</Action>
+		</Command>
+		<Command name="УдалитьДублиУПД" id="21">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Удалить дубли</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Найти за период строки с одним поставщиком, номером и датой и удалить пустые (без подписи, утверждения и статуса). Подписанные и утверждённые не трогаются. Сначала показывает список</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>УдалитьДублиУПД</Action>
+		</Command>
+		<Command name="ШтрихкодыВРегистр" id="22">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Штрихкоды в регистр</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить в «Штрихкоды поставщиков» штрихкоды строк выбранной УПД (GTIN из XML и марок) и все товары её приходной Далиона со штрихкодами, затем назначить штрихкоды и пересверить цепочку</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ШтрихкодыВРегистр</Action>
+		</Command>
+		<Command name="ПросмотретьАрхив" id="912">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Просмотреть архив</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Найти в архиве обмена уникальные приходные, запросить недостающие УПД в СБИС за 3 дня и сверить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПросмотретьАрхив</Action>
+		</Command>
+		<Command name="ДозапроситьУПД" id="23">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Запросить УПД к приходным</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Найти в СБИС УПД для приходных Далиона без УПД за период и загрузить их</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ДозапроситьУПД</Action>
+		</Command>
+		<Command name="СохранитьПары" id="913">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохранить пары и создать номенклатуру</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Записать выбранные пары «строка УПД - строка прихода Далиона», пересверить цепочку и создать в УТ номенклатуру, которой нет: наименование Далиона, данные из УПД</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СохранитьПары</Action>
+		</Command>
+		<Command name="СоздатьНоменклатуруУТ" id="921">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить товар в УТ</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вручную записать в УТ номенклатуру выбранных строк товаров, у которых нет галочки «Есть в УТ»: наименование и штрихкод из строки, вид - в окне</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СоздатьНоменклатуруУТ</Action>
+		</Command>
+		<Command name="ЗапроситьРеестрЗаПериод" id="922">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Запросить реестр за период</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить из СБИС реестр УПД за выбранный период (регламент берёт только последние 3 дня): реестр сразу, товары - фоновым заданием</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗапроситьРеестрЗаПериод</Action>
+		</Command>
+	</Commands>
+</Form>

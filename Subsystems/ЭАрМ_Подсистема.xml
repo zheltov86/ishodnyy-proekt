@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<Subsystem uuid="5f3be4eb-404b-41c6-b968-4b8f1f080840">
+		<Properties>
+			<Name>ЭАрМ_Подсистема</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>АРМ ЭДО — Обмен с Далион</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment>Расширение для обмена электронными документами ЭДО между УТ и Далион</Comment>
+			<IncludeHelpInContents>true</IncludeHelpInContents>
+			<IncludeInCommandInterface>true</IncludeInCommandInterface>
+			<UseOneCommand>false</UseOneCommand>
+			<Explanation>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подсистема обеспечивает автоматический обмен входящими ЭДО-документами (ЭТРН, УПД) между базой УТ и базой Далион. При поступлении входящего документа данные отправляются в Далион для обработки. После подтверждения документ автоматически подписывается и отправляется в ЭДО.</v8:content>
+				</v8:item>
+			</Explanation>
+			<Picture>
+				<xr:Ref>StdPicture.ExchangePlan</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Content>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ЭАрМ_ОбменСДругойБазой</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ЭАрМ_ОбработкаПодтвержденийЭДО</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ЭАрМ_ОбщийМодуль</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ЭАрМ_ПанельУправленияЭДОКлиент</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ЭАрМ_ПанельУправленияЭДОСервер</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ЭАрМ_ПриемДокументовДалион</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ЭАрМ_НастройкиСервер</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.ЭАрМ_ОсновнаяРоль</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">EventSubscription.ЭАрМ_ПриЗаписиСостоянияЭДО</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">EventSubscription.ЭАрМ_ПриЗаписиВходящегоЭДО</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">HTTPService.ЭАрМ_ПодтверждениеЭДО</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">HTTPService.ЭАрМ_ПриемДокументов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ЭАрМ_АдресСервисаОбменаСДругойБазой</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ЭлектронныйДокументВходящийЭДО</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.ЭАрМ_СтатусыОжиданияПодтвержденияЭДО</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.ЭАрМ_СтатусыПодписанияЭДО</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.ЭАрМ_ПанельУправленияЭДО</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ЭАрМ_НастройкиЭДО</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.ЭАрМ_СтатистикаЭДО</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.ЭАрМ_ВыгрузкаВБух</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.СостоянияПоОбъектамУчетаЭДО</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ЭАрМ_ОжидаемыеПодтвержденияЭДО</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ЭАрМ_РеестрЭТрН</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ЭАрМ_ОбщийМодульОбмен</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ЭАрМ_Служебный</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ЭАрМ_РегламентныйОбменЭДО</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ЭАрМ_ТоварыЭТрН</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ЭАрМ_ОбработкаЭДО</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.ЭАрМ_ОбработкаЭДО</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ЭАрМ_УПД_Входящий</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ЭАрМ_УКД_Входящий</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ЭАрМ_ЖурналОбменаЭДО</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ЭАрМ_ТрассаПриема</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">ScheduledJob.ЭАрМ_РегламентноеЗадание</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">ScheduledJob.ЭАрМ_ПроверкаПапкиОбмена</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">ScheduledJob.ЭАрМ_ОбновлениеРеестровЭДО</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ЭАрМ_ПриемПакетовДалион</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ЭАрМ_ЦепочкаЗакупки</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ЭАрМ_СверкаТоваровЦепочки</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ЭАрМ_ПакетыДалион</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ЭАрМ_ШтрихкодыПоставщиков</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ЭАрМ_ЦепочкаЗакупки</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ЭАрМ_СверкаТоваровЦепочки</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">ScheduledJob.ЭАрМ_ОбменЦепочкиЗакупок</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ЭАрМ_ЗапросыДалион</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ЭАрМ_ТестоваяВыгрузкаДалион</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.ЭАрМ_ЗапросДанныхДалион</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">ScheduledJob.ЭАрМ_ОбработкаПакетовДалион</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ЭАрМ_ЗапросыДалион</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ЭАрМ_РеестрТоваровЗаказов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ЭАрМ_КорректировкиУПД</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ЭАрМ_ИтогиТоваровЭДО</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ЭАрМ_КодыМаркировки</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ЭАрМ_УтверждениеСБИС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.ЭАрМ_РеестрТоваровЗаказов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ЭАрМ_ПарыНоменклатурыПоИмени</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ЭАрМ_ДокументыЗакупки</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ЭАрМ_ЗаказПоставщику</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ЭАрМ_ПриходнаяНакладная</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DocumentJournal.ЭАрМ_ДокументыЗакупки</xr:Item>
+			</Content>
+		</Properties>
+		<ChildObjects/>
+	</Subsystem>
+</MetaDataObject>

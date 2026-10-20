@@ -1,0 +1,248 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ЗагрузитьИзФайлаКнопка" id="50">
+				<Type>UsualButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.Command.ЗагрузитьИзФайла</CommandName>
+				<ExtendedTooltip name="ЗагрузитьИзФайлаКнопкаРасширеннаяПодсказка" id="51"/>
+			</Button>
+			<Button name="ЗагрузитьИзПапкиКнопка" id="52">
+				<Type>UsualButton</Type>
+				<CommandName>Form.Command.ЗагрузитьИзПапки</CommandName>
+				<ExtendedTooltip name="ЗагрузитьИзПапкиКнопкаРасширеннаяПодсказка" id="53"/>
+			</Button>
+			<Button name="ЗагрузитьИзСверкиКнопка" id="54">
+				<Type>UsualButton</Type>
+				<CommandName>Form.Command.ЗагрузитьИзСверки</CommandName>
+				<ExtendedTooltip name="ЗагрузитьИзСверкиКнопкаРасширеннаяПодсказка" id="55"/>
+			</Button>
+			<Button name="ПеренестиВУТПроверитьКнопка" id="60">
+				<Type>UsualButton</Type>
+				<CommandName>Form.Command.ПеренестиВУТПроверить</CommandName>
+				<ExtendedTooltip name="ПеренестиВУТПроверитьКнопкаРасширеннаяПодсказка" id="61"/>
+			</Button>
+			<Button name="ПеренестиВУТКнопка" id="62">
+				<Type>UsualButton</Type>
+				<CommandName>Form.Command.ПеренестиВУТ</CommandName>
+				<ExtendedTooltip name="ПеренестиВУТКнопкаРасширеннаяПодсказка" id="63"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<ChildItems>
+		<Table name="Список" id="1">
+			<Representation>List</Representation>
+			<CommandBarLocation>None</CommandBarLocation>
+			<DefaultItem>true</DefaultItem>
+			<ChangeRowOrder>false</ChangeRowOrder>
+			<UseAlternationRowColor>true</UseAlternationRowColor>
+			<DataPath>Список</DataPath>
+			<RowPictureDataPath>Список.DefaultPicture</RowPictureDataPath>
+			<AutoRefresh>false</AutoRefresh>
+			<AutoRefreshPeriod>60</AutoRefreshPeriod>
+			<Period>
+				<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+				<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+				<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+			</Period>
+			<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+			<RestoreCurrentRow>true</RestoreCurrentRow>
+			<TopLevelParent xsi:nil="true"/>
+			<ShowRoot>true</ShowRoot>
+			<AllowRootChoice>false</AllowRootChoice>
+			<UpdateOnDataChange>Auto</UpdateOnDataChange>
+			<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+			<ContextMenu name="СписокКонтекстноеМеню" id="2"/>
+			<AutoCommandBar name="СписокКоманднаяПанель" id="3"/>
+			<ExtendedTooltip name="СписокРасширеннаяПодсказка" id="4"/>
+			<SearchStringAddition name="СписокСтрокаПоиска" id="5">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокСтрокаПоискаКонтекстноеМеню" id="6"/>
+				<ExtendedTooltip name="СписокСтрокаПоискаРасширеннаяПодсказка" id="7"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="СписокСостояниеПросмотра" id="8">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокСостояниеПросмотраКонтекстноеМеню" id="9"/>
+				<ExtendedTooltip name="СписокСостояниеПросмотраРасширеннаяПодсказка" id="10"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="СписокУправлениеПоиском" id="11">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="12"/>
+				<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="13"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<InputField name="Штрихкод" id="14">
+					<DataPath>Список.Штрихкод</DataPath>
+					<ContextMenu name="ШтрихкодКонтекстноеМеню" id="15"/>
+					<ExtendedTooltip name="ШтрихкодРасширеннаяПодсказка" id="16"/>
+				</InputField>
+				<InputField name="НаименованиеПоставщика" id="17">
+					<DataPath>Список.НаименованиеПоставщика</DataPath>
+					<ContextMenu name="НаименованиеПоставщикаКонтекстноеМеню" id="18"/>
+					<ExtendedTooltip name="НаименованиеПоставщикаРасширеннаяПодсказка" id="19"/>
+				</InputField>
+				<InputField name="НоменклатураДалион" id="20">
+					<DataPath>Список.НоменклатураДалион</DataPath>
+					<ContextMenu name="НоменклатураДалионКонтекстноеМеню" id="21"/>
+					<ExtendedTooltip name="НоменклатураДалионРасширеннаяПодсказка" id="22"/>
+				</InputField>
+				<InputField name="КодНоменклатурыДалион" id="23">
+					<DataPath>Список.КодНоменклатурыДалион</DataPath>
+					<ContextMenu name="КодНоменклатурыДалионКонтекстноеМеню" id="24"/>
+					<ExtendedTooltip name="КодНоменклатурыДалионРасширеннаяПодсказка" id="25"/>
+				</InputField>
+				<InputField name="КодТовараПоставщика" id="26">
+					<DataPath>Список.КодТовараПоставщика</DataPath>
+					<ContextMenu name="КодТовараПоставщикаКонтекстноеМеню" id="27"/>
+					<ExtendedTooltip name="КодТовараПоставщикаРасширеннаяПодсказка" id="28"/>
+				</InputField>
+				<InputField name="ИННПоставщика" id="29">
+					<DataPath>Список.ИННПоставщика</DataPath>
+					<ContextMenu name="ИННПоставщикаКонтекстноеМеню" id="30"/>
+					<ExtendedTooltip name="ИННПоставщикаРасширеннаяПодсказка" id="31"/>
+				</InputField>
+				<InputField name="Поставщик" id="32">
+					<DataPath>Список.Поставщик</DataPath>
+					<ContextMenu name="ПоставщикКонтекстноеМеню" id="33"/>
+					<ExtendedTooltip name="ПоставщикРасширеннаяПодсказка" id="34"/>
+				</InputField>
+				<InputField name="Источник" id="35">
+					<DataPath>Список.Источник</DataPath>
+					<ContextMenu name="ИсточникКонтекстноеМеню" id="36"/>
+					<ExtendedTooltip name="ИсточникРасширеннаяПодсказка" id="37"/>
+				</InputField>
+				<InputField name="ДатаОбновления" id="38">
+					<DataPath>Список.ДатаОбновления</DataPath>
+					<ContextMenu name="ДатаОбновленияКонтекстноеМеню" id="39"/>
+					<ExtendedTooltip name="ДатаОбновленияРасширеннаяПодсказка" id="40"/>
+				</InputField>
+				<InputField name="ВидНоменклатуры" id="41">
+					<DataPath>Список.ВидНоменклатуры</DataPath>
+					<ContextMenu name="ВидНоменклатурыКонтекстноеМеню" id="42"/>
+					<ExtendedTooltip name="ВидНоменклатурыРасширеннаяПодсказка" id="43"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Список" id="1">
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>false</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<MainTable>InformationRegister.ЭАрМ_ШтрихкодыПоставщиков</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ЗагрузитьИзФайла" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить из файла</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выберите файл</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗагрузитьИзФайла</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ЗагрузитьИзПапки" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить из папки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выберите папку</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗагрузитьИзПапки</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ЗагрузитьИзСверки" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить из сверки товаров</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить штрихкоды поступивших товаров из реестра товаров (итог сверки), которых ещё нет в регистре. Дубли не добавляются.</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗагрузитьИзСверки</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ПеренестиВУТПроверить" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>В УТ: проверить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сколько строк регистра перейдёт в «Номенклатуру контрагентов» УТ, какие без карточки УТ или контрагента, где расхождения. Ничего не пишет</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПеренестиВУТПроверить</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ПеренестиВУТ" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>В УТ: перенести</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Записать строки регистра в справочник «Номенклатура контрагентов» УТ: артикул поставщика, номенклатура, упаковка и штук в ней, штрихкод. Повторный перенос дублей не создаёт</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПеренестиВУТ</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

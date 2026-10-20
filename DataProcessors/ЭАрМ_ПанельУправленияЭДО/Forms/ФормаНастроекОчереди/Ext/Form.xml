@@ -1,0 +1,376 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Очередь отправки в СБИС</v8:content>
+		</v8:item>
+	</Title>
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ФормаЗаписатьИЗакрыть" id="1">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.Command.ЗаписатьИЗакрыть</CommandName>
+				<ExtendedTooltip name="ФормаЗаписатьИЗакрытьРасширеннаяПодсказка" id="2"/>
+			</Button>
+			<Button name="ФормаЗаписать" id="3">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.Записать</CommandName>
+				<ExtendedTooltip name="ФормаЗаписатьРасширеннаяПодсказка" id="4"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаОпция" id="10">
+			<Group>Vertical</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаОпцияРасширеннаяПодсказка" id="11"/>
+			<ChildItems>
+				<CheckBoxField name="Включена" id="12">
+					<DataPath>Включена</DataPath>
+					<TitleLocation>Right</TitleLocation>
+					<CheckBoxType>CheckBox</CheckBoxType>
+					<ContextMenu name="ВключенаКонтекстноеМеню" id="13"/>
+					<ExtendedTooltip name="ВключенаРасширеннаяПодсказка" id="14"/>
+					<Events>
+						<Event name="OnChange">ВключенаПриИзменении</Event>
+					</Events>
+				</CheckBoxField>
+				<LabelDecoration name="ОписаниеОпции" id="15">
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<HorizontalStretch>true</HorizontalStretch>
+					<TextColor>web:Gray</TextColor>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Регламентное задание само сверяет цепочки и ставит сошедшиеся УПД и УКД («Готов к утверждению») в очередь «Ожидают отправки» - реестр УПД открывать не нужно. Подписывает очередь выбранный ниже способ: на клиенте (открытая форма очереди или реестра УПД) или на сервере 1С (без открытых форм). Выключено - только вручную из форм.</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ОписаниеОпцииКонтекстноеМеню" id="16"/>
+					<ExtendedTooltip name="ОписаниеОпцииРасширеннаяПодсказка" id="17"/>
+				</LabelDecoration>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаОтправка" id="20">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отправка</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>NormalSeparation</Representation>
+			<ExtendedTooltip name="ГруппаОтправкаРасширеннаяПодсказка" id="21"/>
+			<ChildItems>
+				<InputField name="МестоПодписи" id="54">
+					<DataPath>МестоПодписи</DataPath>
+					<TitleLocation>Left</TitleLocation>
+					<ListChoiceMode>true</ListChoiceMode>
+					<ContextMenu name="МестоПодписиКонтекстноеМеню" id="55"/>
+					<ExtendedTooltip name="МестоПодписиРасширеннаяПодсказка" id="56">
+						<Title formatted="false">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Клиент - подписывает открытая форма очереди или реестра УПД ключом своего компьютера, сервер по расписанию только сверяет и ставит в очередь. Сервер - подписывает регламентное задание ключом на сервере 1С, формы открывать не нужно (нужен КриптоПро на сервере).</v8:content>
+							</v8:item>
+						</Title>
+					</ExtendedTooltip>
+					<Events>
+						<Event name="OnChange">МестоПодписиПриИзменении</Event>
+					</Events>
+				</InputField>
+				<InputField name="Подписант" id="22">
+					<DataPath>Подписант</DataPath>
+					<TitleLocation>Left</TitleLocation>
+					<ListChoiceMode>true</ListChoiceMode>
+					<ContextMenu name="ПодписантКонтекстноеМеню" id="23"/>
+					<ExtendedTooltip name="ПодписантРасширеннаяПодсказка" id="24">
+						<Title formatted="false">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>От имени кого очередь уходит в СБИС.</v8:content>
+							</v8:item>
+						</Title>
+					</ExtendedTooltip>
+				</InputField>
+				<InputField name="Интервал" id="25">
+					<DataPath>Интервал</DataPath>
+					<TitleLocation>Left</TitleLocation>
+					<ListChoiceMode>true</ListChoiceMode>
+					<ContextMenu name="ИнтервалКонтекстноеМеню" id="26"/>
+					<ExtendedTooltip name="ИнтервалРасширеннаяПодсказка" id="27">
+						<Title formatted="false">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Как часто регламентное задание сверяет цепочки, ставит сошедшиеся в очередь и отправляет. Сразу после попадания в очередь документ уходит и без него.</v8:content>
+							</v8:item>
+						</Title>
+					</ExtendedTooltip>
+				</InputField>
+				<LabelDecoration name="СостояниеНадпись" id="28">
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<HorizontalStretch>true</HorizontalStretch>
+					<ContextMenu name="СостояниеНадписьКонтекстноеМеню" id="29"/>
+					<ExtendedTooltip name="СостояниеНадписьРасширеннаяПодсказка" id="30"/>
+				</LabelDecoration>
+				<UsualGroup name="ГруппаКнопки" id="31">
+					<Group>AlwaysHorizontal</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаКнопкиРасширеннаяПодсказка" id="32"/>
+					<ChildItems>
+						<Button name="ПарольКлючаНаСервереКнопка" id="33">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.ПарольКлючаНаСервере</CommandName>
+							<ExtendedTooltip name="ПарольКлючаНаСервереКнопкаРасширеннаяПодсказка" id="34"/>
+						</Button>
+						<Button name="ПроверитьПодписьНаСервереКнопка" id="35">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.ПроверитьПодписьНаСервере</CommandName>
+							<ExtendedTooltip name="ПроверитьПодписьНаСервереКнопкаРасширеннаяПодсказка" id="36"/>
+						</Button>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаКриптопровайдер" id="40">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Криптопровайдер на сервере 1С</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>NormalSeparation</Representation>
+			<ExtendedTooltip name="ГруппаКриптопровайдерРасширеннаяПодсказка" id="41"/>
+			<ChildItems>
+				<LabelDecoration name="СерверНадпись" id="42">
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<HorizontalStretch>true</HorizontalStretch>
+					<TextColor>web:Gray</TextColor>
+					<ContextMenu name="СерверНадписьКонтекстноеМеню" id="43"/>
+					<ExtendedTooltip name="СерверНадписьРасширеннаяПодсказка" id="44"/>
+				</LabelDecoration>
+				<InputField name="Модуль" id="45">
+					<DataPath>Модуль</DataPath>
+					<TitleLocation>Left</TitleLocation>
+					<Width>50</Width>
+					<ContextMenu name="МодульКонтекстноеМеню" id="46"/>
+					<ExtendedTooltip name="МодульРасширеннаяПодсказка" id="47">
+						<Title formatted="false">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Пусто - программа из настроек электронной подписи (как на клиенте), затем «Crypto-Pro GOST R 34.10-2012 Cryptographic Service Provider».</v8:content>
+							</v8:item>
+						</Title>
+					</ExtendedTooltip>
+				</InputField>
+				<InputField name="Путь" id="48">
+					<DataPath>Путь</DataPath>
+					<TitleLocation>Left</TitleLocation>
+					<Width>50</Width>
+					<ContextMenu name="ПутьКонтекстноеМеню" id="49"/>
+					<ExtendedTooltip name="ПутьРасширеннаяПодсказка" id="50">
+						<Title formatted="false">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Путь к модулю криптопровайдера на сервере. Для КриптоПро в Windows - пусто.</v8:content>
+							</v8:item>
+						</Title>
+					</ExtendedTooltip>
+				</InputField>
+				<InputField name="ТипПровайдера" id="51">
+					<DataPath>ТипПровайдера</DataPath>
+					<TitleLocation>Left</TitleLocation>
+					<Width>10</Width>
+					<ContextMenu name="ТипПровайдераКонтекстноеМеню" id="52"/>
+					<ExtendedTooltip name="ТипПровайдераРасширеннаяПодсказка" id="53">
+						<Title formatted="false">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Тип провайдера. Пусто - 80 (ГОСТ 2012/256).</v8:content>
+							</v8:item>
+						</Title>
+					</ExtendedTooltip>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Включена" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Очередь отправки в СБИС</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Подписант" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подписант отправки (от имени кого)</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>2</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Интервал" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отправлять с сервера каждые</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>4</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Модуль" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Криптопровайдер</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>200</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Путь" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Путь к модулю</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>500</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ТипПровайдера" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тип провайдера</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>10</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="МестоПодписи" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Где подписывать</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>10</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ЗаписатьИЗакрыть" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Записать и закрыть</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Записать настройки очереди и закрыть</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗаписатьИЗакрыть</Action>
+		</Command>
+		<Command name="Записать" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Записать</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Записать настройки очереди</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Записать</Action>
+		</Command>
+		<Command name="ПарольКлючаНаСервере" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пароль ключа на сервере...</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохранить пароль контейнера ключа подписанта отправки для подписи на сервере (безопасное хранилище). Пусто - удалить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПарольКлючаНаСервере</Action>
+		</Command>
+		<Command name="ПроверитьПодписьНаСервере" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проверить подпись на сервере</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Записать настройки и проверить, может ли сервер 1С подписывать ключом подписанта отправки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПроверитьПодписьНаСервере</Action>
+		</Command>
+	</Commands>
+</Form>

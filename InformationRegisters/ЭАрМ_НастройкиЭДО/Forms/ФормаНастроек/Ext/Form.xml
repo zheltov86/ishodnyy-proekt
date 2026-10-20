@@ -1,0 +1,2692 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ЗаписатьНастройкиКнопка" id="1">
+				<Type>CommandBarButton</Type>
+				<Representation>Text</Representation>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.Command.ЗаписатьНастройки</CommandName>
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Записать</v8:content>
+					</v8:item>
+				</Title>
+				<RepresentationInContextMenu>None</RepresentationInContextMenu>
+				<ExtendedTooltip name="ЗаписатьНастройкиКнопкаРасширеннаяПодсказка" id="2"/>
+			</Button>
+			<Button name="ВыполнитьОбменСейчасКнопка" id="7">
+				<Type>CommandBarButton</Type>
+				<Representation>Text</Representation>
+				<CommandName>Form.Command.ВыполнитьОбменСейчас</CommandName>
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Выполнить обмен сейчас</v8:content>
+					</v8:item>
+				</Title>
+				<RepresentationInContextMenu>None</RepresentationInContextMenu>
+				<ExtendedTooltip name="ВыполнитьОбменСейчасКнопкаРасширеннаяПодсказка" id="8"/>
+			</Button>
+			<Button name="ПроверитьСБИСКнопка" id="3">
+				<Type>CommandBarButton</Type>
+				<Representation>Text</Representation>
+				<CommandName>Form.Command.ПроверитьСБИС</CommandName>
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Проверить СБИС</v8:content>
+					</v8:item>
+				</Title>
+				<RepresentationInContextMenu>None</RepresentationInContextMenu>
+				<ExtendedTooltip name="ПроверитьСБИСКнопкаРасширеннаяПодсказка" id="4"/>
+			</Button>
+			<Button name="ПроверитьFTPКнопка" id="5">
+				<Type>CommandBarButton</Type>
+				<Representation>Text</Representation>
+				<CommandName>Form.Command.ПроверитьFTP</CommandName>
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Проверить FTP</v8:content>
+					</v8:item>
+				</Title>
+				<RepresentationInContextMenu>None</RepresentationInContextMenu>
+				<ExtendedTooltip name="ПроверитьFTPКнопкаРасширеннаяПодсказка" id="6"/>
+			</Button>
+			<Popup name="ПодменюРегистры" id="483">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Регистры</v8:content>
+					</v8:item>
+				</Title>
+				<ToolTip>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Все регистры АРМ ЭДО - списком; в разделе их больше нет, открываются отсюда</v8:content>
+					</v8:item>
+				</ToolTip>
+				<ExtendedTooltip name="ПодменюРегистрыРасширеннаяПодсказка" id="484"/>
+				<ChildItems>
+					<Button name="ОткрытьРегистр_ЭАрМ_УПД_ВходящийКнопка" id="485">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ОткрытьРегистр_ЭАрМ_УПД_Входящий</CommandName>
+						<ExtendedTooltip name="ОткрытьРегистр_ЭАрМ_УПД_ВходящийКнопкаРасширеннаяПодсказка" id="486"/>
+					</Button>
+					<Button name="ОткрытьРегистр_ЭАрМ_УКД_ВходящийКнопка" id="487">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ОткрытьРегистр_ЭАрМ_УКД_Входящий</CommandName>
+						<ExtendedTooltip name="ОткрытьРегистр_ЭАрМ_УКД_ВходящийКнопкаРасширеннаяПодсказка" id="488"/>
+					</Button>
+					<Button name="ОткрытьРегистр_ЭАрМ_РеестрЭТрНКнопка" id="489">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ОткрытьРегистр_ЭАрМ_РеестрЭТрН</CommandName>
+						<ExtendedTooltip name="ОткрытьРегистр_ЭАрМ_РеестрЭТрНКнопкаРасширеннаяПодсказка" id="490"/>
+					</Button>
+					<Button name="ОткрытьРегистр_ЭАрМ_ТоварыЭТрНКнопка" id="491">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ОткрытьРегистр_ЭАрМ_ТоварыЭТрН</CommandName>
+						<ExtendedTooltip name="ОткрытьРегистр_ЭАрМ_ТоварыЭТрНКнопкаРасширеннаяПодсказка" id="492"/>
+					</Button>
+					<Button name="ОткрытьРегистр_ЭАрМ_ПакетыДалионКнопка" id="493">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ОткрытьРегистр_ЭАрМ_ПакетыДалион</CommandName>
+						<ExtendedTooltip name="ОткрытьРегистр_ЭАрМ_ПакетыДалионКнопкаРасширеннаяПодсказка" id="494"/>
+					</Button>
+					<Button name="ОткрытьРегистр_ЭАрМ_ЦепочкаЗакупкиКнопка" id="495">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ОткрытьРегистр_ЭАрМ_ЦепочкаЗакупки</CommandName>
+						<ExtendedTooltip name="ОткрытьРегистр_ЭАрМ_ЦепочкаЗакупкиКнопкаРасширеннаяПодсказка" id="496"/>
+					</Button>
+					<Button name="ОткрытьРегистр_ЭАрМ_СверкаТоваровЦепочкиКнопка" id="497">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ОткрытьРегистр_ЭАрМ_СверкаТоваровЦепочки</CommandName>
+						<ExtendedTooltip name="ОткрытьРегистр_ЭАрМ_СверкаТоваровЦепочкиКнопкаРасширеннаяПодсказка" id="498"/>
+					</Button>
+					<Button name="ОткрытьРегистр_ЭАрМ_РеестрТоваровЗаказовКнопка" id="499">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ОткрытьРегистр_ЭАрМ_РеестрТоваровЗаказов</CommandName>
+						<ExtendedTooltip name="ОткрытьРегистр_ЭАрМ_РеестрТоваровЗаказовКнопкаРасширеннаяПодсказка" id="500"/>
+					</Button>
+					<Button name="ОткрытьРегистр_ЭАрМ_ПравкиЦенПриходовКнопка" id="501">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ОткрытьРегистр_ЭАрМ_ПравкиЦенПриходов</CommandName>
+						<ExtendedTooltip name="ОткрытьРегистр_ЭАрМ_ПравкиЦенПриходовКнопкаРасширеннаяПодсказка" id="502"/>
+					</Button>
+					<Button name="ОткрытьРегистр_ЭАрМ_ЗапросыДалионКнопка" id="503">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ОткрытьРегистр_ЭАрМ_ЗапросыДалион</CommandName>
+						<ExtendedTooltip name="ОткрытьРегистр_ЭАрМ_ЗапросыДалионКнопкаРасширеннаяПодсказка" id="504"/>
+					</Button>
+					<Button name="ОткрытьРегистр_ЭАрМ_ЖурналОбменаЭДОКнопка" id="505">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ОткрытьРегистр_ЭАрМ_ЖурналОбменаЭДО</CommandName>
+						<ExtendedTooltip name="ОткрытьРегистр_ЭАрМ_ЖурналОбменаЭДОКнопкаРасширеннаяПодсказка" id="506"/>
+					</Button>
+					<Button name="ОткрытьРегистр_ЭАрМ_ТрассаПриемаКнопка" id="507">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ОткрытьРегистр_ЭАрМ_ТрассаПриема</CommandName>
+						<ExtendedTooltip name="ОткрытьРегистр_ЭАрМ_ТрассаПриемаКнопкаРасширеннаяПодсказка" id="508"/>
+					</Button>
+					<Button name="ОткрытьРегистр_ЭАрМ_ОжидаемыеПодтвержденияЭДОКнопка" id="509">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ОткрытьРегистр_ЭАрМ_ОжидаемыеПодтвержденияЭДО</CommandName>
+						<ExtendedTooltip name="ОткрытьРегистр_ЭАрМ_ОжидаемыеПодтвержденияЭДОКнопкаРасширеннаяПодсказка" id="510"/>
+					</Button>
+					<Button name="ОткрытьРегистр_СостоянияПоОбъектамУчетаЭДОКнопка" id="511">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ОткрытьРегистр_СостоянияПоОбъектамУчетаЭДО</CommandName>
+						<ExtendedTooltip name="ОткрытьРегистр_СостоянияПоОбъектамУчетаЭДОКнопкаРасширеннаяПодсказка" id="512"/>
+					</Button>
+					<Button name="ОткрытьРегистр_ЭАрМ_ШтрихкодыПоставщиковКнопка" id="513">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ОткрытьРегистр_ЭАрМ_ШтрихкодыПоставщиков</CommandName>
+						<ExtendedTooltip name="ОткрытьРегистр_ЭАрМ_ШтрихкодыПоставщиковКнопкаРасширеннаяПодсказка" id="514"/>
+					</Button>
+					<Button name="ОткрытьРегистр_ЭАрМ_ПарыНоменклатурыПоИмениКнопка" id="515">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ОткрытьРегистр_ЭАрМ_ПарыНоменклатурыПоИмени</CommandName>
+						<ExtendedTooltip name="ОткрытьРегистр_ЭАрМ_ПарыНоменклатурыПоИмениКнопкаРасширеннаяПодсказка" id="516"/>
+					</Button>
+					<Button name="ОткрытьРегистр_ЭАрМ_ОчередьСозданияНоменклатурыКнопка" id="517">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ОткрытьРегистр_ЭАрМ_ОчередьСозданияНоменклатуры</CommandName>
+						<ExtendedTooltip name="ОткрытьРегистр_ЭАрМ_ОчередьСозданияНоменклатурыКнопкаРасширеннаяПодсказка" id="518"/>
+					</Button>
+					<Button name="ОткрытьРегистр_ЭАрМ_КодыМаркировкиСтрокКнопка" id="519">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ОткрытьРегистр_ЭАрМ_КодыМаркировкиСтрок</CommandName>
+						<ExtendedTooltip name="ОткрытьРегистр_ЭАрМ_КодыМаркировкиСтрокКнопкаРасширеннаяПодсказка" id="520"/>
+					</Button>
+				</ChildItems>
+			</Popup>
+			<Popup name="ПодменюОткрыть" id="462">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Открыть</v8:content>
+					</v8:item>
+				</Title>
+				<ToolTip>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Реестры, журнал обмена, подписанты, пересверка номенклатуры</v8:content>
+					</v8:item>
+				</ToolTip>
+				<ExtendedTooltip name="ПодменюОткрытьРасширеннаяПодсказка" id="463"/>
+				<ChildItems>
+					<Button name="ПодписантыИСертификатыКнопка" id="406">
+						<Type>CommandBarButton</Type>
+						<Representation>Text</Representation>
+						<CommandName>Form.Command.ПодписантыИСертификаты</CommandName>
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Подписанты и сертификаты</v8:content>
+							</v8:item>
+						</Title>
+						<ExtendedTooltip name="ПодписантыИСертификатыКнопкаРасширеннаяПодсказка" id="407"/>
+					</Button>
+					<Button name="ПересверкаНоменклатурыКнопка" id="421">
+						<Type>CommandBarButton</Type>
+						<Representation>Text</Representation>
+						<CommandName>Form.Command.ПересверкаНоменклатуры</CommandName>
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Пересверка номенклатуры</v8:content>
+							</v8:item>
+						</Title>
+						<RepresentationInContextMenu>None</RepresentationInContextMenu>
+						<ExtendedTooltip name="ПересверкаНоменклатурыКнопкаРасширеннаяПодсказка" id="422"/>
+					</Button>
+				</ChildItems>
+			</Popup>
+			<Button name="ВыгрузитьЛогиКоманднаяПанель" id="479">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ВыгрузитьЛоги</CommandName>
+				<ExtendedTooltip name="ВыгрузитьЛогиКоманднаяПанельРасширеннаяПодсказка" id="480"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<Pages name="СтраницыНастроек" id="138">
+			<PagesRepresentation>TabsOnTop</PagesRepresentation>
+			<ExtendedTooltip name="СтраницыНастроекРасширеннаяПодсказка" id="139"/>
+			<ChildItems>
+				<Page name="СтраницаНастройки" id="140">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>СБИС</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="СтраницаНастройкиРасширеннаяПодсказка" id="141"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаСБИС" id="50">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Подключение к СБИС</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>NormalSeparation</Representation>
+							<ExtendedTooltip name="ГруппаСБИСРасширеннаяПодсказка" id="51"/>
+							<ChildItems>
+								<InputField name="СБИС_КлиентID" id="17">
+									<DataPath>СБИС_КлиентID</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>app_client_id</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="СБИС_КлиентIDКонтекстноеМеню" id="18"/>
+									<ExtendedTooltip name="СБИС_КлиентIDРасширеннаяПодсказка" id="19"/>
+								</InputField>
+								<InputField name="СБИС_КлиентСекрет" id="20">
+									<DataPath>СБИС_КлиентСекрет</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>app_secret</v8:content>
+										</v8:item>
+									</Title>
+									<PasswordMode>true</PasswordMode>
+									<ContextMenu name="СБИС_КлиентСекретКонтекстноеМеню" id="21"/>
+									<ExtendedTooltip name="СБИС_КлиентСекретРасширеннаяПодсказка" id="22"/>
+								</InputField>
+								<InputField name="СБИС_СекретныйКлюч" id="23">
+									<DataPath>СБИС_СекретныйКлюч</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>secret_key</v8:content>
+										</v8:item>
+									</Title>
+									<PasswordMode>true</PasswordMode>
+									<ContextMenu name="СБИС_СекретныйКлючКонтекстноеМеню" id="24"/>
+									<ExtendedTooltip name="СБИС_СекретныйКлючРасширеннаяПодсказка" id="25"/>
+								</InputField>
+								<InputField name="СБИС_АдресСервера" id="26">
+									<DataPath>СБИС_АдресСервера</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Сервер (без протокола)</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="СБИС_АдресСервераКонтекстноеМеню" id="27"/>
+									<ExtendedTooltip name="СБИС_АдресСервераРасширеннаяПодсказка" id="28"/>
+								</InputField>
+								<InputField name="СБИС_Направление" id="29">
+									<DataPath>СБИС_Направление</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Направление документов</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="СБИС_НаправлениеКонтекстноеМеню" id="30"/>
+									<ExtendedTooltip name="СБИС_НаправлениеРасширеннаяПодсказка" id="31"/>
+								</InputField>
+								<InputField name="СБИС_ТипДокумента" id="32">
+									<DataPath>СБИС_ТипДокумента</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Тип документов ЭПД</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="СБИС_ТипДокументаКонтекстноеМеню" id="33"/>
+									<ExtendedTooltip name="СБИС_ТипДокументаРасширеннаяПодсказка" id="34"/>
+								</InputField>
+								<InputField name="СБИС_ТипРеестраУПД" id="35">
+									<DataPath>СБИС_ТипРеестраУПД</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Реестр ЭДО</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="СБИС_ТипРеестраУПДКонтекстноеМеню" id="36"/>
+									<ExtendedTooltip name="СБИС_ТипРеестраУПДРасширеннаяПодсказка" id="37"/>
+								</InputField>
+								<InputField name="СБИС_ТипВложенияУПД" id="38">
+									<DataPath>СБИС_ТипВложенияУПД</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Форматы вложений УПД</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="СБИС_ТипВложенияУПДКонтекстноеМеню" id="39"/>
+									<ExtendedTooltip name="СБИС_ТипВложенияУПДРасширеннаяПодсказка" id="40"/>
+								</InputField>
+								<InputField name="СБИС_ГлубинаДней" id="41">
+									<DataPath>СБИС_ГлубинаДней</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Глубина запроса, дней</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="СБИС_ГлубинаДнейКонтекстноеМеню" id="42"/>
+									<ExtendedTooltip name="СБИС_ГлубинаДнейРасширеннаяПодсказка" id="43"/>
+								</InputField>
+								<InputField name="СБИС_РазмерСтраницы" id="44">
+									<DataPath>СБИС_РазмерСтраницы</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Документов за запрос</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="СБИС_РазмерСтраницыКонтекстноеМеню" id="45"/>
+									<ExtendedTooltip name="СБИС_РазмерСтраницыРасширеннаяПодсказка" id="46"/>
+								</InputField>
+								<InputField name="СБИС_ВремяЖизниСессии" id="47">
+									<DataPath>СБИС_ВремяЖизниСессии</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Время жизни сессии, мин</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="СБИС_ВремяЖизниСессииКонтекстноеМеню" id="48"/>
+									<ExtendedTooltip name="СБИС_ВремяЖизниСессииРасширеннаяПодсказка" id="49"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаПодписание" id="464">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Подписание</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="СтраницаПодписаниеРасширеннаяПодсказка" id="465"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаПодписант" id="156">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Подписант документов в СБИС</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>NormalSeparation</Representation>
+							<ExtendedTooltip name="ГруппаПодписантРасширеннаяПодсказка" id="157"/>
+							<ChildItems>
+								<InputField name="СБИС_ОтпечатокСертификата" id="144">
+									<DataPath>СБИС_ОтпечатокСертификата</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Отпечаток сертификата</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="СБИС_ОтпечатокСертификатаКонтекстноеМеню" id="145"/>
+									<ExtendedTooltip name="СБИС_ОтпечатокСертификатаРасширеннаяПодсказка" id="146"/>
+								</InputField>
+								<InputField name="СБИС_ФИОПодписанта" id="147">
+									<DataPath>СБИС_ФИОПодписанта</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>ФИО подписанта</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="СБИС_ФИОПодписантаКонтекстноеМеню" id="148"/>
+									<ExtendedTooltip name="СБИС_ФИОПодписантаРасширеннаяПодсказка" id="149"/>
+								</InputField>
+								<InputField name="СБИС_ИННПодписанта" id="150">
+									<DataPath>СБИС_ИННПодписанта</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>ИНН подписанта (физлица)</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="СБИС_ИННПодписантаКонтекстноеМеню" id="151"/>
+									<ExtendedTooltip name="СБИС_ИННПодписантаРасширеннаяПодсказка" id="152"/>
+								</InputField>
+								<InputField name="СБИС_ДолжностьПодписанта" id="153">
+									<DataPath>СБИС_ДолжностьПодписанта</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Должность подписанта</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="СБИС_ДолжностьПодписантаКонтекстноеМеню" id="154"/>
+									<ExtendedTooltip name="СБИС_ДолжностьПодписантаРасширеннаяПодсказка" id="155"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаПодписант2" id="404">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Подписант 2</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>NormalSeparation</Representation>
+							<ExtendedTooltip name="ГруппаПодписант2РасширеннаяПодсказка" id="405"/>
+							<ChildItems>
+								<InputField name="СБИС_ОтпечатокСертификата2" id="392">
+									<DataPath>СБИС_ОтпечатокСертификата2</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Отпечаток сертификата</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="СБИС_ОтпечатокСертификата2КонтекстноеМеню" id="393"/>
+									<ExtendedTooltip name="СБИС_ОтпечатокСертификата2РасширеннаяПодсказка" id="394"/>
+								</InputField>
+								<InputField name="СБИС_ФИОПодписанта2" id="395">
+									<DataPath>СБИС_ФИОПодписанта2</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>ФИО подписанта</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="СБИС_ФИОПодписанта2КонтекстноеМеню" id="396"/>
+									<ExtendedTooltip name="СБИС_ФИОПодписанта2РасширеннаяПодсказка" id="397"/>
+								</InputField>
+								<InputField name="СБИС_ИННПодписанта2" id="398">
+									<DataPath>СБИС_ИННПодписанта2</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>ИНН подписанта (физлица)</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="СБИС_ИННПодписанта2КонтекстноеМеню" id="399"/>
+									<ExtendedTooltip name="СБИС_ИННПодписанта2РасширеннаяПодсказка" id="400"/>
+								</InputField>
+								<InputField name="СБИС_ДолжностьПодписанта2" id="401">
+									<DataPath>СБИС_ДолжностьПодписанта2</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Должность подписанта</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="СБИС_ДолжностьПодписанта2КонтекстноеМеню" id="402"/>
+									<ExtendedTooltip name="СБИС_ДолжностьПодписанта2РасширеннаяПодсказка" id="403"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<InputField name="ПодписантПоУмолчанию" id="418">
+							<DataPath>ПодписантПоУмолчанию</DataPath>
+							<ListChoiceMode>true</ListChoiceMode>
+							<ContextMenu name="ПодписантПоУмолчаниюКонтекстноеМеню" id="419"/>
+							<ExtendedTooltip name="ПодписантПоУмолчаниюРасширеннаяПодсказка" id="420">
+								<Title formatted="false">
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Кто подписывает без вопроса «Кто подписывает?». Подписант, выбранный на рабочем месте в «Ожидают отправки», важнее. «Спрашивать» - как раньше.</v8:content>
+									</v8:item>
+								</Title>
+							</ExtendedTooltip>
+						</InputField>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаДалион" id="466">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Далион и обмен</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="СтраницаДалионРасширеннаяПодсказка" id="467"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаFTP" id="79">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>FTP-сервер Далиона</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>NormalSeparation</Representation>
+							<ExtendedTooltip name="ГруппаFTPРасширеннаяПодсказка" id="80"/>
+							<ChildItems>
+								<InputField name="FTP_Сервер" id="52">
+									<DataPath>FTP_Сервер</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Сервер</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="FTP_СерверКонтекстноеМеню" id="53"/>
+									<ExtendedTooltip name="FTP_СерверРасширеннаяПодсказка" id="54"/>
+								</InputField>
+								<InputField name="FTP_Порт" id="55">
+									<DataPath>FTP_Порт</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Порт</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="FTP_ПортКонтекстноеМеню" id="56"/>
+									<ExtendedTooltip name="FTP_ПортРасширеннаяПодсказка" id="57"/>
+								</InputField>
+								<InputField name="FTP_Пользователь" id="58">
+									<DataPath>FTP_Пользователь</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Пользователь</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="FTP_ПользовательКонтекстноеМеню" id="59"/>
+									<ExtendedTooltip name="FTP_ПользовательРасширеннаяПодсказка" id="60"/>
+								</InputField>
+								<InputField name="FTP_Пароль" id="61">
+									<DataPath>FTP_Пароль</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Пароль</v8:content>
+										</v8:item>
+									</Title>
+									<PasswordMode>true</PasswordMode>
+									<ContextMenu name="FTP_ПарольКонтекстноеМеню" id="62"/>
+									<ExtendedTooltip name="FTP_ПарольРасширеннаяПодсказка" id="63"/>
+								</InputField>
+								<InputField name="FTP_Каталог" id="64">
+									<DataPath>FTP_Каталог</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Каталог</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="FTP_КаталогКонтекстноеМеню" id="65"/>
+									<ExtendedTooltip name="FTP_КаталогРасширеннаяПодсказка" id="66"/>
+								</InputField>
+								<CheckBoxField name="FTP_Пассивное" id="67">
+									<DataPath>FTP_Пассивное</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Пассивное соединение</v8:content>
+										</v8:item>
+									</Title>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="FTP_ПассивноеКонтекстноеМеню" id="68"/>
+									<ExtendedTooltip name="FTP_ПассивноеРасширеннаяПодсказка" id="69"/>
+								</CheckBoxField>
+								<InputField name="FTP_Таймаут" id="70">
+									<DataPath>FTP_Таймаут</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Таймаут, секунд</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="FTP_ТаймаутКонтекстноеМеню" id="71"/>
+									<ExtendedTooltip name="FTP_ТаймаутРасширеннаяПодсказка" id="72"/>
+								</InputField>
+								<InputField name="FTP_КаталогВыгрузки" id="73">
+									<DataPath>FTP_КаталогВыгрузки</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Подкаталог выгрузки</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="FTP_КаталогВыгрузкиКонтекстноеМеню" id="74"/>
+									<ExtendedTooltip name="FTP_КаталогВыгрузкиРасширеннаяПодсказка" id="75"/>
+								</InputField>
+								<InputField name="FTP_КаталогОтветов" id="76">
+									<DataPath>FTP_КаталогОтветов</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Подкаталог ответов</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="FTP_КаталогОтветовКонтекстноеМеню" id="77"/>
+									<ExtendedTooltip name="FTP_КаталогОтветовРасширеннаяПодсказка" id="78"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаМонитор" id="541">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Монитор папок (служба FolderMonitor)</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Пакеты Далиона берутся из очереди Монитора папок: он отдаёт только дописанные файлы. Монитор не ответил - пакеты читаются из папки, как раньше</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>NormalSeparation</Representation>
+							<ExtendedTooltip name="ГруппаМониторРасширеннаяПодсказка" id="542"/>
+							<ChildItems>
+								<CheckBoxField name="Монитор_Включен" id="543">
+									<DataPath>Монитор_Включен</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Брать пакеты из очереди Монитора папок</v8:content>
+										</v8:item>
+									</Title>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="Монитор_ВключенКонтекстноеМеню" id="544"/>
+									<ExtendedTooltip name="Монитор_ВключенРасширеннаяПодсказка" id="545"/>
+								</CheckBoxField>
+								<InputField name="Монитор_Сервер" id="546">
+									<DataPath>Монитор_Сервер</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Сервер</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Имя или IP сервера, где стоит служба FolderMonitor; localhost - этот же сервер</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ContextMenu name="Монитор_СерверКонтекстноеМеню" id="547"/>
+									<ExtendedTooltip name="Монитор_СерверРасширеннаяПодсказка" id="548"/>
+								</InputField>
+								<InputField name="Монитор_Порт" id="549">
+									<DataPath>Монитор_Порт</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Порт</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Порт службы, по умолчанию 5080</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ContextMenu name="Монитор_ПортКонтекстноеМеню" id="550"/>
+									<ExtendedTooltip name="Монитор_ПортРасширеннаяПодсказка" id="551"/>
+								</InputField>
+								<InputField name="Монитор_Ключ" id="552">
+									<DataPath>Монитор_Ключ</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Ключ API</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Веб-интерфейс монитора → Настройки → Ключ API</v8:content>
+										</v8:item>
+									</ToolTip>
+									<PasswordMode>true</PasswordMode>
+									<ContextMenu name="Монитор_КлючКонтекстноеМеню" id="553"/>
+									<ExtendedTooltip name="Монитор_КлючРасширеннаяПодсказка" id="554"/>
+								</InputField>
+								<InputField name="Монитор_ИдПапки" id="555">
+									<DataPath>Монитор_ИдПапки</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Папка в мониторе (Id)</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Id папки пакетов Далиона в мониторе - покажет кнопка «Проверить монитор». 0 - очередь всех папок</v8:content>
+										</v8:item>
+									</ToolTip>
+									<DropListButton>true</DropListButton>
+									<ChoiceListButton>true</ChoiceListButton>
+									<ContextMenu name="Монитор_ИдПапкиКонтекстноеМеню" id="556"/>
+									<ExtendedTooltip name="Монитор_ИдПапкиРасширеннаяПодсказка" id="557"/>
+								</InputField>
+								<Button name="ПроверитьМониторКнопка" id="558">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.ПроверитьМонитор</CommandName>
+									<ExtendedTooltip name="ПроверитьМониторКнопкаРасширеннаяПодсказка" id="559"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаОбмен" id="108">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Обмен</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>NormalSeparation</Representation>
+							<ExtendedTooltip name="ГруппаОбменРасширеннаяПодсказка" id="109"/>
+							<ChildItems>
+								<CheckBoxField name="ОтключитьФоновыеЗадания" id="293">
+									<DataPath>ОтключитьФоновыеЗадания</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Отключить все фоновые задания</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Снимает с расписания регламентные задания ЭДО и останавливает уже запущенные фоновые. Кнопки на открытых формах работают.</v8:content>
+										</v8:item>
+									</ToolTip>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ОтключитьФоновыеЗаданияКонтекстноеМеню" id="294"/>
+									<ExtendedTooltip name="ОтключитьФоновыеЗаданияРасширеннаяПодсказка" id="295"/>
+								</CheckBoxField>
+								<CheckBoxField name="ОбменВключен" id="81">
+									<DataPath>ОбменВключен</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Обмен включён</v8:content>
+										</v8:item>
+									</Title>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ОбменВключенКонтекстноеМеню" id="82"/>
+									<ExtendedTooltip name="ОбменВключенРасширеннаяПодсказка" id="83"/>
+								</CheckBoxField>
+								<CheckBoxField name="ВыгружатьАвтоматически" id="84">
+									<DataPath>ВыгружатьАвтоматически</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Выгружать в Далион регламентно</v8:content>
+										</v8:item>
+									</Title>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ВыгружатьАвтоматическиКонтекстноеМеню" id="85"/>
+									<ExtendedTooltip name="ВыгружатьАвтоматическиРасширеннаяПодсказка" id="86"/>
+								</CheckBoxField>
+								<CheckBoxField name="ТолькоПриемИзДалиона" id="290">
+									<DataPath>ТолькоПриемИзДалиона</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Только приём из Далиона</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Документы на создание в Далион не отправляются. Читаются только готовые пакеты из result.</v8:content>
+										</v8:item>
+									</ToolTip>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ТолькоПриемИзДалионаКонтекстноеМеню" id="291"/>
+									<ExtendedTooltip name="ТолькоПриемИзДалионаРасширеннаяПодсказка" id="292"/>
+								</CheckBoxField>
+								<InputField name="ТранспортОбмена" id="87">
+									<DataPath>ТранспортОбмена</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Транспорт (FTP, Папка, HTTP)</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ТранспортОбменаКонтекстноеМеню" id="88"/>
+									<ExtendedTooltip name="ТранспортОбменаРасширеннаяПодсказка" id="89"/>
+								</InputField>
+								<InputField name="ПапкаВыгрузки" id="90">
+									<DataPath>ПапкаВыгрузки</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Папка выгрузки в Далион</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ПапкаВыгрузкиКонтекстноеМеню" id="91"/>
+									<ExtendedTooltip name="ПапкаВыгрузкиРасширеннаяПодсказка" id="92"/>
+								</InputField>
+								<InputField name="ПапкаОбмена" id="93">
+									<DataPath>ПапкаОбмена</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Папка ответов Далион</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ПапкаОбменаКонтекстноеМеню" id="94"/>
+									<ExtendedTooltip name="ПапкаОбменаРасширеннаяПодсказка" id="95"/>
+								</InputField>
+								<InputField name="АдресСервисаДалион" id="96">
+									<DataPath>АдресСервисаДалион</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Адрес сервиса Далион</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="АдресСервисаДалионКонтекстноеМеню" id="97"/>
+									<ExtendedTooltip name="АдресСервисаДалионРасширеннаяПодсказка" id="98"/>
+								</InputField>
+								<InputField name="МаксимумДокументовЗаСеанс" id="99">
+									<DataPath>МаксимумДокументовЗаСеанс</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Документов за сеанс</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="МаксимумДокументовЗаСеансКонтекстноеМеню" id="100"/>
+									<ExtendedTooltip name="МаксимумДокументовЗаСеансРасширеннаяПодсказка" id="101"/>
+								</InputField>
+								<InputField name="МаксимумПопытокВыгрузки" id="102">
+									<DataPath>МаксимумПопытокВыгрузки</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Попыток выгрузки документа</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="МаксимумПопытокВыгрузкиКонтекстноеМеню" id="103"/>
+									<ExtendedTooltip name="МаксимумПопытокВыгрузкиРасширеннаяПодсказка" id="104"/>
+								</InputField>
+								<CheckBoxField name="ЛогироватьСобытия" id="105">
+									<DataPath>ЛогироватьСобытия</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Подробный журнал</v8:content>
+										</v8:item>
+									</Title>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ЛогироватьСобытияКонтекстноеМеню" id="106"/>
+									<ExtendedTooltip name="ЛогироватьСобытияРасширеннаяПодсказка" id="107"/>
+								</CheckBoxField>
+								<InputField name="ПапкаВыгрузкиБух" id="415">
+									<DataPath>ПапкаВыгрузкиБух</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Папка обмена с БП</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Сюда после подписи выгружаются УПД (JSON) для БП; она же папка входящих в расширении ОбменED. Пусто - выгрузки нет.</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ContextMenu name="ПапкаВыгрузкиБухКонтекстноеМеню" id="416"/>
+									<ExtendedTooltip name="ПапкаВыгрузкиБухРасширеннаяПодсказка" id="417"/>
+								</InputField>
+								<CheckBoxField name="АвтообменСБух" id="537">
+									<DataPath>АвтообменСБух</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Автообмен с БП</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Включено: подписанные УПД и УКД сами уходят в папку обмена (после подписи и регламентом), ответы БП читаются регламентом. Выключено - только вручную: «Выгрузка в БП», «Пакеты в БП».</v8:content>
+										</v8:item>
+									</ToolTip>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="АвтообменСБухКонтекстноеМеню" id="538"/>
+									<ExtendedTooltip name="АвтообменСБухРасширеннаяПодсказка" id="539"/>
+								</CheckBoxField>
+								<CheckBoxField name="Очередь_Включена" id="569">
+									<DataPath>Очередь_Включена</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Обработка событий через очередь</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Включено: записи в реестры УПД, УКД, ЭТрН и состояния ЭДО только ставят отметку изменений и строку очереди, работу делает регламент «Обработка очереди» (раз в минуту); реестр УПД раз в минуту проверяет отметку вместо четырёх таймеров. Выключено - всё по-старому: прямой вызов в подписках и таймеры формы.</v8:content>
+										</v8:item>
+									</ToolTip>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="Очередь_ВключенаКонтекстноеМеню" id="570"/>
+									<ExtendedTooltip name="Очередь_ВключенаРасширеннаяПодсказка" id="571"/>
+								</CheckBoxField>
+								<CheckBoxField name="Статусы_ЧерезМонитор" id="560">
+									<DataPath>Статусы_ЧерезМонитор</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Статусы Бух через монитор</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Включено: регламент «Применение пакетов» (раз в 5 минут) читает файлы ut_Статусы_*.json от Монитора папок и пишет «Отправлено в БП» и «Документ в БП» в реестры УПД и УКД. Выключено - ничего не делает.</v8:content>
+										</v8:item>
+									</ToolTip>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="Статусы_ЧерезМониторКонтекстноеМеню" id="561"/>
+									<ExtendedTooltip name="Статусы_ЧерезМониторРасширеннаяПодсказка" id="562"/>
+								</CheckBoxField>
+								<InputField name="Статусы_Подпапка" id="563">
+									<DataPath>Статусы_Подпапка</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Подпапка статусов монитора</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Подпапка папки обмена с БП, куда Монитор кладёт ut_Статусы_*.json. По умолчанию ut-status. Применённые файлы уходят в archive, битые - в error, Монитору остаётся monitor_response_*.json.</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ContextMenu name="Статусы_ПодпапкаКонтекстноеМеню" id="564"/>
+									<ExtendedTooltip name="Статусы_ПодпапкаРасширеннаяПодсказка" id="565"/>
+								</InputField>
+								<InputField name="Сверка_Подпапка" id="566">
+									<DataPath>Сверка_Подпапка</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Подпапка поступлений БП</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Подпапка папки обмена с БП с файлами ПоступленияБП_*_авто.json (их пишет БП). По последнему файлу раз в 3 часа идёт сверка «что есть в Бух». По умолчанию ПоступленияБП.</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ContextMenu name="Сверка_ПодпапкаКонтекстноеМеню" id="567"/>
+									<ExtendedTooltip name="Сверка_ПодпапкаРасширеннаяПодсказка" id="568"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаСервис" id="468">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сервис</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="СтраницаСервисРасширеннаяПодсказка" id="469"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаЛоги" id="470">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Логи и настройки в файл</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Логи - в папку error, настройки - в папку setting папки пакетов Далиона (папки обмена)</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>NormalSeparation</Representation>
+							<ExtendedTooltip name="ГруппаЛогиРасширеннаяПодсказка" id="471"/>
+							<ChildItems>
+								<InputField name="Логи_Часов" id="472">
+									<DataPath>Логи_Часов</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Логи за последние, часов</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="Логи_ЧасовКонтекстноеМеню" id="473"/>
+									<ExtendedTooltip name="Логи_ЧасовРасширеннаяПодсказка" id="474"/>
+								</InputField>
+								<UsualGroup name="ГруппаЛогиКнопки" id="481">
+									<Group>AlwaysHorizontal</Group>
+									<Behavior>Usual</Behavior>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаЛогиКнопкиРасширеннаяПодсказка" id="482"/>
+									<ChildItems>
+										<Button name="ВыгрузитьЛогиКнопка" id="475">
+											<Type>UsualButton</Type>
+											<CommandName>Form.Command.ВыгрузитьЛоги</CommandName>
+											<ExtendedTooltip name="ВыгрузитьЛогиКнопкаРасширеннаяПодсказка" id="476"/>
+										</Button>
+										<Button name="ВыгрузитьНастройкиКнопка" id="477">
+											<Type>UsualButton</Type>
+											<CommandName>Form.Command.ВыгрузитьНастройки</CommandName>
+											<ExtendedTooltip name="ВыгрузитьНастройкиКнопкаРасширеннаяПодсказка" id="478"/>
+										</Button>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаТестСверки" id="430">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Тест приёма и сверки</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>NormalSeparation</Representation>
+							<ExtendedTooltip name="ГруппаТестСверкиРасширеннаяПодсказка" id="431"/>
+							<ChildItems>
+								<InputField name="ТестСверки_Количество" id="452">
+									<DataPath>ТестСверки_Количество</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Сколько поставок</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Сколько поставок (УПД с УКД, заказ, приходная) создать в новой подпапке и прогнать через приём и сверку. Все сценарии УКД и аннулирования - хотя бы по разу, если поставок хватает. 0 - тест по своим XML УПД из папки ниже.</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ContextMenu name="ТестСверки_КоличествоКонтекстноеМеню" id="453"/>
+									<ExtendedTooltip name="ТестСверки_КоличествоРасширеннаяПодсказка" id="454"/>
+								</InputField>
+								<InputField name="ТестСверки_ПроцентРасхождений" id="455">
+									<DataPath>ТестСверки_ПроцентРасхождений</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>С расхождениями, %</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Какая доля поставок создаётся с расхождением (недовоз, перевоз, цена, нет или лишняя строка, приход по исходной при УКД, приход по аннулированной УКД, аннулированная УПД). Остальные должны сойтись с учётом УКД.</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ContextMenu name="ТестСверки_ПроцентРасхожденийКонтекстноеМеню" id="456"/>
+									<ExtendedTooltip name="ТестСверки_ПроцентРасхожденийРасширеннаяПодсказка" id="457"/>
+								</InputField>
+								<Button name="ТестСверкиКнопка" id="432">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.ТестСверки</CommandName>
+									<ExtendedTooltip name="ТестСверкиКнопкаРасширеннаяПодсказка" id="433"/>
+								</Button>
+								<Button name="УдалитьТестовыеДанныеКнопка" id="446">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.УдалитьТестовыеДанные</CommandName>
+									<ExtendedTooltip name="УдалитьТестовыеДанныеКнопкаРасширеннаяПодсказка" id="447"/>
+								</Button>
+								<InputField name="ТестСверки_Папка" id="434">
+									<DataPath>ТестСверки_Папка</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Папка, куда создать файлы</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Папка теста приёма и сверки: XML УПД и рядом json Далиона. Пусто - подпапка Тест_сверки папки пакетов Далиона. Должна быть доступна серверу 1С. Запоминается при нажатии кнопки.</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ContextMenu name="ТестСверки_ПапкаКонтекстноеМеню" id="435"/>
+									<ExtendedTooltip name="ТестСверки_ПапкаРасширеннаяПодсказка" id="436"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаАрхив" id="438">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Архив пакетов Далиона</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>NormalSeparation</Representation>
+							<ExtendedTooltip name="ГруппаАрхивРасширеннаяПодсказка" id="439"/>
+							<ChildItems>
+								<Button name="ОчиститьАрхивКнопка" id="440">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.ОчиститьАрхив</CommandName>
+									<ExtendedTooltip name="ОчиститьАрхивКнопкаРасширеннаяПодсказка" id="441"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаЗамеры" id="410">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Замеры</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>NormalSeparation</Representation>
+							<ExtendedTooltip name="ГруппаЗамерыРасширеннаяПодсказка" id="411"/>
+							<ChildItems>
+								<InputField name="Замеры_Папка" id="412">
+									<DataPath>Замеры_Папка</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Папка для замеров</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Папка, куда пишутся замеры времени (zamery_*.csv): шаги построения цепочки при выборе строки в реестре УПД. Пусто - замеры выключены. Папка должна быть доступна серверу 1С, например C:\ОбменЭДО\Замеры</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ContextMenu name="Замеры_ПапкаКонтекстноеМеню" id="413"/>
+									<ExtendedTooltip name="Замеры_ПапкаРасширеннаяПодсказка" id="414"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаАдминка" id="521">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Админка</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="СтраницаАдминкаРасширеннаяПодсказка" id="522"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаОчисткаЖурнала" id="523">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Очистка журнала обмена ЭДО</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Удаляет записи регистра «Журнал обмена ЭДО» (ЭАрМ_ЖурналОбменаЭДО) за период: с даты «С» (пусто - с самой первой записи) по дату «По» включительно. Перед удалением показывает, сколько записей будет удалено, и спрашивает подтверждение. Удаляет порциями по 1000 записей в транзакциях; начало, итог и ошибки - в журнал регистрации (событие АРМ_ЭДО.ОчисткаЖурналаОбмена). Трасса приёма (ТрассаПриема.log) и другие регистры не затрагиваются</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>NormalSeparation</Representation>
+							<ExtendedTooltip name="ГруппаОчисткаЖурналаРасширеннаяПодсказка" id="524"/>
+							<ChildItems>
+								<InputField name="ОчисткаЖурнала_С" id="525">
+									<DataPath>ОчисткаЖурнала_С</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>С (пусто - с первой записи)</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>С какого дня удалять записи журнала обмена. Пусто - со всеми более старыми записями</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ClearButton>true</ClearButton>
+									<ContextMenu name="ОчисткаЖурнала_СКонтекстноеМеню" id="526"/>
+									<ExtendedTooltip name="ОчисткаЖурнала_СРасширеннаяПодсказка" id="527"/>
+								</InputField>
+								<InputField name="ОчисткаЖурнала_По" id="528">
+									<DataPath>ОчисткаЖурнала_По</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>По (включительно)</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>По какой день включительно удалять записи журнала обмена. По умолчанию - месяц назад: свежий журнал остаётся</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ClearButton>true</ClearButton>
+									<ContextMenu name="ОчисткаЖурнала_ПоКонтекстноеМеню" id="529"/>
+									<ExtendedTooltip name="ОчисткаЖурнала_ПоРасширеннаяПодсказка" id="530"/>
+								</InputField>
+								<UsualGroup name="ГруппаОчисткаЖурналаКнопки" id="531">
+									<Group>AlwaysHorizontal</Group>
+									<Behavior>Usual</Behavior>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаОчисткаЖурналаКнопкиРасширеннаяПодсказка" id="532"/>
+									<ChildItems>
+										<Button name="ПодсчитатьЗаписиЖурналаКнопка" id="533">
+											<Type>UsualButton</Type>
+											<CommandName>Form.Command.ПодсчитатьЗаписиЖурнала</CommandName>
+											<ExtendedTooltip name="ПодсчитатьЗаписиЖурналаКнопкаРасширеннаяПодсказка" id="534"/>
+										</Button>
+										<Button name="ОчиститьЖурналОбменаКнопка" id="535">
+											<Type>UsualButton</Type>
+											<CommandName>Form.Command.ОчиститьЖурналОбмена</CommandName>
+											<ExtendedTooltip name="ОчиститьЖурналОбменаКнопкаРасширеннаяПодсказка" id="536"/>
+										</Button>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+		<InputField name="ДатаПоследнегоОбмена" id="110">
+			<DataPath>ДатаПоследнегоОбмена</DataPath>
+			<ReadOnly>true</ReadOnly>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Последний обмен</v8:content>
+				</v8:item>
+			</Title>
+			<ContextMenu name="ДатаПоследнегоОбменаКонтекстноеМеню" id="111"/>
+			<ExtendedTooltip name="ДатаПоследнегоОбменаРасширеннаяПодсказка" id="112"/>
+		</InputField>
+		<LabelField name="СтатусПроверки" id="113">
+			<DataPath>СтатусПроверки</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Результат</v8:content>
+				</v8:item>
+			</Title>
+			<Height>8</Height>
+			<HorizontalStretch>true</HorizontalStretch>
+			<VerticalStretch>true</VerticalStretch>
+			<ContextMenu name="СтатусПроверкиКонтекстноеМеню" id="114"/>
+			<ExtendedTooltip name="СтатусПроверкиРасширеннаяПодсказка" id="115"/>
+		</LabelField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Список" id="1">
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>false</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<MainTable>InformationRegister.ЭАрМ_НастройкиЭДО</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="СБИС_КлиентID" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>app_client_id</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>100</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="СБИС_КлиентСекрет" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>app_secret</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>500</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="СБИС_СекретныйКлюч" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>secret_key</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>500</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="СБИС_АдресСервера" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сервер (без протокола)</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>100</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="СБИС_Направление" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Направление документов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>20</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="СБИС_ТипДокумента" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тип документов ЭПД</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>50</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="СБИС_ТипРеестраУПД" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Реестр ЭДО</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>30</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="СБИС_ТипВложенияУПД" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Форматы вложений УПД</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>200</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="СБИС_ГлубинаДней" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Глубина запроса, дней</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>4</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="СБИС_РазмерСтраницы" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Документов за запрос</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>5</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="СБИС_ВремяЖизниСессии" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Время жизни сессии, мин</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>4</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="FTP_Сервер" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сервер</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>100</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="FTP_Порт" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Порт</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>5</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="FTP_Пользователь" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пользователь</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>100</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="FTP_Пароль" id="16">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пароль</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>100</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="FTP_Каталог" id="17">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Каталог</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>200</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="FTP_Пассивное" id="18">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пассивное соединение</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="FTP_Таймаут" id="19">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Таймаут, секунд</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>4</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="FTP_КаталогВыгрузки" id="20">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подкаталог выгрузки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>100</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="FTP_КаталогОтветов" id="21">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подкаталог ответов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>100</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ОтключитьФоновыеЗадания" id="45">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отключить все фоновые задания</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ОбменВключен" id="22">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обмен включён</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ВыгружатьАвтоматически" id="23">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выгружать в Далион регламентно</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ТолькоПриемИзДалиона" id="37">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Только приём из Далиона</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ТранспортОбмена" id="24">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Транспорт (FTP, Папка, HTTP)</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>10</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПапкаВыгрузки" id="25">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Папка выгрузки в Далион</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>500</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПапкаОбмена" id="26">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Папка ответов Далион</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>500</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="АдресСервисаДалион" id="27">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Адрес сервиса Далион</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>200</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="МаксимумДокументовЗаСеанс" id="28">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Документов за сеанс</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>5</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="МаксимумПопытокВыгрузки" id="29">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Попыток выгрузки документа</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>3</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ЛогироватьСобытия" id="30">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подробный журнал</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="СтатусПроверки" id="31">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Результат</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ДатаПоследнегоОбмена" id="32">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Последний обмен</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>50</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="СБИС_ОтпечатокСертификата" id="33">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отпечаток сертификата</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>60</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="СБИС_ФИОПодписанта" id="34">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ФИО подписанта</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>150</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="СБИС_ИННПодписанта" id="35">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ИНН подписанта</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>20</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="СБИС_ДолжностьПодписанта" id="36">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Должность подписанта</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>100</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="СБИС_ОтпечатокСертификата2" id="38">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отпечаток сертификата (подписант 2)</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>60</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="СБИС_ФИОПодписанта2" id="39">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ФИО подписанта (подписант 2)</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>150</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="СБИС_ИННПодписанта2" id="40">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ИНН подписанта (подписант 2)</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>20</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="СБИС_ДолжностьПодписанта2" id="41">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Должность подписанта (подписант 2)</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>100</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Замеры_Папка" id="42">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Папка для замеров</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ТестСверки_Папка" id="46">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Папка, куда создать файлы</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ТестСверки_Количество" id="47">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сколько поставок</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>5</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ТестСверки_ПроцентРасхождений" id="48">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>С расхождениями, %</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>3</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Логи_Часов" id="49">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Логи за последние, часов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>5</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПапкаВыгрузкиБух" id="43">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Папка обмена с БП</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="АвтообменСБух" id="52">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Автообмен с БП</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ПодписантПоУмолчанию" id="44">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подписант по умолчанию</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>2</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ОчисткаЖурнала_С" id="50">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Очистка журнала с</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ОчисткаЖурнала_По" id="51">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Очистка журнала по</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Очередь_Включена" id="61">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обработка событий через очередь</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Статусы_ЧерезМонитор" id="58">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Статусы Бух через монитор</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Статусы_Подпапка" id="59">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подпапка статусов монитора</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>200</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Сверка_Подпапка" id="60">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подпапка поступлений БП</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>200</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Монитор_Включен" id="53">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Брать пакеты из очереди Монитора папок</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Монитор_Сервер" id="54">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сервер Монитора папок</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>200</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Монитор_Порт" id="55">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Порт Монитора папок</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>5</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Монитор_Ключ" id="56">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ключ API Монитора папок</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>200</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Монитор_ИдПапки" id="57">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Папка в мониторе (Id)</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ЗаписатьНастройки" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Записать</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ЗаписатьНастройки</Action>
+			<CurrentRowUse>Use</CurrentRowUse>
+		</Command>
+		<Command name="ПроверитьСБИС" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проверить СБИС</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ПроверитьСБИС</Action>
+			<CurrentRowUse>Use</CurrentRowUse>
+		</Command>
+		<Command name="ПроверитьFTP" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проверить FTP</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ПроверитьFTP</Action>
+			<CurrentRowUse>Use</CurrentRowUse>
+		</Command>
+		<Command name="ВыполнитьОбменСейчас" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выполнить обмен сейчас</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ВыполнитьОбменСейчас</Action>
+			<CurrentRowUse>Use</CurrentRowUse>
+		</Command>
+		<Command name="ОчиститьАрхив" id="442">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Очистить архив</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Удаляет файлы из папок archive папки пакетов Далиона (куда уходят принятые dalion_*.json): archive и result\archive. Другие папки не затрагиваются. Перед удалением спрашивает подтверждение</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОчиститьАрхив</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="УдалитьТестовыеДанные" id="448">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Удалить тестовые данные</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Удаляет всё, что создал тест приёма и сверки: УПД и ЭТрН «ТЕСТ…» с товарами, пакеты, цепочки, сверку, реестр товаров и документы тестовых заказов и приходных, штрихкоды тестового поставщика. Настоящие документы не трогает; настоящая цепочка, привязавшаяся к тестовой УПД, только отвязывается. Трасса, журнал и файлы остаются. Перед удалением спрашивает подтверждение</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>УдалитьТестовыеДанные</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ТестСверки" id="437">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тест приёма и сверки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Единый тест приёма и сверки - фоном. «Сколько поставок» больше 0: в новой подпапке «Прогон_ГГГГММДД_ЧЧММСС» папки ниже (пусто - Тест_сверки папки пакетов) создаются XML УПД и УКД тестового поставщика «ООО ТЕСТ Сверки» по всем сценариям УКД и аннулирования, указанный процент - с расхождениями. 0 - тест по своим XML из папки. Каждую УПД и УКД пишет в реестры как из СБИС, рядом кладёт заказ и приходную Далиона и гонит полный проход приёма: пакеты, цепочка, поиск УПД, документы, сверка. Итог по каждой поставке (ожидалось / получилось) и время по этапам - в поле статуса и в ТрассаПриема.log</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ТестСверки</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ПодписантыИСертификаты" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подписанты и сертификаты</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохранить настройки и показать данные подписантов: кому выдан сертификат, ИНН, издатель, срок действия, отпечаток - и все сертификаты с закрытым ключом на этом компьютере</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПодписантыИСертификаты</Action>
+		</Command>
+		<Command name="ПересверкаНоменклатуры" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пересверка номенклатуры</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Строки УПД, сверенные не с той строкой прихода или получившие чужой штрихкод; ручные пары с номенклатурой Далиона и дубли штрихкодов поставщиков</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПересверкаНоменклатуры</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ВыгрузитьЛоги" id="460">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выгрузить логи</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Трасса приёма и журнал обмена за последние часы (поле на вкладке «Сервис») - в текстовые файлы папки error в папке пакетов Далиона: Логи_дата.txt - всё, Ошибки_дата.txt - только ошибки и «ОШИБКА ПРОВЕРКИ»</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВыгрузитьЛоги</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ВыгрузитьНастройки" id="461">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выгрузить настройки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохранённые настройки ЭДО - в текстовый файл папки setting в папке пакетов Далиона. Пароли и секреты не выгружаются (звёздочки)</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВыгрузитьНастройки</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОткрытьРегистр_ЭАрМ_УПД_Входящий" id="470">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Реестр УПД (СБИС)</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть список «Реестр УПД (СБИС)» (РегистрСведений.ЭАрМ_УПД_Входящий)</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОткрытьРегистр</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОткрытьРегистр_ЭАрМ_УКД_Входящий" id="471">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Реестр УКД (СБИС)</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть список «Реестр УКД (СБИС)» (РегистрСведений.ЭАрМ_УКД_Входящий)</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОткрытьРегистр</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОткрытьРегистр_ЭАрМ_РеестрЭТрН" id="472">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Реестр ЭТрН (СБИС)</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть список «Реестр ЭТрН (СБИС)» (РегистрСведений.ЭАрМ_РеестрЭТрН)</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОткрытьРегистр</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОткрытьРегистр_ЭАрМ_ТоварыЭТрН" id="473">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Товары УПД, УКД и ЭТрН</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть список «Товары УПД, УКД и ЭТрН» (РегистрСведений.ЭАрМ_ТоварыЭТрН)</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОткрытьРегистр</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОткрытьРегистр_ЭАрМ_ПакетыДалион" id="474">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пакеты Далиона</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть список «Пакеты Далиона» (РегистрСведений.ЭАрМ_ПакетыДалион)</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОткрытьРегистр</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОткрытьРегистр_ЭАрМ_ЦепочкаЗакупки" id="475">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Цепочка закупки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть список «Цепочка закупки» (РегистрСведений.ЭАрМ_ЦепочкаЗакупки)</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОткрытьРегистр</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОткрытьРегистр_ЭАрМ_СверкаТоваровЦепочки" id="476">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сверка товаров цепочки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть список «Сверка товаров цепочки» (РегистрСведений.ЭАрМ_СверкаТоваровЦепочки)</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОткрытьРегистр</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОткрытьРегистр_ЭАрМ_РеестрТоваровЗаказов" id="477">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Реестр товаров по заказам</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть список «Реестр товаров по заказам» (РегистрСведений.ЭАрМ_РеестрТоваровЗаказов)</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОткрытьРегистр</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОткрытьРегистр_ЭАрМ_ПравкиЦенПриходов" id="478">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Правки цен приходных накладных</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть список «Правки цен приходных накладных» (РегистрСведений.ЭАрМ_ПравкиЦенПриходов)</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОткрытьРегистр</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОткрытьРегистр_ЭАрМ_ЗапросыДалион" id="479">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Запросы данных Далиона</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть список «Запросы данных Далиона» (РегистрСведений.ЭАрМ_ЗапросыДалион)</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОткрытьРегистр</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОткрытьРегистр_ЭАрМ_ЖурналОбменаЭДО" id="480">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Журнал обмена ЭДО</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть список «Журнал обмена ЭДО» (РегистрСведений.ЭАрМ_ЖурналОбменаЭДО)</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОткрытьРегистр</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОткрытьРегистр_ЭАрМ_ТрассаПриема" id="481">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Трасса приёма Далиона</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть список «Трасса приёма Далиона» (РегистрСведений.ЭАрМ_ТрассаПриема)</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОткрытьРегистр</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОткрытьРегистр_ЭАрМ_ОжидаемыеПодтвержденияЭДО" id="482">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ожидаемые подтверждения ЭДО</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть список «Ожидаемые подтверждения ЭДО» (РегистрСведений.ЭАрМ_ОжидаемыеПодтвержденияЭДО)</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОткрытьРегистр</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОткрытьРегистр_СостоянияПоОбъектамУчетаЭДО" id="483">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Состояния по объектам учёта ЭДО</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть список «Состояния по объектам учёта ЭДО» (РегистрСведений.СостоянияПоОбъектамУчетаЭДО)</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОткрытьРегистр</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОткрытьРегистр_ЭАрМ_ШтрихкодыПоставщиков" id="484">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Штрихкоды поставщиков</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть список «Штрихкоды поставщиков» (РегистрСведений.ЭАрМ_ШтрихкодыПоставщиков)</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОткрытьРегистр</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОткрытьРегистр_ЭАрМ_ПарыНоменклатурыПоИмени" id="485">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пары номенклатуры по имени</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть список «Пары номенклатуры по имени» (РегистрСведений.ЭАрМ_ПарыНоменклатурыПоИмени)</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОткрытьРегистр</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОткрытьРегистр_ЭАрМ_ОчередьСозданияНоменклатуры" id="486">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Очередь создания номенклатуры</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть список «Очередь создания номенклатуры» (РегистрСведений.ЭАрМ_ОчередьСозданияНоменклатуры)</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОткрытьРегистр</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОткрытьРегистр_ЭАрМ_КодыМаркировкиСтрок" id="487">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Коды маркировки строк</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть список «Коды маркировки строк» (РегистрСведений.ЭАрМ_КодыМаркировкиСтрок)</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОткрытьРегистр</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ПодсчитатьЗаписиЖурнала" id="488">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подсчитать записи</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показывает, сколько записей журнала обмена ЭДО попадает в период. Ничего не удаляет</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПодсчитатьЗаписиЖурнала</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОчиститьЖурналОбмена" id="489">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Очистить журнал обмена…</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Удаляет записи журнала обмена ЭДО за период. Сначала показывает число записей и спрашивает подтверждение; итог - «удалено записей» в поле результата и в журнале регистрации</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОчиститьЖурналОбмена</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ПроверитьМонитор" id="540">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проверить монитор</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохраняет настройки и спрашивает Монитор папок: отвечает ли, сколько в очереди, какие папки и их Id</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПроверитьМонитор</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

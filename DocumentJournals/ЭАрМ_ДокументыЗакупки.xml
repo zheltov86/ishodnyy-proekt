@@ -1,0 +1,166 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<DocumentJournal uuid="650b906e-217d-5021-8e32-d2cbfcaa243d">
+		<InternalInfo>
+			<xr:GeneratedType name="DocumentJournalSelection.ЭАрМ_ДокументыЗакупки" category="Selection">
+				<xr:TypeId>1cfb5a91-95ef-5874-9f99-686c711efb9f</xr:TypeId>
+				<xr:ValueId>bec713b5-98af-5c0b-816c-0f8de3cfdd26</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="DocumentJournalList.ЭАрМ_ДокументыЗакупки" category="List">
+				<xr:TypeId>15427aed-f08b-5b0a-b661-2c59c593a9e5</xr:TypeId>
+				<xr:ValueId>ef1c37e9-2450-506b-86f1-372bdfe326bf</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="DocumentJournalManager.ЭАрМ_ДокументыЗакупки" category="Manager">
+				<xr:TypeId>9d270754-d557-53fc-9e74-f2295e28c7e2</xr:TypeId>
+				<xr:ValueId>32b7d1aa-2c60-5c1a-b44b-81d640ba6764</xr:ValueId>
+			</xr:GeneratedType>
+		</InternalInfo>
+		<Properties>
+			<Name>ЭАрМ_ДокументыЗакупки</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Документы закупки</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment>Заказ поставщику и приходная накладная Далиона</Comment>
+			<DefaultForm>DocumentJournal.ЭАрМ_ДокументыЗакупки.Form.ФормаСписка</DefaultForm>
+			<AuxiliaryForm/>
+			<UseStandardCommands>true</UseStandardCommands>
+			<RegisteredDocuments>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ЭАрМ_ЗаказПоставщику</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ЭАрМ_ПриходнаяНакладная</xr:Item>
+			</RegisteredDocuments>
+			<IncludeHelpInContents>false</IncludeHelpInContents>
+			<ListPresentation/>
+			<ExtendedListPresentation/>
+			<Explanation/>
+		</Properties>
+		<ChildObjects>
+			<Column uuid="2f239d78-2844-5532-8e82-8a99c23d5e39">
+				<Properties>
+					<Name>НомерУПД</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>УПД номер</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Indexing>Index</Indexing>
+					<References>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.ЭАрМ_ЗаказПоставщику.Attribute.НомерУПД</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.ЭАрМ_ПриходнаяНакладная.Attribute.НомерУПД</xr:Item>
+					</References>
+				</Properties>
+			</Column>
+			<Column uuid="d2f17107-5c9a-599f-99b4-686449312eec">
+				<Properties>
+					<Name>НомерПриходной</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Приходная накладная номер</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Indexing>Index</Indexing>
+					<References>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.ЭАрМ_ЗаказПоставщику.Attribute.НомерПриходной</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.ЭАрМ_ПриходнаяНакладная.Attribute.НомерПриходной</xr:Item>
+					</References>
+				</Properties>
+			</Column>
+			<Column uuid="87850eea-98df-5122-b36a-c087d04e3833">
+				<Properties>
+					<Name>НомерУКД</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>УКД номер</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Indexing>Index</Indexing>
+					<References>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.ЭАрМ_ЗаказПоставщику.Attribute.НомерУКД</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.ЭАрМ_ПриходнаяНакладная.Attribute.НомерУКД</xr:Item>
+					</References>
+				</Properties>
+			</Column>
+			<Column uuid="511e79cf-1e2f-55e4-bf57-26cc8cca4b5f">
+				<Properties>
+					<Name>СтатусОтображения</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Статус</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Indexing>Index</Indexing>
+					<References>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.ЭАрМ_ЗаказПоставщику.Attribute.СтатусОтображения</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.ЭАрМ_ПриходнаяНакладная.Attribute.СтатусОтображения</xr:Item>
+					</References>
+				</Properties>
+			</Column>
+			<Column uuid="9c46ad64-0ef1-50eb-a3e1-243996b88f7d">
+				<Properties>
+					<Name>ПроведенВДалион</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Проведен в Далион</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Indexing>Index</Indexing>
+					<References>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.ЭАрМ_ЗаказПоставщику.Attribute.ПроведенВДалион</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.ЭАрМ_ПриходнаяНакладная.Attribute.ПроведенВДалион</xr:Item>
+					</References>
+				</Properties>
+			</Column>
+			<Column uuid="f734fb08-a96a-577d-86e2-0b2811de3250">
+				<Properties>
+					<Name>Поставщик</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Поставщик</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Indexing>Index</Indexing>
+					<References>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.ЭАрМ_ЗаказПоставщику.Attribute.Поставщик</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.ЭАрМ_ПриходнаяНакладная.Attribute.Поставщик</xr:Item>
+					</References>
+				</Properties>
+			</Column>
+			<Form>ФормаСписка</Form>
+			<Command uuid="4abc7c9a-1348-5b48-aac6-41e72f5c2ddb">
+				<Properties>
+					<Name>ОткрытьДокументыЗакупки</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Документы закупки</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Group>NavigationPanelImportant</Group>
+					<CommandParameterType/>
+					<ParameterUseMode>Single</ParameterUseMode>
+					<ModifiesData>false</ModifiesData>
+					<Representation>Text</Representation>
+					<ToolTip/>
+					<Picture/>
+					<Shortcut/>
+					<OnMainServerUnavalableBehavior>Auto</OnMainServerUnavalableBehavior>
+				</Properties>
+			</Command>
+		</ChildObjects>
+	</DocumentJournal>
+</MetaDataObject>

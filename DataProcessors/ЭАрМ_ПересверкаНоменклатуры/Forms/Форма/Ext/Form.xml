@@ -1,0 +1,1978 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<CheckBoxField name="ПерезаписатьПринудительно" id="317">
+			<DataPath>ПерезаписатьПринудительно</DataPath>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Перед записью пары убрать из регистра штрихкодов поставщиков записи, которые спорят с выбранной номенклатурой Далиона: то же наименование поставщика или тот же штрихкод строки УПД с другой номенклатурой. После записи цепочки пересверяются.</v8:content>
+				</v8:item>
+			</ToolTip>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="ПерезаписатьПринудительноКонтекстноеМеню" id="318"/>
+			<ExtendedTooltip name="ПерезаписатьПринудительноРасширеннаяПодсказка" id="319"/>
+		</CheckBoxField>
+		<Pages name="Страницы" id="101">
+			<PagesRepresentation>TabsOnTop</PagesRepresentation>
+			<ExtendedTooltip name="СтраницыРасширеннаяПодсказка" id="102"/>
+			<ChildItems>
+				<Page name="СтраницаСтрокиУПД" id="103">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Строки УПД и пары</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="СтраницаСтрокиУПДРасширеннаяПодсказка" id="104"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаОтбор" id="105">
+							<Group>AlwaysHorizontal</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаОтборРасширеннаяПодсказка" id="106"/>
+							<ChildItems>
+								<InputField name="ДатаС" id="107">
+									<DataPath>ДатаС</DataPath>
+									<ContextMenu name="ДатаСКонтекстноеМеню" id="108"/>
+									<ExtendedTooltip name="ДатаСРасширеннаяПодсказка" id="109"/>
+								</InputField>
+								<InputField name="ДатаПо" id="110">
+									<DataPath>ДатаПо</DataPath>
+									<ContextMenu name="ДатаПоКонтекстноеМеню" id="111"/>
+									<ExtendedTooltip name="ДатаПоРасширеннаяПодсказка" id="112"/>
+								</InputField>
+								<InputField name="НомерУПД" id="113">
+									<DataPath>НомерУПД</DataPath>
+									<ContextMenu name="НомерУПДКонтекстноеМеню" id="114"/>
+									<ExtendedTooltip name="НомерУПДРасширеннаяПодсказка" id="115"/>
+								</InputField>
+								<CheckBoxField name="ТолькоКонфликты" id="116">
+									<DataPath>ТолькоКонфликты</DataPath>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ТолькоКонфликтыКонтекстноеМеню" id="117"/>
+									<ExtendedTooltip name="ТолькоКонфликтыРасширеннаяПодсказка" id="118"/>
+								</CheckBoxField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаКоманды" id="119">
+							<Group>AlwaysHorizontal</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаКомандыРасширеннаяПодсказка" id="120"/>
+							<ChildItems>
+								<Button name="ПоказатьКнопка" id="121">
+									<Type>UsualButton</Type>
+									<DefaultButton>true</DefaultButton>
+									<CommandName>Form.Command.Показать</CommandName>
+									<ExtendedTooltip name="ПоказатьКнопкаРасширеннаяПодсказка" id="122"/>
+								</Button>
+								<Button name="ОтметитьКонфликтыКнопка" id="123">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.ОтметитьКонфликты</CommandName>
+									<ExtendedTooltip name="ОтметитьКонфликтыКнопкаРасширеннаяПодсказка" id="124"/>
+								</Button>
+								<Button name="СнятьОтметкиКнопка" id="125">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.СнятьОтметки</CommandName>
+									<ExtendedTooltip name="СнятьОтметкиКнопкаРасширеннаяПодсказка" id="126"/>
+								</Button>
+								<Button name="СвязатьОтмеченныеКнопка" id="127">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.СвязатьОтмеченные</CommandName>
+									<ExtendedTooltip name="СвязатьОтмеченныеКнопкаРасширеннаяПодсказка" id="128"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+						<LabelField name="Итоги" id="129">
+							<DataPath>Итоги</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<ContextMenu name="ИтогиКонтекстноеМеню" id="130"/>
+							<ExtendedTooltip name="ИтогиРасширеннаяПодсказка" id="131"/>
+						</LabelField>
+						<Table name="Строки" id="132">
+							<ChangeRowSet>false</ChangeRowSet>
+							<ChangeRowOrder>false</ChangeRowOrder>
+							<DataPath>Строки</DataPath>
+							<CommandSet>
+								<ExcludedCommand>Add</ExcludedCommand>
+								<ExcludedCommand>Copy</ExcludedCommand>
+								<ExcludedCommand>Delete</ExcludedCommand>
+							</CommandSet>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="СтрокиКонтекстноеМеню" id="133"/>
+							<AutoCommandBar name="СтрокиКоманднаяПанель" id="134"/>
+							<ExtendedTooltip name="СтрокиРасширеннаяПодсказка" id="135"/>
+							<SearchStringAddition name="СтрокиСтрокаПоиска" id="320">
+								<AdditionSource>
+									<Item>Строки</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СтрокиСтрокаПоискаКонтекстноеМеню" id="321"/>
+								<ExtendedTooltip name="СтрокиСтрокаПоискаРасширеннаяПодсказка" id="322"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="СтрокиСостояниеПросмотра" id="323">
+								<AdditionSource>
+									<Item>Строки</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СтрокиСостояниеПросмотраКонтекстноеМеню" id="324"/>
+								<ExtendedTooltip name="СтрокиСостояниеПросмотраРасширеннаяПодсказка" id="325"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="СтрокиУправлениеПоиском" id="326">
+								<AdditionSource>
+									<Item>Строки</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="СтрокиУправлениеПоискомКонтекстноеМеню" id="327"/>
+								<ExtendedTooltip name="СтрокиУправлениеПоискомРасширеннаяПодсказка" id="328"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<CheckBoxField name="СтрокиОтметка" id="136">
+									<DataPath>Строки.Отметка</DataPath>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="СтрокиОтметкаКонтекстноеМеню" id="137"/>
+									<ExtendedTooltip name="СтрокиОтметкаРасширеннаяПодсказка" id="138"/>
+								</CheckBoxField>
+								<CheckBoxField name="СтрокиКонфликт" id="139">
+									<DataPath>Строки.Конфликт</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="СтрокиКонфликтКонтекстноеМеню" id="140"/>
+									<ExtendedTooltip name="СтрокиКонфликтРасширеннаяПодсказка" id="141"/>
+								</CheckBoxField>
+								<InputField name="СтрокиПричина" id="142">
+									<DataPath>Строки.Причина</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<ContextMenu name="СтрокиПричинаКонтекстноеМеню" id="143"/>
+									<ExtendedTooltip name="СтрокиПричинаРасширеннаяПодсказка" id="144"/>
+								</InputField>
+								<InputField name="СтрокиУПД" id="145">
+									<DataPath>Строки.УПД</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<ContextMenu name="СтрокиУПДКонтекстноеМеню" id="146"/>
+									<ExtendedTooltip name="СтрокиУПДРасширеннаяПодсказка" id="147"/>
+								</InputField>
+								<InputField name="СтрокиНаименование" id="148">
+									<DataPath>Строки.Наименование</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<ContextMenu name="СтрокиНаименованиеКонтекстноеМеню" id="149"/>
+									<ExtendedTooltip name="СтрокиНаименованиеРасширеннаяПодсказка" id="150"/>
+								</InputField>
+								<InputField name="СтрокиКоличество" id="151">
+									<DataPath>Строки.Количество</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<ContextMenu name="СтрокиКоличествоКонтекстноеМеню" id="152"/>
+									<ExtendedTooltip name="СтрокиКоличествоРасширеннаяПодсказка" id="153"/>
+								</InputField>
+								<InputField name="СтрокиЦенаСНДС" id="154">
+									<DataPath>Строки.ЦенаСНДС</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<ContextMenu name="СтрокиЦенаСНДСКонтекстноеМеню" id="155"/>
+									<ExtendedTooltip name="СтрокиЦенаСНДСРасширеннаяПодсказка" id="156"/>
+								</InputField>
+								<InputField name="СтрокиШтрихкод" id="157">
+									<DataPath>Строки.Штрихкод</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<ContextMenu name="СтрокиШтрихкодКонтекстноеМеню" id="158"/>
+									<ExtendedTooltip name="СтрокиШтрихкодРасширеннаяПодсказка" id="159"/>
+								</InputField>
+								<InputField name="СтрокиСпособПоискаШК" id="160">
+									<DataPath>Строки.СпособПоискаШК</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<ContextMenu name="СтрокиСпособПоискаШККонтекстноеМеню" id="161"/>
+									<ExtendedTooltip name="СтрокиСпособПоискаШКРасширеннаяПодсказка" id="162"/>
+								</InputField>
+								<InputField name="СтрокиТоварПоШтрихкоду" id="163">
+									<DataPath>Строки.ТоварПоШтрихкоду</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<ContextMenu name="СтрокиТоварПоШтрихкодуКонтекстноеМеню" id="164"/>
+									<ExtendedTooltip name="СтрокиТоварПоШтрихкодуРасширеннаяПодсказка" id="165"/>
+								</InputField>
+								<InputField name="СтрокиИсточникЗаписи" id="166">
+									<DataPath>Строки.ИсточникЗаписи</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<ContextMenu name="СтрокиИсточникЗаписиКонтекстноеМеню" id="167"/>
+									<ExtendedTooltip name="СтрокиИсточникЗаписиРасширеннаяПодсказка" id="168"/>
+								</InputField>
+								<InputField name="СтрокиТекущаяПара" id="169">
+									<DataPath>Строки.ТекущаяПара</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<ContextMenu name="СтрокиТекущаяПараКонтекстноеМеню" id="170"/>
+									<ExtendedTooltip name="СтрокиТекущаяПараРасширеннаяПодсказка" id="171"/>
+								</InputField>
+								<InputField name="СтрокиПредлагаемаяПара" id="172">
+									<DataPath>Строки.ПредлагаемаяПара</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<ContextMenu name="СтрокиПредлагаемаяПараКонтекстноеМеню" id="173"/>
+									<ExtendedTooltip name="СтрокиПредлагаемаяПараРасширеннаяПодсказка" id="174"/>
+								</InputField>
+								<InputField name="СтрокиКоличествоПрихода" id="175">
+									<DataPath>Строки.КоличествоПрихода</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<ContextMenu name="СтрокиКоличествоПриходаКонтекстноеМеню" id="176"/>
+									<ExtendedTooltip name="СтрокиКоличествоПриходаРасширеннаяПодсказка" id="177"/>
+								</InputField>
+								<InputField name="СтрокиЦенаПрихода" id="178">
+									<DataPath>Строки.ЦенаПрихода</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<ContextMenu name="СтрокиЦенаПриходаКонтекстноеМеню" id="179"/>
+									<ExtendedTooltip name="СтрокиЦенаПриходаРасширеннаяПодсказка" id="180"/>
+								</InputField>
+								<InputField name="СтрокиОценкаИмени" id="181">
+									<DataPath>Строки.ОценкаИмени</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<ContextMenu name="СтрокиОценкаИмениКонтекстноеМеню" id="182"/>
+									<ExtendedTooltip name="СтрокиОценкаИмениРасширеннаяПодсказка" id="183"/>
+								</InputField>
+								<InputField name="СтрокиРезультат" id="184">
+									<DataPath>Строки.Результат</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<ContextMenu name="СтрокиРезультатКонтекстноеМеню" id="185"/>
+									<ExtendedTooltip name="СтрокиРезультатРасширеннаяПодсказка" id="186"/>
+								</InputField>
+								<InputField name="СтрокиШтрихкодыДалиона" id="187">
+									<DataPath>Строки.ШтрихкодыДалиона</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<ContextMenu name="СтрокиШтрихкодыДалионаКонтекстноеМеню" id="188"/>
+									<ExtendedTooltip name="СтрокиШтрихкодыДалионаРасширеннаяПодсказка" id="189"/>
+								</InputField>
+								<InputField name="СтрокиШтрихкодыУТ" id="190">
+									<DataPath>Строки.ШтрихкодыУТ</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<ContextMenu name="СтрокиШтрихкодыУТКонтекстноеМеню" id="191"/>
+									<ExtendedTooltip name="СтрокиШтрихкодыУТРасширеннаяПодсказка" id="192"/>
+								</InputField>
+								<InputField name="СтрокиШтрихкодИзУПД" id="193">
+									<DataPath>Строки.ШтрихкодИзУПД</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<ContextMenu name="СтрокиШтрихкодИзУПДКонтекстноеМеню" id="194"/>
+									<ExtendedTooltip name="СтрокиШтрихкодИзУПДРасширеннаяПодсказка" id="195"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаНоменклатура" id="196">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Номенклатура и штрихкоды</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="СтраницаНоменклатураРасширеннаяПодсказка" id="197"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаОтборНоменклатуры" id="198">
+							<Group>AlwaysHorizontal</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаОтборНоменклатурыРасширеннаяПодсказка" id="199"/>
+							<ChildItems>
+								<InputField name="ПоставщикОтбор" id="200">
+									<DataPath>ПоставщикОтбор</DataPath>
+									<ContextMenu name="ПоставщикОтборКонтекстноеМеню" id="201"/>
+									<ExtendedTooltip name="ПоставщикОтборРасширеннаяПодсказка" id="202"/>
+								</InputField>
+								<InputField name="ПоискНоменклатуры" id="203">
+									<DataPath>ПоискНоменклатуры</DataPath>
+									<ContextMenu name="ПоискНоменклатурыКонтекстноеМеню" id="204"/>
+									<ExtendedTooltip name="ПоискНоменклатурыРасширеннаяПодсказка" id="205"/>
+								</InputField>
+								<CheckBoxField name="ТолькоБезПары" id="206">
+									<DataPath>ТолькоБезПары</DataPath>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ТолькоБезПарыКонтекстноеМеню" id="207"/>
+									<ExtendedTooltip name="ТолькоБезПарыРасширеннаяПодсказка" id="208"/>
+								</CheckBoxField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаКомандыНоменклатуры" id="209">
+							<Group>AlwaysHorizontal</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаКомандыНоменклатурыРасширеннаяПодсказка" id="210"/>
+							<ChildItems>
+								<Button name="ЗагрузитьНоменклатуруКнопка" id="211">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.ЗагрузитьНоменклатуру</CommandName>
+									<ExtendedTooltip name="ЗагрузитьНоменклатуруКнопкаРасширеннаяПодсказка" id="212"/>
+								</Button>
+								<Button name="ЗаписатьПарыКнопка" id="213">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.ЗаписатьПары</CommandName>
+									<ExtendedTooltip name="ЗаписатьПарыКнопкаРасширеннаяПодсказка" id="214"/>
+								</Button>
+								<Button name="УдалитьДублиШККнопка" id="215">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.УдалитьДублиШК</CommandName>
+									<ExtendedTooltip name="УдалитьДублиШККнопкаРасширеннаяПодсказка" id="216"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+						<LabelField name="ИтогиНоменклатуры" id="217">
+							<DataPath>ИтогиНоменклатуры</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<ContextMenu name="ИтогиНоменклатурыКонтекстноеМеню" id="218"/>
+							<ExtendedTooltip name="ИтогиНоменклатурыРасширеннаяПодсказка" id="219"/>
+						</LabelField>
+						<Table name="Номенклатура" id="220">
+							<ChangeRowSet>false</ChangeRowSet>
+							<ChangeRowOrder>false</ChangeRowOrder>
+							<DataPath>Номенклатура</DataPath>
+							<CommandSet>
+								<ExcludedCommand>Add</ExcludedCommand>
+								<ExcludedCommand>Copy</ExcludedCommand>
+								<ExcludedCommand>Delete</ExcludedCommand>
+							</CommandSet>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="НоменклатураКонтекстноеМеню" id="221"/>
+							<AutoCommandBar name="НоменклатураКоманднаяПанель" id="222"/>
+							<ExtendedTooltip name="НоменклатураРасширеннаяПодсказка" id="223"/>
+							<SearchStringAddition name="НоменклатураСтрокаПоиска" id="329">
+								<AdditionSource>
+									<Item>Номенклатура</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="НоменклатураСтрокаПоискаКонтекстноеМеню" id="330"/>
+								<ExtendedTooltip name="НоменклатураСтрокаПоискаРасширеннаяПодсказка" id="331"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="НоменклатураСостояниеПросмотра" id="332">
+								<AdditionSource>
+									<Item>Номенклатура</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="НоменклатураСостояниеПросмотраКонтекстноеМеню" id="333"/>
+								<ExtendedTooltip name="НоменклатураСостояниеПросмотраРасширеннаяПодсказка" id="334"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="НоменклатураУправлениеПоиском" id="335">
+								<AdditionSource>
+									<Item>Номенклатура</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="НоменклатураУправлениеПоискомКонтекстноеМеню" id="336"/>
+								<ExtendedTooltip name="НоменклатураУправлениеПоискомРасширеннаяПодсказка" id="337"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="OnActivateRow">НоменклатураПриАктивизацииСтроки</Event>
+							</Events>
+							<ChildItems>
+								<CheckBoxField name="НоменклатураЗаписать" id="224">
+									<DataPath>Номенклатура.Записать</DataPath>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="НоменклатураЗаписатьКонтекстноеМеню" id="225"/>
+									<ExtendedTooltip name="НоменклатураЗаписатьРасширеннаяПодсказка" id="226"/>
+								</CheckBoxField>
+								<InputField name="НоменклатураНоменклатураДалион" id="227">
+									<DataPath>Номенклатура.НоменклатураДалион</DataPath>
+									<ContextMenu name="НоменклатураНоменклатураДалионКонтекстноеМеню" id="228"/>
+									<ExtendedTooltip name="НоменклатураНоменклатураДалионРасширеннаяПодсказка" id="229"/>
+									<Events>
+										<Event name="OnChange">НоменклатураНоменклатураДалионПриИзменении</Event>
+									</Events>
+								</InputField>
+								<InputField name="НоменклатураКодДалион" id="230">
+									<DataPath>Номенклатура.КодДалион</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<ContextMenu name="НоменклатураКодДалионКонтекстноеМеню" id="231"/>
+									<ExtendedTooltip name="НоменклатураКодДалионРасширеннаяПодсказка" id="232"/>
+								</InputField>
+								<InputField name="НоменклатураШтрихкодыДалиона" id="233">
+									<DataPath>Номенклатура.ШтрихкодыДалиона</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<ContextMenu name="НоменклатураШтрихкодыДалионаКонтекстноеМеню" id="234"/>
+									<ExtendedTooltip name="НоменклатураШтрихкодыДалионаРасширеннаяПодсказка" id="235"/>
+								</InputField>
+								<InputField name="НоменклатураНазваниеПоставщика" id="236">
+									<DataPath>Номенклатура.НазваниеПоставщика</DataPath>
+									<ContextMenu name="НоменклатураНазваниеПоставщикаКонтекстноеМеню" id="237"/>
+									<ExtendedTooltip name="НоменклатураНазваниеПоставщикаРасширеннаяПодсказка" id="238"/>
+									<Events>
+										<Event name="OnChange">НоменклатураНазваниеПоставщикаПриИзменении</Event>
+									</Events>
+								</InputField>
+								<InputField name="НоменклатураШтрихкодУПД" id="239">
+									<DataPath>Номенклатура.ШтрихкодУПД</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<ContextMenu name="НоменклатураШтрихкодУПДКонтекстноеМеню" id="240"/>
+									<ExtendedTooltip name="НоменклатураШтрихкодУПДРасширеннаяПодсказка" id="241"/>
+								</InputField>
+								<CheckBoxField name="НоменклатураШКСовпадает" id="242">
+									<DataPath>Номенклатура.ШКСовпадает</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="НоменклатураШКСовпадаетКонтекстноеМеню" id="243"/>
+									<ExtendedTooltip name="НоменклатураШКСовпадаетРасширеннаяПодсказка" id="244"/>
+								</CheckBoxField>
+								<InputField name="НоменклатураКодПоставщика" id="245">
+									<DataPath>Номенклатура.КодПоставщика</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<ContextMenu name="НоменклатураКодПоставщикаКонтекстноеМеню" id="246"/>
+									<ExtendedTooltip name="НоменклатураКодПоставщикаРасширеннаяПодсказка" id="247"/>
+								</InputField>
+								<InputField name="НоменклатураИсточникПары" id="248">
+									<DataPath>Номенклатура.ИсточникПары</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<ContextMenu name="НоменклатураИсточникПарыКонтекстноеМеню" id="249"/>
+									<ExtendedTooltip name="НоменклатураИсточникПарыРасширеннаяПодсказка" id="250"/>
+								</InputField>
+								<InputField name="НоменклатураРезультат" id="251">
+									<DataPath>Номенклатура.Результат</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<ContextMenu name="НоменклатураРезультатКонтекстноеМеню" id="252"/>
+									<ExtendedTooltip name="НоменклатураРезультатРасширеннаяПодсказка" id="253"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+						<UsualGroup name="ГруппаВарианты" id="255">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Варианты штрихкодов и названий текущей строки</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<Behavior>Usual</Behavior>
+							<ExtendedTooltip name="ГруппаВариантыРасширеннаяПодсказка" id="256"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаКомандыВариантов" id="257">
+									<Group>AlwaysHorizontal</Group>
+									<Behavior>Usual</Behavior>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаКомандыВариантовРасширеннаяПодсказка" id="258"/>
+									<ChildItems>
+										<Button name="СвязатьВариантыКнопка" id="259">
+											<Type>UsualButton</Type>
+											<CommandName>Form.Command.СвязатьВарианты</CommandName>
+											<ExtendedTooltip name="СвязатьВариантыКнопкаРасширеннаяПодсказка" id="260"/>
+										</Button>
+										<Button name="УдалитьВариантыКнопка" id="261">
+											<Type>UsualButton</Type>
+											<CommandName>Form.Command.УдалитьВарианты</CommandName>
+											<ExtendedTooltip name="УдалитьВариантыКнопкаРасширеннаяПодсказка" id="262"/>
+										</Button>
+										<Button name="ОтметитьПодозрительныеКнопка" id="263">
+											<Type>UsualButton</Type>
+											<CommandName>Form.Command.ОтметитьПодозрительные</CommandName>
+											<ExtendedTooltip name="ОтметитьПодозрительныеКнопкаРасширеннаяПодсказка" id="264"/>
+										</Button>
+									</ChildItems>
+								</UsualGroup>
+								<LabelField name="ИтогиВариантов" id="265">
+									<DataPath>ИтогиВариантов</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<ContextMenu name="ИтогиВариантовКонтекстноеМеню" id="266"/>
+									<ExtendedTooltip name="ИтогиВариантовРасширеннаяПодсказка" id="267"/>
+								</LabelField>
+								<Table name="Варианты" id="268">
+									<ChangeRowSet>false</ChangeRowSet>
+									<ChangeRowOrder>false</ChangeRowOrder>
+									<DataPath>Варианты</DataPath>
+									<CommandSet>
+										<ExcludedCommand>Add</ExcludedCommand>
+										<ExcludedCommand>Copy</ExcludedCommand>
+										<ExcludedCommand>Delete</ExcludedCommand>
+									</CommandSet>
+									<RowFilter xsi:nil="true"/>
+									<ContextMenu name="ВариантыКонтекстноеМеню" id="269"/>
+									<AutoCommandBar name="ВариантыКоманднаяПанель" id="270"/>
+									<ExtendedTooltip name="ВариантыРасширеннаяПодсказка" id="271"/>
+									<SearchStringAddition name="ВариантыСтрокаПоиска" id="338">
+										<AdditionSource>
+											<Item>Варианты</Item>
+											<Type>SearchStringRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ВариантыСтрокаПоискаКонтекстноеМеню" id="339"/>
+										<ExtendedTooltip name="ВариантыСтрокаПоискаРасширеннаяПодсказка" id="340"/>
+									</SearchStringAddition>
+									<ViewStatusAddition name="ВариантыСостояниеПросмотра" id="341">
+										<AdditionSource>
+											<Item>Варианты</Item>
+											<Type>ViewStatusRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ВариантыСостояниеПросмотраКонтекстноеМеню" id="342"/>
+										<ExtendedTooltip name="ВариантыСостояниеПросмотраРасширеннаяПодсказка" id="343"/>
+									</ViewStatusAddition>
+									<SearchControlAddition name="ВариантыУправлениеПоиском" id="344">
+										<AdditionSource>
+											<Item>Варианты</Item>
+											<Type>SearchControl</Type>
+										</AdditionSource>
+										<ContextMenu name="ВариантыУправлениеПоискомКонтекстноеМеню" id="345"/>
+										<ExtendedTooltip name="ВариантыУправлениеПоискомРасширеннаяПодсказка" id="346"/>
+									</SearchControlAddition>
+									<ChildItems>
+										<CheckBoxField name="ВариантыСвязать" id="272">
+											<DataPath>Варианты.Связать</DataPath>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="ВариантыСвязатьКонтекстноеМеню" id="273"/>
+											<ExtendedTooltip name="ВариантыСвязатьРасширеннаяПодсказка" id="274"/>
+											<Events>
+												<Event name="OnChange">ВариантыСвязатьПриИзменении</Event>
+											</Events>
+										</CheckBoxField>
+										<CheckBoxField name="ВариантыУдалить" id="275">
+											<DataPath>Варианты.Удалить</DataPath>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="ВариантыУдалитьКонтекстноеМеню" id="276"/>
+											<ExtendedTooltip name="ВариантыУдалитьРасширеннаяПодсказка" id="277"/>
+											<Events>
+												<Event name="OnChange">ВариантыУдалитьПриИзменении</Event>
+											</Events>
+										</CheckBoxField>
+										<InputField name="ВариантыВид" id="278">
+											<DataPath>Варианты.Вид</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<ContextMenu name="ВариантыВидКонтекстноеМеню" id="279"/>
+											<ExtendedTooltip name="ВариантыВидРасширеннаяПодсказка" id="280"/>
+										</InputField>
+										<InputField name="ВариантыШтрихкод" id="281">
+											<DataPath>Варианты.Штрихкод</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<ContextMenu name="ВариантыШтрихкодКонтекстноеМеню" id="282"/>
+											<ExtendedTooltip name="ВариантыШтрихкодРасширеннаяПодсказка" id="283"/>
+										</InputField>
+										<InputField name="ВариантыШтрихкодКанон" id="284">
+											<DataPath>Варианты.ШтрихкодКанон</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<ContextMenu name="ВариантыШтрихкодКанонКонтекстноеМеню" id="285"/>
+											<ExtendedTooltip name="ВариантыШтрихкодКанонРасширеннаяПодсказка" id="286"/>
+										</InputField>
+										<CheckBoxField name="ВариантыШКЕстьУДалиона" id="287">
+											<DataPath>Варианты.ШКЕстьУДалиона</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="ВариантыШКЕстьУДалионаКонтекстноеМеню" id="288"/>
+											<ExtendedTooltip name="ВариантыШКЕстьУДалионаРасширеннаяПодсказка" id="289"/>
+										</CheckBoxField>
+										<InputField name="ВариантыНаименованиеПоставщика" id="290">
+											<DataPath>Варианты.НаименованиеПоставщика</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<ContextMenu name="ВариантыНаименованиеПоставщикаКонтекстноеМеню" id="291"/>
+											<ExtendedTooltip name="ВариантыНаименованиеПоставщикаРасширеннаяПодсказка" id="292"/>
+										</InputField>
+										<InputField name="ВариантыПохожестьИмени" id="293">
+											<DataPath>Варианты.ПохожестьИмени</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<ContextMenu name="ВариантыПохожестьИмениКонтекстноеМеню" id="294"/>
+											<ExtendedTooltip name="ВариантыПохожестьИмениРасширеннаяПодсказка" id="295"/>
+										</InputField>
+										<InputField name="ВариантыНоменклатураЗаписи" id="296">
+											<DataPath>Варианты.НоменклатураЗаписи</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<ContextMenu name="ВариантыНоменклатураЗаписиКонтекстноеМеню" id="297"/>
+											<ExtendedTooltip name="ВариантыНоменклатураЗаписиРасширеннаяПодсказка" id="298"/>
+										</InputField>
+										<CheckBoxField name="ВариантыЧужаяНоменклатура" id="299">
+											<DataPath>Варианты.ЧужаяНоменклатура</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="ВариантыЧужаяНоменклатураКонтекстноеМеню" id="300"/>
+											<ExtendedTooltip name="ВариантыЧужаяНоменклатураРасширеннаяПодсказка" id="301"/>
+										</CheckBoxField>
+										<InputField name="ВариантыКодПоставщика" id="302">
+											<DataPath>Варианты.КодПоставщика</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<ContextMenu name="ВариантыКодПоставщикаКонтекстноеМеню" id="303"/>
+											<ExtendedTooltip name="ВариантыКодПоставщикаРасширеннаяПодсказка" id="304"/>
+										</InputField>
+										<InputField name="ВариантыПоставщик" id="305">
+											<DataPath>Варианты.Поставщик</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<ContextMenu name="ВариантыПоставщикКонтекстноеМеню" id="306"/>
+											<ExtendedTooltip name="ВариантыПоставщикРасширеннаяПодсказка" id="307"/>
+										</InputField>
+										<InputField name="ВариантыИсточник" id="308">
+											<DataPath>Варианты.Источник</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<ContextMenu name="ВариантыИсточникКонтекстноеМеню" id="309"/>
+											<ExtendedTooltip name="ВариантыИсточникРасширеннаяПодсказка" id="310"/>
+										</InputField>
+										<InputField name="ВариантыДатаОбновления" id="311">
+											<DataPath>Варианты.ДатаОбновления</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<ContextMenu name="ВариантыДатаОбновленияКонтекстноеМеню" id="312"/>
+											<ExtendedTooltip name="ВариантыДатаОбновленияРасширеннаяПодсказка" id="313"/>
+										</InputField>
+										<InputField name="ВариантыРезультат" id="314">
+											<DataPath>Варианты.Результат</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<ContextMenu name="ВариантыРезультатКонтекстноеМеню" id="315"/>
+											<ExtendedTooltip name="ВариантыРезультатРасширеннаяПодсказка" id="316"/>
+										</InputField>
+									</ChildItems>
+								</Table>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.ЭАрМ_ПересверкаНоменклатуры</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="ДатаС" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>УПД с</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ДатаПо" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>по</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="НомерУПД" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Номер УПД (пусто - все за период)</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>50</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ТолькоКонфликты" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Только конфликты</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Итоги" id="6">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Строки" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Строки УПД и их пары в приходе Далиона</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Отметка" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Связать</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Конфликт" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Конфликт</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Причина" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Что не так</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>200</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="УПД" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>УПД</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>150</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Наименование" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Строка УПД</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>500</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Количество" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Кол-во УПД</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>15</v8:Digits>
+							<v8:FractionDigits>3</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="ЦенаСНДС" id="7">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Цена УПД с НДС</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>15</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="Штрихкод" id="8">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Штрихкод строки УПД</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>200</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="СпособПоискаШК" id="9">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Откуда штрихкод</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>20</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ТоварПоШтрихкоду" id="10">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Чей штрихкод (Далион)</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>500</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ИсточникЗаписи" id="11">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Источник записи</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>30</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ТекущаяПара" id="12">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сейчас сверено с</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>500</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ПредлагаемаяПара" id="13">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Предлагаемая пара в приходе</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>500</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="КоличествоПрихода" id="14">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Кол-во прихода</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>15</v8:Digits>
+							<v8:FractionDigits>3</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="ЦенаПрихода" id="15">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Цена прихода</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>15</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="ОценкаИмени" id="16">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Похожесть имени</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>5</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="Результат" id="17">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Результат</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ИдентификаторУПД" id="18">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Идентификатор УПД</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>100</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="НомерПозиции" id="19">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Позиция УПД</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="КодТовараПоставщика" id="20">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Код товара поставщика</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>50</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ШтрихкодыУПД" id="21">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Собственные штрихкоды УПД</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ШтрихкодыПрихода" id="22">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Штрихкоды строки прихода</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="КлючиНоменклатуры" id="23">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Номенклатура Далиона строки</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ИННПоставщика" id="24">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ИНН поставщика</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>12</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Поставщик" id="25">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Поставщик</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>200</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ШтрихкодыДалиона" id="26">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ШК Далиона (пакет прихода)</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ШтрихкодыУТ" id="27">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ШК УТ (номенклатура УТ)</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ШтрихкодИзУПД" id="28">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ШК из УПД (GTIN в XML)</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>200</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ПоставщикОтбор" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Поставщик (наименование)</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>200</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПоискНоменклатуры" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Поиск по номенклатуре</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>100</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ТолькоБезПары" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Только без названия поставщика</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ИтогиНоменклатуры" id="11">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Номенклатура" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Номенклатура Далиона и названия поставщика</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Записать" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Записать</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="НоменклатураДалион" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Номенклатура Далиона (подбор по ШК и названию из приходных)</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>500</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="КодДалион" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Код Далиона</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>50</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ШтрихкодыДалиона" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ШК Далиона (регистр)</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="НазваниеПоставщика" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Название у поставщика (правится)</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>500</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ШтрихкодУПД" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ШК из УПД к паре</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>200</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ШКСовпадает" id="7">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ШК УПД есть у Далиона</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="КодПоставщика" id="8">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Код поставщика</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>50</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ИсточникПары" id="9">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Источник пары</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>30</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Результат" id="10">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Результат</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ИдентификаторДалион" id="11">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>uid Далиона</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>36</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ИдентификаторУПД" id="12">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>УПД с этим названием</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>100</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ИННПоставщика" id="13">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ИНН поставщика</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>12</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Поставщик" id="14">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Поставщик</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>200</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="Варианты" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Варианты штрихкодов и названий</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Связать" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Связать</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Удалить" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Удалить</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Вид" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Где</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>30</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Штрихкод" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Штрихкод</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>200</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ШтрихкодКанон" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Штрихкод (EAN-13)</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>20</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ШКЕстьУДалиона" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ШК есть у Далиона</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="НаименованиеПоставщика" id="7">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Название у поставщика</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>500</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ПохожестьИмени" id="8">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Похожесть на имя Далиона</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>5</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="НоменклатураЗаписи" id="9">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Номенклатура Далиона в записи</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>500</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ЧужаяНоменклатура" id="10">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Другой товар Далиона</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="КодПоставщика" id="11">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Код поставщика</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>50</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Поставщик" id="12">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Поставщик</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>200</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ИННПоставщика" id="13">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ИНН</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>12</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Источник" id="14">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Источник</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>30</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ДатаОбновления" id="15">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Обновлено</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>DateTime</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+				</Column>
+				<Column name="Подозрение" id="16">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Подозрение</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Результат" id="17">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Результат</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="КлючНаименования" id="18">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ключ наименования</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>32</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ИдентификаторУПД" id="19">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>УПД</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>100</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ИтогиВариантов" id="16">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ТоварыПоставщика" id="13">
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Наименование" id="1">
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>500</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="КлючНаименования" id="2">
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>32</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="КодТовараПоставщика" id="3">
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>50</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Штрихкод" id="4">
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>200</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ИдентификаторУПД" id="5">
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>100</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ИНН" id="6">
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>12</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Поставщик" id="7">
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>200</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ТоварыПрихода" id="14">
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Наименование" id="1">
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>500</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Код" id="2">
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>50</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Уид" id="3">
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>36</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Штрихкоды" id="4">
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Представление" id="5">
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ПерезаписатьПринудительно" id="17">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Перезаписать принудительно</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="Показать" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показать</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Собрать строки УПД, их штрихкоды и пары с приходом. Ничего не пишет</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Показать</Action>
+		</Command>
+		<Command name="ОтметитьКонфликты" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отметить конфликты</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отметить строки, где пара с приходом не та или её нет, а верная найдена</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОтметитьКонфликты</Action>
+		</Command>
+		<Command name="СнятьОтметки" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Снять отметки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Снять все отметки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СнятьОтметки</Action>
+		</Command>
+		<Command name="СвязатьОтмеченные" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Связать отмеченные</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Записать ручную пару в регистр штрихкодов поставщиков, назначить штрихкоды заново и пересверить цепочку. Записи регистра не удаляются</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СвязатьОтмеченные</Action>
+		</Command>
+		<Command name="ЗагрузитьНоменклатуру" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить номенклатуру</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Номенклатура Далиона со штрихкодами из регистра штрихкодов поставщиков и названия товаров из УПД поставщика. Ничего не пишет</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗагрузитьНоменклатуру</Action>
+		</Command>
+		<Command name="ЗаписатьПары" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Записать пары</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отмеченные строки: название поставщика и ШК из УПД - ручной парой к номенклатуре Далиона, затем пересверка цепочек этой УПД</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗаписатьПары</Action>
+		</Command>
+		<Command name="УдалитьДублиШК" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Удалить дубли ШК</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Удалить из регистра штрихкодов поставщиков записи, где один штрихкод записан по-разному (с нулём, GTIN-14, 01+GTIN) под тем же названием. Данные удаляемых переносятся в оставшуюся запись</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>УдалитьДублиШК</Action>
+		</Command>
+		<Command name="СвязатьВарианты" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Связать отмеченные</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отмеченные товары из УПД записать ручной парой к номенклатуре Далиона текущей строки и пересверить цепочки этих УПД</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СвязатьВарианты</Action>
+		</Command>
+		<Command name="УдалитьВарианты" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Удалить отмеченные</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Удалить из регистра штрихкодов поставщиков отмеченные неверные записи. Отменить нельзя</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>УдалитьВарианты</Action>
+		</Command>
+		<Command name="ОтметитьПодозрительные" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отметить подозрительные</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отметить к удалению записи регистра, где штрихкода нет у Далиона и название не похоже, или штрихкод записан за другим товаром Далиона</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОтметитьПодозрительные</Action>
+		</Command>
+	</Commands>
+	<Parameters>
+		<Parameter name="НомерУПД">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Parameter>
+		<Parameter name="ДатаУПД">
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>DateTime</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Parameter>
+	</Parameters>
+</Form>

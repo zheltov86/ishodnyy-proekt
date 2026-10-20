@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<EventSubscription uuid="5ee2e00e-957c-43ba-bae6-98ea4d4bc8a2">
+		<Properties>
+			<Name>ЭАрМ_ПриЗаписиРеестровЭДО</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>АРМ При записи реестров ЭДО</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment>Реестры УПД, УКД, ЭТрН и цепочка закупок: отметка изменений и строка очереди (ЭАрМ_ОчередьСобытий.ПриЗаписиРеестра); ничего тяжёлого в транзакции записи</Comment>
+			<Source>
+				<v8:Type>cfg:InformationRegisterRecordSet.ЭАрМ_УПД_Входящий</v8:Type>
+				<v8:Type>cfg:InformationRegisterRecordSet.ЭАрМ_УКД_Входящий</v8:Type>
+				<v8:Type>cfg:InformationRegisterRecordSet.ЭАрМ_РеестрЭТрН</v8:Type>
+				<v8:Type>cfg:InformationRegisterRecordSet.ЭАрМ_ЦепочкаЗакупки</v8:Type>
+			</Source>
+			<Event>OnWrite</Event>
+			<Handler>CommonModule.ЭАрМ_ОчередьСобытий.ПриЗаписиРеестра</Handler>
+		</Properties>
+	</EventSubscription>
+</MetaDataObject>

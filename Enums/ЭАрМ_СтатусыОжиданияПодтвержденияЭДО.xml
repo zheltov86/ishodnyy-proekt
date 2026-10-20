@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<Enum uuid="b17af122-253c-41ad-a37a-7b2b35427133">
+		<InternalInfo>
+			<xr:GeneratedType name="EnumRef.ЭАрМ_СтатусыОжиданияПодтвержденияЭДО" category="Ref">
+				<xr:TypeId>db2a992f-8115-48a7-930d-fc1f1a841cba</xr:TypeId>
+				<xr:ValueId>1db9bf77-96b8-4d76-8367-d7d3917dc2b5</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="EnumManager.ЭАрМ_СтатусыОжиданияПодтвержденияЭДО" category="Manager">
+				<xr:TypeId>8d94cce2-3456-4f28-81c5-1466b6d2165e</xr:TypeId>
+				<xr:ValueId>a17f6e44-837a-4add-8ee0-1845e93365fd</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="EnumList.ЭАрМ_СтатусыОжиданияПодтвержденияЭДО" category="List">
+				<xr:TypeId>f1178c63-da73-426e-873b-80772b052aa2</xr:TypeId>
+				<xr:ValueId>727a9c40-b815-4131-89b5-be063337d767</xr:ValueId>
+			</xr:GeneratedType>
+		</InternalInfo>
+		<Properties>
+			<Name>ЭАрМ_СтатусыОжиданияПодтвержденияЭДО</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>АРМ Статусы ожидания подтверждения ЭДО</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<UseStandardCommands>false</UseStandardCommands>
+			<Characteristics/>
+			<QuickChoice>true</QuickChoice>
+			<ChoiceMode>BothWays</ChoiceMode>
+			<DefaultListForm/>
+			<DefaultChoiceForm/>
+			<AuxiliaryListForm/>
+			<AuxiliaryChoiceForm/>
+			<ListPresentation/>
+			<ExtendedListPresentation/>
+			<Explanation/>
+			<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
+		</Properties>
+		<ChildObjects>
+			<EnumValue uuid="2e13e4ed-6279-41b5-8b22-ada582428493">
+				<Properties>
+					<Name>Ожидает</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ожидает</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="c6ac0721-e28f-41b0-8b2b-8689fcf7bf74">
+				<Properties>
+					<Name>Подтверждено</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Подтверждено</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="27b6dca6-51f4-4357-9ab6-656cac1ff43f">
+				<Properties>
+					<Name>Отклонено</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Отклонено</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="a1b2c3d4-1111-aaaa-bbbb-cccccccccccc">
+				<Properties>
+					<Name>ОшибкаОтправки</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ошибка отправки</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="b2c3d4e5-2222-bbbb-cccc-dddddddddddd">
+				<Properties>
+					<Name>ОжидаетПовторнойОтправки</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ожидает повторной отправки</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="c3d4e5f6-3333-cccc-dddd-eeeeeeeeeeee">
+				<Properties>
+					<Name>НеОбработаноВДалион</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Не обработано в Далион</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="d4e5f607-4444-4ddd-8eee-111122223333">
+				<Properties>
+					<Name>ГотовКОтправке</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Готовы к отправке</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>Сошедшаяся УПД или ЭТрН с приходной, ожидает подписание в СБИС</Comment>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="e5f60718-5555-4eee-8fff-222233334444">
+				<Properties>
+					<Name>ОтправленНаПодпись</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Отправлен на подпись</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>Утверждение ушло в СБИС, подпись в его состоянии ещё не видна</Comment>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="431ff034-18b7-49db-a361-eb75bf15c8c9">
+				<Properties>
+					<Name>НетВСБИС</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Нет в СБИС</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>Три ответа СБИС «документ не найден» подряд: автопроверка подписи остановлена, ручная работает</Comment>
+				</Properties>
+			</EnumValue>
+		</ChildObjects>
+	</Enum>
+</MetaDataObject>

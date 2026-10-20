@@ -1,0 +1,249 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ПрогнатьПоНазваниюКнопка" id="4">
+				<Type>UsualButton</Type>
+				<CommandName>Form.Command.ПрогнатьПоНазванию</CommandName>
+				<ExtendedTooltip name="ПрогнатьПоНазваниюКнопкаРасширеннаяПодсказка" id="5"/>
+			</Button>
+			<Button name="ТолькоНесверенныеКнопка" id="6">
+				<Type>UsualButton</Type>
+				<CommandName>Form.Command.ТолькоНесверенные</CommandName>
+				<ExtendedTooltip name="ТолькоНесверенныеКнопкаРасширеннаяПодсказка" id="7"/>
+			</Button>
+			<Button name="ГрафикЦенКнопка" id="90">
+				<Type>UsualButton</Type>
+				<CommandName>Form.Command.ГрафикЦен</CommandName>
+				<ExtendedTooltip name="ГрафикЦенКнопкаРасширеннаяПодсказка" id="91"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<Table name="Список" id="1">
+			<Representation>List</Representation>
+			<CommandBarLocation>None</CommandBarLocation>
+			<DefaultItem>true</DefaultItem>
+			<ChangeRowSet>false</ChangeRowSet>
+			<ChangeRowOrder>false</ChangeRowOrder>
+			<UseAlternationRowColor>true</UseAlternationRowColor>
+			<DataPath>Список</DataPath>
+			<RowPictureDataPath>Список.DefaultPicture</RowPictureDataPath>
+			<AutoRefresh>false</AutoRefresh>
+			<AutoRefreshPeriod>60</AutoRefreshPeriod>
+			<Period>
+				<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+				<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+				<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+			</Period>
+			<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+			<RestoreCurrentRow>true</RestoreCurrentRow>
+			<TopLevelParent xsi:nil="true"/>
+			<ShowRoot>true</ShowRoot>
+			<AllowRootChoice>false</AllowRootChoice>
+			<UpdateOnDataChange>Auto</UpdateOnDataChange>
+			<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+			<ContextMenu name="СписокКонтекстноеМеню" id="2"/>
+			<AutoCommandBar name="СписокКоманднаяПанель" id="3"/>
+			<ExtendedTooltip name="СписокРасширеннаяПодсказка" id="12"/>
+			<SearchStringAddition name="СписокСтрокаПоиска" id="13">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокСтрокаПоискаКонтекстноеМеню" id="14"/>
+				<ExtendedTooltip name="СписокСтрокаПоискаРасширеннаяПодсказка" id="15"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="СписокСостояниеПросмотра" id="16">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокСостояниеПросмотраКонтекстноеМеню" id="17"/>
+				<ExtendedTooltip name="СписокСостояниеПросмотраРасширеннаяПодсказка" id="18"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="СписокУправлениеПоиском" id="19">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="20"/>
+				<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="21"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<InputField name="ИдентификаторЗаказа" id="30">
+					<DataPath>Список.ИдентификаторЗаказа</DataPath>
+					<ContextMenu name="ИдентификаторЗаказаКонтекстноеМеню" id="31"/>
+					<ExtendedTooltip name="ИдентификаторЗаказаРасширеннаяПодсказка" id="32"/>
+				</InputField>
+				<InputField name="ИдентификаторПоступления" id="33">
+					<DataPath>Список.ИдентификаторПоступления</DataPath>
+					<ContextMenu name="ИдентификаторПоступленияКонтекстноеМеню" id="34"/>
+					<ExtendedTooltip name="ИдентификаторПоступленияРасширеннаяПодсказка" id="35"/>
+				</InputField>
+				<InputField name="ПозицияСверки" id="36">
+					<DataPath>Список.ПозицияСверки</DataPath>
+					<ContextMenu name="ПозицияСверкиКонтекстноеМеню" id="37"/>
+					<ExtendedTooltip name="ПозицияСверкиРасширеннаяПодсказка" id="38"/>
+				</InputField>
+				<InputField name="Штрихкод" id="39">
+					<DataPath>Список.Штрихкод</DataPath>
+					<ContextMenu name="ШтрихкодКонтекстноеМеню" id="40"/>
+					<ExtendedTooltip name="ШтрихкодРасширеннаяПодсказка" id="41"/>
+				</InputField>
+				<InputField name="СпособСопоставления" id="42">
+					<DataPath>Список.СпособСопоставления</DataPath>
+					<ContextMenu name="СпособСопоставленияКонтекстноеМеню" id="43"/>
+					<ExtendedTooltip name="СпособСопоставленияРасширеннаяПодсказка" id="44"/>
+				</InputField>
+				<InputField name="НоменклатураЗаказа" id="45">
+					<DataPath>Список.НоменклатураЗаказа</DataPath>
+					<ContextMenu name="НоменклатураЗаказаКонтекстноеМеню" id="46"/>
+					<ExtendedTooltip name="НоменклатураЗаказаРасширеннаяПодсказка" id="47"/>
+				</InputField>
+				<InputField name="НоменклатураПоступления" id="48">
+					<DataPath>Список.НоменклатураПоступления</DataPath>
+					<ContextMenu name="НоменклатураПоступленияКонтекстноеМеню" id="49"/>
+					<ExtendedTooltip name="НоменклатураПоступленияРасширеннаяПодсказка" id="50"/>
+				</InputField>
+				<InputField name="НаименованиеУПД" id="51">
+					<DataPath>Список.НаименованиеУПД</DataPath>
+					<ContextMenu name="НаименованиеУПДКонтекстноеМеню" id="52"/>
+					<ExtendedTooltip name="НаименованиеУПДРасширеннаяПодсказка" id="53"/>
+				</InputField>
+				<InputField name="НаименованиеЭТрН" id="54">
+					<DataPath>Список.НаименованиеЭТрН</DataPath>
+					<ContextMenu name="НаименованиеЭТрНКонтекстноеМеню" id="55"/>
+					<ExtendedTooltip name="НаименованиеЭТрНРасширеннаяПодсказка" id="56"/>
+				</InputField>
+				<InputField name="КоличествоЗаказа" id="57">
+					<DataPath>Список.КоличествоЗаказа</DataPath>
+					<ContextMenu name="КоличествоЗаказаКонтекстноеМеню" id="58"/>
+					<ExtendedTooltip name="КоличествоЗаказаРасширеннаяПодсказка" id="59"/>
+				</InputField>
+				<InputField name="КоличествоПоступления" id="60">
+					<DataPath>Список.КоличествоПоступления</DataPath>
+					<ContextMenu name="КоличествоПоступленияКонтекстноеМеню" id="61"/>
+					<ExtendedTooltip name="КоличествоПоступленияРасширеннаяПодсказка" id="62"/>
+				</InputField>
+				<InputField name="КоличествоУПД" id="63">
+					<DataPath>Список.КоличествоУПД</DataPath>
+					<ContextMenu name="КоличествоУПДКонтекстноеМеню" id="64"/>
+					<ExtendedTooltip name="КоличествоУПДРасширеннаяПодсказка" id="65"/>
+				</InputField>
+				<InputField name="КоличествоЭТрН" id="66">
+					<DataPath>Список.КоличествоЭТрН</DataPath>
+					<ContextMenu name="КоличествоЭТрНКонтекстноеМеню" id="67"/>
+					<ExtendedTooltip name="КоличествоЭТрНРасширеннаяПодсказка" id="68"/>
+				</InputField>
+				<InputField name="ЦенаЗаказа" id="69">
+					<DataPath>Список.ЦенаЗаказа</DataPath>
+					<ContextMenu name="ЦенаЗаказаКонтекстноеМеню" id="70"/>
+					<ExtendedTooltip name="ЦенаЗаказаРасширеннаяПодсказка" id="71"/>
+				</InputField>
+				<InputField name="ЦенаПоступления" id="72">
+					<DataPath>Список.ЦенаПоступления</DataPath>
+					<ContextMenu name="ЦенаПоступленияКонтекстноеМеню" id="73"/>
+					<ExtendedTooltip name="ЦенаПоступленияРасширеннаяПодсказка" id="74"/>
+				</InputField>
+				<InputField name="ЦенаУПД" id="75">
+					<DataPath>Список.ЦенаУПД</DataPath>
+					<ContextMenu name="ЦенаУПДКонтекстноеМеню" id="76"/>
+					<ExtendedTooltip name="ЦенаУПДРасширеннаяПодсказка" id="77"/>
+				</InputField>
+				<InputField name="Результат" id="78">
+					<DataPath>Список.Результат</DataPath>
+					<ContextMenu name="РезультатКонтекстноеМеню" id="79"/>
+					<ExtendedTooltip name="РезультатРасширеннаяПодсказка" id="80"/>
+				</InputField>
+				<InputField name="Комментарий" id="81">
+					<DataPath>Список.Комментарий</DataPath>
+					<ContextMenu name="КомментарийКонтекстноеМеню" id="82"/>
+					<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="83"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Список" id="1">
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>false</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<MainTable>InformationRegister.ЭАрМ_СверкаТоваровЦепочки</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ПрогнатьПоНазванию" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Прогнать несверенные по названию</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Для цепочек с несверенными строками искать пары по названию, понижая порог совпадения слов до 50%, пока цепочка не сойдётся. Вес, объём и жирность не смягчаются</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПрогнатьПоНазванию</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ТолькоНесверенные" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Только несверенные</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показать только строки «Нет в УПД» и «Нет в поступлении» и обратно</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ТолькоНесверенные</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ГрафикЦен" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>График цен</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Динамика цен УПД и прихода по сверке цепочки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ГрафикЦен</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

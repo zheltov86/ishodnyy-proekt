@@ -1,0 +1,495 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="СверкаСУПДКнопка" id="4">
+				<Type>UsualButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.Command.СверкаСУПД</CommandName>
+				<ExtendedTooltip name="СверкаСУПДКнопкаРасширеннаяПодсказка" id="5"/>
+			</Button>
+			<Button name="СвязатьСУПДКнопка" id="6">
+				<Type>UsualButton</Type>
+				<CommandName>Form.Command.СвязатьСУПД</CommandName>
+				<ExtendedTooltip name="СвязатьСУПДКнопкаРасширеннаяПодсказка" id="7"/>
+			</Button>
+			<Button name="КодыМаркировкиКнопка" id="8">
+				<Type>UsualButton</Type>
+				<CommandName>Form.Command.КодыМаркировки</CommandName>
+				<ExtendedTooltip name="КодыМаркировкиКнопкаРасширеннаяПодсказка" id="9"/>
+			</Button>
+			<Button name="ОткрытьФайлКнопка" id="10">
+				<Type>UsualButton</Type>
+				<CommandName>Form.Command.ОткрытьФайл</CommandName>
+				<ExtendedTooltip name="ОткрытьФайлКнопкаРасширеннаяПодсказка" id="11"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="OnOpen">ПриОткрытии</Event>
+	</Events>
+	<ChildItems>
+		<LabelField name="ХодЗагрузкиПоле" id="64">
+			<DataPath>ХодЗагрузки</DataPath>
+			<Visible>false</Visible>
+			<TitleLocation>None</TitleLocation>
+			<HorizontalStretch>true</HorizontalStretch>
+			<ContextMenu name="ХодЗагрузкиПолеКонтекстноеМеню" id="65"/>
+			<ExtendedTooltip name="ХодЗагрузкиПолеРасширеннаяПодсказка" id="66"/>
+		</LabelField>
+		<Table name="Список" id="1">
+			<Representation>List</Representation>
+			<CommandBarLocation>None</CommandBarLocation>
+			<DefaultItem>true</DefaultItem>
+			<ChangeRowSet>false</ChangeRowSet>
+			<ChangeRowOrder>false</ChangeRowOrder>
+			<UseAlternationRowColor>true</UseAlternationRowColor>
+			<DataPath>Список</DataPath>
+			<RowPictureDataPath>Список.DefaultPicture</RowPictureDataPath>
+			<AutoRefresh>true</AutoRefresh>
+			<AutoRefreshPeriod>60</AutoRefreshPeriod>
+			<Period>
+				<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+				<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+				<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+			</Period>
+			<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+			<RestoreCurrentRow>true</RestoreCurrentRow>
+			<TopLevelParent xsi:nil="true"/>
+			<ShowRoot>true</ShowRoot>
+			<AllowRootChoice>false</AllowRootChoice>
+			<UpdateOnDataChange>Auto</UpdateOnDataChange>
+			<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+			<ContextMenu name="СписокКонтекстноеМеню" id="2"/>
+			<AutoCommandBar name="СписокКоманднаяПанель" id="3"/>
+			<ExtendedTooltip name="СписокРасширеннаяПодсказка" id="12"/>
+			<SearchStringAddition name="СписокСтрокаПоиска" id="13">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокСтрокаПоискаКонтекстноеМеню" id="14"/>
+				<ExtendedTooltip name="СписокСтрокаПоискаРасширеннаяПодсказка" id="15"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="СписокСостояниеПросмотра" id="16">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокСостояниеПросмотраКонтекстноеМеню" id="17"/>
+				<ExtendedTooltip name="СписокСостояниеПросмотраРасширеннаяПодсказка" id="18"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="СписокУправлениеПоиском" id="19">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="20"/>
+				<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="21"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<InputField name="Номер" id="22">
+					<DataPath>Список.Номер</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Номер УКД</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="НомерКонтекстноеМеню" id="23"/>
+					<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="24"/>
+				</InputField>
+				<InputField name="Дата" id="25">
+					<DataPath>Список.Дата</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дата УКД</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ДатаКонтекстноеМеню" id="26"/>
+					<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="27"/>
+				</InputField>
+				<InputField name="Контрагент" id="28">
+					<DataPath>Список.Контрагент</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Контрагент</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="КонтрагентКонтекстноеМеню" id="29"/>
+					<ExtendedTooltip name="КонтрагентРасширеннаяПодсказка" id="30"/>
+				</InputField>
+				<InputField name="ИННКонтрагента" id="31">
+					<DataPath>Список.ИННКонтрагента</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ИНН</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ИННКонтрагентаКонтекстноеМеню" id="32"/>
+					<ExtendedTooltip name="ИННКонтрагентаРасширеннаяПодсказка" id="33"/>
+				</InputField>
+				<InputField name="НомерОснования" id="34">
+					<DataPath>Список.НомерОснования</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Исправляет УПД №</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="НомерОснованияКонтекстноеМеню" id="35"/>
+					<ExtendedTooltip name="НомерОснованияРасширеннаяПодсказка" id="36"/>
+				</InputField>
+				<InputField name="ДатаОснования" id="37">
+					<DataPath>Список.ДатаОснования</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>от</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ДатаОснованияКонтекстноеМеню" id="38"/>
+					<ExtendedTooltip name="ДатаОснованияРасширеннаяПодсказка" id="39"/>
+				</InputField>
+				<CheckBoxField name="РасхожденийНет" id="40">
+					<DataPath>Список.РасхожденийНет</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сошлось</v8:content>
+						</v8:item>
+					</Title>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="РасхожденийНетКонтекстноеМеню" id="41"/>
+					<ExtendedTooltip name="РасхожденийНетРасширеннаяПодсказка" id="42"/>
+				</CheckBoxField>
+				<InputField name="ТекстСверки" id="43">
+					<DataPath>Список.ТекстСверки</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сверка</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ТекстСверкиКонтекстноеМеню" id="44"/>
+					<ExtendedTooltip name="ТекстСверкиРасширеннаяПодсказка" id="45"/>
+				</InputField>
+				<InputField name="СтатусУКД" id="46">
+					<DataPath>Список.СтатусУКД</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Статус</v8:content>
+						</v8:item>
+					</Title>
+						<ToolTip>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Что с корректировкой сейчас: аннулирована / аннулирование не решено / исходная УПД не найдена или аннулирована / подписана / утверждена / нет приходной Далиона / УКД есть, нет возврата из Далиона / не сверена / сошлась или расхождение с приходной. Считается при показе списка, не хранится</v8:content>
+							</v8:item>
+						</ToolTip>
+					<ContextMenu name="СтатусУКДКонтекстноеМеню" id="47"/>
+					<ExtendedTooltip name="СтатусУКДРасширеннаяПодсказка" id="48"/>
+				</InputField>
+				<CheckBoxField name="Утверждено" id="49">
+					<DataPath>Список.Утверждено</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Утверждено</v8:content>
+						</v8:item>
+					</Title>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="УтвержденоКонтекстноеМеню" id="50"/>
+					<ExtendedTooltip name="УтвержденоРасширеннаяПодсказка" id="51"/>
+				</CheckBoxField>
+				<CheckBoxField name="Подписано" id="61">
+					<DataPath>Список.Подписано</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Подписан</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>СБИС подтвердил подпись</v8:content>
+						</v8:item>
+					</ToolTip>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ПодписаноКонтекстноеМеню" id="62"/>
+					<ExtendedTooltip name="ПодписаноРасширеннаяПодсказка" id="63"/>
+				</CheckBoxField>
+				<InputField name="Состояние" id="52">
+					<DataPath>Список.Состояние</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Состояние в СБИС</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="СостояниеКонтекстноеМеню" id="53"/>
+					<ExtendedTooltip name="СостояниеРасширеннаяПодсказка" id="54"/>
+				</InputField>
+				<InputField name="ИдентификаторОснования" id="55">
+					<DataPath>Список.ИдентификаторОснования</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Исходная УПД в СБИС</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ИдентификаторОснованияКонтекстноеМеню" id="56"/>
+					<ExtendedTooltip name="ИдентификаторОснованияРасширеннаяПодсказка" id="57"/>
+				</InputField>
+				<InputField name="ИдентификаторСБИС" id="58">
+					<DataPath>Список.ИдентификаторСБИС</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Идентификатор СБИС</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ИдентификаторСБИСКонтекстноеМеню" id="59"/>
+					<ExtendedTooltip name="ИдентификаторСБИСРасширеннаяПодсказка" id="60"/>
+				</InputField>
+				<CheckBoxField name="ОтправленоВБух" id="67">
+					<DataPath>Список.ОтправленоВБух</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>В БП</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Отправлено в БП: БП ответила, что документ у неё есть (создан сейчас или был раньше). Что создано - колонка «Документ в БП»</v8:content>
+						</v8:item>
+					</ToolTip>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ОтправленоВБухКонтекстноеМеню" id="68"/>
+					<ExtendedTooltip name="ОтправленоВБухРасширеннаяПодсказка" id="69"/>
+				</CheckBoxField>
+				<CheckBoxField name="ПроведенВБух" id="73">
+					<DataPath>Список.ПроведенВБух</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Проведён в БП</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>БП ответила, что документ у неё проведён</v8:content>
+						</v8:item>
+					</ToolTip>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ПроведенВБухКонтекстноеМеню" id="74"/>
+					<ExtendedTooltip name="ПроведенВБухРасширеннаяПодсказка" id="75"/>
+				</CheckBoxField>
+				<InputField name="ДокументБух" id="70">
+					<DataPath>Список.ДокументБух</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Документ в БП</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ответ БП: что создано по документу или почему не создано</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ContextMenu name="ДокументБухКонтекстноеМеню" id="71"/>
+					<ExtendedTooltip name="ДокументБухРасширеннаяПодсказка" id="72"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Список" id="1">
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	УКД.ИдентификаторСБИС КАК ИдентификаторСБИС,
+	УКД.Номер КАК Номер,
+	УКД.Дата КАК Дата,
+	УКД.Контрагент КАК Контрагент,
+	УКД.ИННКонтрагента КАК ИННКонтрагента,
+	УКД.НомерОснования КАК НомерОснования,
+	УКД.ДатаОснования КАК ДатаОснования,
+	УКД.ИдентификаторОснования КАК ИдентификаторОснования,
+	УКД.РасхожденийНет КАК РасхожденийНет,
+	УКД.ТекстСверки КАК ТекстСверки,
+	УКД.СтатусПодписания КАК СтатусПодписания,
+	УКД.Утверждено КАК Утверждено,
+	УКД.Подписано КАК Подписано,
+	УКД.Состояние КАК Состояние,
+	УКД.КодСостояния КАК КодСостояния,
+	УКД.ДатаЗагрузки КАК ДатаЗагрузки,
+	УКД.ОтправленоВБух КАК ОтправленоВБух,
+	УКД.ДокументБух КАК ДокументБух,
+	УКД.ПроведенВБух КАК ПроведенВБух,
+	ВЫБОР
+		КОГДА УКД.КодСостояния В ("19", "20", "21", "22")
+				ИЛИ УКД.КодСостояния = ""
+					И (УКД.Состояние ПОДОБНО "Аннулирован%"
+						ИЛИ УКД.Состояние ПОДОБНО "Удален%"
+						ИЛИ УКД.Состояние ПОДОБНО "Отозван%")
+			ТОГДА "Аннулирована в СБИС - в сверке не участвует"
+		КОГДА УКД.КодСостояния = "27"
+				ИЛИ УКД.КодСостояния = ""
+					И УКД.Состояние ПОДОБНО "Ожидает аннулирования%"
+			ТОГДА "Аннулирование не решено - решите в СБИС"
+		КОГДА УКД.ИдентификаторОснования = ""
+				ИЛИ УПД.ИдентификаторСБИС ЕСТЬ NULL
+			ТОГДА "Исходная УПД не найдена"
+		КОГДА УПД.КодСостояния В ("19", "20", "21", "22")
+				ИЛИ УПД.КодСостояния = ""
+					И (УПД.Состояние ПОДОБНО "Аннулирован%"
+						ИЛИ УПД.Состояние ПОДОБНО "Удален%"
+						ИЛИ УПД.Состояние ПОДОБНО "Отозван%")
+			ТОГДА "Исходная УПД аннулирована"
+		КОГДА УКД.Подписано
+			ТОГДА "Подписана"
+		КОГДА УКД.СтатусПодписания = ЗНАЧЕНИЕ(Перечисление.ЭАрМ_СтатусыПодписанияЭДО.Утвержден)
+			ТОГДА "Утверждена"
+		КОГДА НЕ УКД.ИдентификаторОснования В
+					(ВЫБРАТЬ
+						Цепочка.ИдентификаторУПД
+					ИЗ
+						РегистрСведений.ЭАрМ_ЦепочкаЗакупки КАК Цепочка
+					ГДЕ
+						НЕ Цепочка.ИдентификаторПоступления = "")
+			ТОГДА "Нет приходной Далиона"
+		КОГДА УПД.СтатусПодписания = ЗНАЧЕНИЕ(Перечисление.ЭАрМ_СтатусыПодписанияЭДО.НетВозвратаДалиона)
+			ТОГДА "УКД есть, нет возврата из Далиона"
+		КОГДА УПД.РасхожденийНет
+			ТОГДА "Сошлась с приходной"
+		КОГДА ПОДСТРОКА(УПД.ТекстСверки, 1, 1) = ""
+			ТОГДА "Не сверена"
+		ИНАЧЕ "Расхождение с приходной"
+	КОНЕЦ КАК СтатусУКД
+ИЗ
+	РегистрСведений.ЭАрМ_УКД_Входящий КАК УКД
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ЭАрМ_УПД_Входящий КАК УПД
+		ПО УКД.ИдентификаторОснования = УПД.ИдентификаторСБИС</QueryText>
+				<MainTable>InformationRegister.ЭАрМ_УКД_Входящий</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="ХодЗагрузки" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ход загрузки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="СверкаСУПД" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сверка с УПД</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сверить исходную УПД с учётом корректировок с приходной накладной Далиона</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СверкаСУПД</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="СвязатьСУПД" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Найти исходную УПД</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заново найти в реестре УПД документ, который исправляет корректировка</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СвязатьСУПД</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="КодыМаркировки" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Коды маркировки и GTIN</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Прочитать корректировку из СБИС и раскрыть GTIN и коды маркировки строк</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КодыМаркировки</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОткрытьФайл" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть файл</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Скачать XML корректировки из СБИС и открыть его</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОткрытьФайл</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

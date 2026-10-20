@@ -1,0 +1,257 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="ПапкаПоле" id="1">
+			<DataPath>Папка</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Папка обмена с БП (на сервере 1С)</v8:content>
+				</v8:item>
+			</Title>
+			<ChoiceButton>true</ChoiceButton>
+			<ContextMenu name="ПапкаПолеКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="ПапкаПолеРасширеннаяПодсказка" id="3"/>
+			<Events>
+				<Event name="StartChoice">ПапкаНачалоВыбора</Event>
+			</Events>
+		</InputField>
+		<CheckBoxField name="ТолькоНеВыгруженныеПоле" id="4">
+			<DataPath>ТолькоНеВыгруженные</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Только не выгруженные</v8:content>
+				</v8:item>
+			</Title>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="ТолькоНеВыгруженныеПолеКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="ТолькоНеВыгруженныеПолеРасширеннаяПодсказка" id="6"/>
+		</CheckBoxField>
+		<CheckBoxField name="СУКДПоле" id="7">
+			<DataPath>СУКД</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>С УКД</v8:content>
+				</v8:item>
+			</Title>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="СУКДПолеКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="СУКДПолеРасширеннаяПодсказка" id="9"/>
+		</CheckBoxField>
+		<CheckBoxField name="БезПроверкиПодписиПоле" id="10">
+			<DataPath>БезПроверкиПодписи</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Без проверки подписи</v8:content>
+				</v8:item>
+			</Title>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="БезПроверкиПодписиПолеКонтекстноеМеню" id="11"/>
+			<ExtendedTooltip name="БезПроверкиПодписиПолеРасширеннаяПодсказка" id="12"/>
+		</CheckBoxField>
+		<CheckBoxField name="ТолькоУКДПоле" id="13">
+			<DataPath>ТолькоУКД</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Без УПД (только УКД)</v8:content>
+				</v8:item>
+			</Title>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="ТолькоУКДПолеКонтекстноеМеню" id="14"/>
+			<ExtendedTooltip name="ТолькоУКДПолеРасширеннаяПодсказка" id="15"/>
+		</CheckBoxField>
+		<CheckBoxField name="СтарыеУКДПоле" id="16">
+			<DataPath>СтарыеУКД</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Старые УКД (без исходной УПД в УТ)</v8:content>
+				</v8:item>
+			</Title>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="СтарыеУКДПолеКонтекстноеМеню" id="17"/>
+			<ExtendedTooltip name="СтарыеУКДПолеРасширеннаяПодсказка" id="18"/>
+		</CheckBoxField>
+		<CheckBoxField name="ОтправлятьБезДоговораПоле" id="19">
+			<DataPath>ОтправлятьБезДоговора</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отправлять без договора</v8:content>
+				</v8:item>
+			</Title>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="ОтправлятьБезДоговораПолеКонтекстноеМеню" id="20"/>
+			<ExtendedTooltip name="ОтправлятьБезДоговораПолеРасширеннаяПодсказка" id="21"/>
+		</CheckBoxField>
+		<CheckBoxField name="СобиратьВФонеПоле" id="22">
+			<DataPath>СобиратьВФоне</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Собирать в фоне</v8:content>
+				</v8:item>
+			</Title>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="СобиратьВФонеПолеКонтекстноеМеню" id="23"/>
+			<ExtendedTooltip name="СобиратьВФонеПолеРасширеннаяПодсказка" id="24"/>
+		</CheckBoxField>
+		<InputField name="ЛимитСборкиМинутПоле" id="25">
+			<DataPath>ЛимитСборкиМинут</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Лимит сборки, мин</v8:content>
+				</v8:item>
+			</Title>
+			<ContextMenu name="ЛимитСборкиМинутПолеКонтекстноеМеню" id="26"/>
+			<ExtendedTooltip name="ЛимитСборкиМинутПолеРасширеннаяПодсказка" id="27"/>
+		</InputField>
+		<Button name="СохранитьКнопка" id="28">
+			<Type>UsualButton</Type>
+			<CommandName>Form.Command.Сохранить</CommandName>
+			<ExtendedTooltip name="СохранитьКнопкаРасширеннаяПодсказка" id="29"/>
+		</Button>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.ЭАрМ_ВыгрузкаВБух</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="Папка" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Папка обмена</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>500</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ТолькоНеВыгруженные" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Только не выгруженные</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="СУКД" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>С УКД</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="БезПроверкиПодписи" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Без проверки подписи</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ТолькоУКД" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Только УКД</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="СтарыеУКД" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Старые УКД</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ОтправлятьБезДоговора" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отправлять без договора</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="СобиратьВФоне" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Собирать в фоне</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ЛимитСборкиМинут" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Лимит сборки, мин</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>4</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="Сохранить" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохранить и закрыть</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохранить настройки - основная форма перечитает их</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Сохранить</Action>
+		</Command>
+	</Commands>
+</Form>

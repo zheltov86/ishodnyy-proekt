@@ -1,0 +1,271 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnClose">ПриЗакрытии</Event>
+	</Events>
+	<ChildItems>
+		<Table name="УПД" id="1">
+			<Representation>List</Representation>
+			<CommandBarLocation>None</CommandBarLocation>
+			<DataPath>Объект.УПД</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="УПДКонтекстноеМеню" id="2"/>
+			<AutoCommandBar name="УПДКоманднаяПанель" id="3"/>
+			<ExtendedTooltip name="УПДРасширеннаяПодсказка" id="4"/>
+			<SearchStringAddition name="УПДСтрокаПоиска" id="5">
+				<AdditionSource>
+					<Item>УПД</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="УПДСтрокаПоискаКонтекстноеМеню" id="6"/>
+				<ExtendedTooltip name="УПДСтрокаПоискаРасширеннаяПодсказка" id="7"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="УПДСостояниеПросмотра" id="8">
+				<AdditionSource>
+					<Item>УПД</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="УПДСостояниеПросмотраКонтекстноеМеню" id="9"/>
+				<ExtendedTooltip name="УПДСостояниеПросмотраРасширеннаяПодсказка" id="10"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="УПДУправлениеПоиском" id="11">
+				<AdditionSource>
+					<Item>УПД</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="УПДУправлениеПоискомКонтекстноеМеню" id="12"/>
+				<ExtendedTooltip name="УПДУправлениеПоискомРасширеннаяПодсказка" id="13"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<InputField name="УПДДата" id="14">
+					<DataPath>Объект.УПД.Дата</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дата</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="УПДДатаКонтекстноеМеню" id="15"/>
+					<ExtendedTooltip name="УПДДатаРасширеннаяПодсказка" id="16"/>
+				</InputField>
+				<InputField name="УПДПредставление" id="17">
+					<DataPath>Объект.УПД.Представление</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Документ</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="УПДПредставлениеКонтекстноеМеню" id="18"/>
+					<ExtendedTooltip name="УПДПредставлениеРасширеннаяПодсказка" id="19"/>
+				</InputField>
+				<InputField name="УПДСтатусПодписания" id="20">
+					<DataPath>Объект.УПД.СтатусПодписания</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Статус</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="УПДСтатусПодписанияКонтекстноеМеню" id="21"/>
+					<ExtendedTooltip name="УПДСтатусПодписанияРасширеннаяПодсказка" id="22"/>
+				</InputField>
+				<CheckBoxField name="УПДКОтправке" id="23">
+					<DataPath>Объект.УПД.КОтправке</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>К отправке</v8:content>
+						</v8:item>
+					</Title>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="УПДКОтправкеКонтекстноеМеню" id="24"/>
+					<ExtendedTooltip name="УПДКОтправкеРасширеннаяПодсказка" id="25"/>
+				</CheckBoxField>
+				<CheckBoxField name="УПДУтверждено" id="26">
+					<DataPath>Объект.УПД.Утверждено</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Утверждено</v8:content>
+						</v8:item>
+					</Title>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="УПДУтвержденоКонтекстноеМеню" id="27"/>
+					<ExtendedTooltip name="УПДУтвержденоРасширеннаяПодсказка" id="28"/>
+				</CheckBoxField>
+				<CheckBoxField name="УПДПодписано" id="29">
+					<DataPath>Объект.УПД.Подписано</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Подписано</v8:content>
+						</v8:item>
+					</Title>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="УПДПодписаноКонтекстноеМеню" id="30"/>
+					<ExtendedTooltip name="УПДПодписаноРасширеннаяПодсказка" id="31"/>
+				</CheckBoxField>
+				<CheckBoxField name="УПДЕстьЭТрН" id="32">
+					<DataPath>Объект.УПД.ЕстьЭТрН</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ЭТрН</v8:content>
+						</v8:item>
+					</Title>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="УПДЕстьЭТрНКонтекстноеМеню" id="33"/>
+					<ExtendedTooltip name="УПДЕстьЭТрНРасширеннаяПодсказка" id="34"/>
+				</CheckBoxField>
+				<CheckBoxField name="УПДЕстьУКД" id="35">
+					<DataPath>Объект.УПД.ЕстьУКД</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>УКД</v8:content>
+						</v8:item>
+					</Title>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="УПДЕстьУКДКонтекстноеМеню" id="36"/>
+					<ExtendedTooltip name="УПДЕстьУКДРасширеннаяПодсказка" id="37"/>
+				</CheckBoxField>
+				<CheckBoxField name="УПДРасхожденийНет" id="38">
+					<DataPath>Объект.УПД.РасхожденийНет</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Расхождений нет</v8:content>
+						</v8:item>
+					</Title>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="УПДРасхожденийНетКонтекстноеМеню" id="39"/>
+					<ExtendedTooltip name="УПДРасхожденийНетРасширеннаяПодсказка" id="40"/>
+				</CheckBoxField>
+				<InputField name="УПДКонтрагент" id="41">
+					<DataPath>Объект.УПД.Контрагент</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Контрагент</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="УПДКонтрагентКонтекстноеМеню" id="42"/>
+					<ExtendedTooltip name="УПДКонтрагентРасширеннаяПодсказка" id="43"/>
+				</InputField>
+				<InputField name="УПДФормат" id="44">
+					<DataPath>Объект.УПД.Формат</DataPath>
+					<Visible>false</Visible>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Формат</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="УПДФорматКонтекстноеМеню" id="45"/>
+					<ExtendedTooltip name="УПДФорматРасширеннаяПодсказка" id="46"/>
+				</InputField>
+				<InputField name="УПДНомерОснования" id="47">
+					<DataPath>Объект.УПД.НомерОснования</DataPath>
+					<Visible>false</Visible>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Исходная УПД</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="УПДНомерОснованияКонтекстноеМеню" id="48"/>
+					<ExtendedTooltip name="УПДНомерОснованияРасширеннаяПодсказка" id="49"/>
+				</InputField>
+				<InputField name="УПДСостояние" id="50">
+					<DataPath>Объект.УПД.Состояние</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Состояние</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="УПДСостояниеКонтекстноеМеню" id="51"/>
+					<ExtendedTooltip name="УПДСостояниеРасширеннаяПодсказка" id="52"/>
+				</InputField>
+				<InputField name="УПДТипРеестра" id="53">
+					<DataPath>Объект.УПД.ТипРеестра</DataPath>
+					<Visible>false</Visible>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Реестр</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="УПДТипРеестраКонтекстноеМеню" id="54"/>
+					<ExtendedTooltip name="УПДТипРеестраРасширеннаяПодсказка" id="55"/>
+				</InputField>
+				<InputField name="УПДДатаЗагрузки" id="56">
+					<DataPath>Объект.УПД.ДатаЗагрузки</DataPath>
+					<Visible>false</Visible>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Загружен</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="УПДДатаЗагрузкиКонтекстноеМеню" id="57"/>
+					<ExtendedTooltip name="УПДДатаЗагрузкиРасширеннаяПодсказка" id="58"/>
+				</InputField>
+				<CheckBoxField name="УПДПломба" id="59">
+					<DataPath>Объект.УПД.Пломба</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Пломба</v8:content>
+						</v8:item>
+					</Title>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="УПДПломбаКонтекстноеМеню" id="60"/>
+					<ExtendedTooltip name="УПДПломбаРасширеннаяПодсказка" id="61"/>
+				</CheckBoxField>
+				<InputField name="УПДИдентификаторСБИС" id="62">
+					<DataPath>Объект.УПД.ИдентификаторСБИС</DataPath>
+					<Visible>false</Visible>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Идентификатор СБИС</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="УПДИдентификаторСБИСКонтекстноеМеню" id="63"/>
+					<ExtendedTooltip name="УПДИдентификаторСБИСРасширеннаяПодсказка" id="64"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.ЭАрМ_ОбработкаЭДО</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ОбновитьРеестрУПД" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Перечитать весь список УПД из регистра</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОбновитьРеестрУПД</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>
