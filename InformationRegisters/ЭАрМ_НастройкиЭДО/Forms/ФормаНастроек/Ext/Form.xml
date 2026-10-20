@@ -999,6 +999,307 @@
 						</UsualGroup>
 					</ChildItems>
 				</Page>
+				<Page name="СтраницаОтправка" id="600">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Отправка и регламенты</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="СтраницаОтправкаРасширеннаяПодсказка" id="601"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаОтправкаСБИС" id="602">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Отправка неотправленного в СБИС и Бух</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Регламентное задание «Отправка очереди ЭДО в СБИС»: собирает всё неотправленное и отправляет пачками по расписанию - в СБИС (флажок ниже) и подписанное в Бух (флажок «Выгружать подписанное в Бух»). Кнопка «Отправить неотправленное сейчас» делает то же сразу и показывает ниже, какая пачка и какой документ уходит.</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>NormalSeparation</Representation>
+							<ExtendedTooltip name="ГруппаОтправкаСБИСРасширеннаяПодсказка" id="603"/>
+							<ChildItems>
+								<CheckBoxField name="Отправка_Включена" id="604">
+									<DataPath>Отправка_Включена</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Собирать и отправлять неотправленное по расписанию</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Регламент «Отправка очереди ЭДО в СБИС»: сверяет ожидающие цепочки, ставит сошедшиеся УПД и УКД («Готов к утверждению») в очередь и отправляет всё неотправленное в СБИС пачками. Это тот же флажок «Автоотправка», что в реестре УПД и в «Ожидают отправки». Подпись на сервере - регламент подписывает сам; на клиенте - подписывает открытая форма на компьютере, где флажок включили.</v8:content>
+										</v8:item>
+									</ToolTip>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="Отправка_ВключенаКонтекстноеМеню" id="605"/>
+									<ExtendedTooltip name="Отправка_ВключенаРасширеннаяПодсказка" id="606"/>
+									<Events>
+										<Event name="OnChange">Отправка_ВключенаПриИзменении</Event>
+									</Events>
+								</CheckBoxField>
+								<CheckBoxField name="Отправка_ВБух" id="740">
+									<DataPath>АвтообменСБух</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Выгружать подписанное в Бух</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Тот же флажок «Автообмен с БП», что на вкладке «Далион и обмен»: подписанные и не выгруженные УПД и УКД уходят в папку обмена с БП - сразу после подписи и этим же регламентом (последним шагом), ответы БП читаются регламентом.</v8:content>
+										</v8:item>
+									</ToolTip>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="Отправка_ВБухКонтекстноеМеню" id="741"/>
+									<ExtendedTooltip name="Отправка_ВБухРасширеннаяПодсказка" id="742"/>
+								</CheckBoxField>
+								<InputField name="ИнтервалОтправкиОчереди" id="607">
+									<DataPath>ИнтервалОтправкиОчереди</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Запуск каждые, минут</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Как часто регламент собирает и отправляет неотправленное (1-1440 минут). Сразу переставляет расписание задания.</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ContextMenu name="ИнтервалОтправкиОчередиКонтекстноеМеню" id="608"/>
+									<ExtendedTooltip name="ИнтервалОтправкиОчередиРасширеннаяПодсказка" id="609"/>
+								</InputField>
+								<InputField name="ОтправкаСБИС_РазмерПачки" id="610">
+									<DataPath>ОтправкаСБИС_РазмерПачки</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Документов в одной пачке в СБИС</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Сколько документов подписывается и уходит в СБИС за один раз (1-50, по умолчанию 5). Меньше пачка - чаще видно, какой документ уходит, и меньше теряется при сбое.</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ContextMenu name="ОтправкаСБИС_РазмерПачкиКонтекстноеМеню" id="611"/>
+									<ExtendedTooltip name="ОтправкаСБИС_РазмерПачкиРасширеннаяПодсказка" id="612"/>
+								</InputField>
+								<InputField name="ОтправкаСБИС_ПачекЗаЗапуск" id="613">
+									<DataPath>ОтправкаСБИС_ПачекЗаЗапуск</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Пачек за один запуск</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Не больше стольких пачек за один запуск регламента (1-200, по умолчанию 20); остальное - следующим запуском.</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ContextMenu name="ОтправкаСБИС_ПачекЗаЗапускКонтекстноеМеню" id="614"/>
+									<ExtendedTooltip name="ОтправкаСБИС_ПачекЗаЗапускРасширеннаяПодсказка" id="615"/>
+								</InputField>
+								<InputField name="ОтправкаСБИС_ВОчередьЗаПроход" id="616">
+									<DataPath>ОтправкаСБИС_ВОчередьЗаПроход</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Ставить в очередь за проход, документов</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Сколько сошедшихся УПД и УКД регламент ставит в очередь «Ожидают отправки» за один проход (1-500, по умолчанию 50).</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ContextMenu name="ОтправкаСБИС_ВОчередьЗаПроходКонтекстноеМеню" id="617"/>
+									<ExtendedTooltip name="ОтправкаСБИС_ВОчередьЗаПроходРасширеннаяПодсказка" id="618"/>
+								</InputField>
+								<LabelField name="Отправка_Подпись" id="619">
+									<DataPath>Отправка_Подпись</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Как работает сейчас</v8:content>
+										</v8:item>
+									</Title>
+									<Height>3</Height>
+									<HorizontalStretch>true</HorizontalStretch>
+									<ContextMenu name="Отправка_ПодписьКонтекстноеМеню" id="620"/>
+									<ExtendedTooltip name="Отправка_ПодписьРасширеннаяПодсказка" id="621"/>
+								</LabelField>
+								<UsualGroup name="ГруппаОтправкаКнопки" id="622">
+									<Group>AlwaysHorizontal</Group>
+									<Behavior>Usual</Behavior>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаОтправкаКнопкиРасширеннаяПодсказка" id="623"/>
+									<ChildItems>
+										<Button name="ОтправитьНеотправленноеСейчасКнопка" id="624">
+											<Type>UsualButton</Type>
+											<CommandName>Form.Command.ОтправитьНеотправленноеСейчас</CommandName>
+											<ExtendedTooltip name="ОтправитьНеотправленноеСейчасКнопкаРасширеннаяПодсказка" id="625"/>
+										</Button>
+										<Button name="ОбновитьОтправкуКнопка" id="626">
+											<Type>UsualButton</Type>
+											<CommandName>Form.Command.ОбновитьОтправку</CommandName>
+											<ExtendedTooltip name="ОбновитьОтправкуКнопкаРасширеннаяПодсказка" id="627"/>
+										</Button>
+									</ChildItems>
+								</UsualGroup>
+								<LabelField name="Отправка_Ход" id="628">
+									<DataPath>Отправка_Ход</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Что происходит</v8:content>
+										</v8:item>
+									</Title>
+									<Height>6</Height>
+									<HorizontalStretch>true</HorizontalStretch>
+									<ContextMenu name="Отправка_ХодКонтекстноеМеню" id="629"/>
+									<ExtendedTooltip name="Отправка_ХодРасширеннаяПодсказка" id="630"/>
+								</LabelField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаРегламенты" id="631">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Регламентные задания расширения</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Все регламентные задания АРМ ЭДО: включено ли, каждые сколько минут, последний запуск и итог. Изменения записываются кнопкой «Записать настройки» (только администратор).</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>NormalSeparation</Representation>
+							<ExtendedTooltip name="ГруппаРегламентыРасширеннаяПодсказка" id="632"/>
+							<ChildItems>
+								<Table name="РегламентныеЗадания" id="633">
+									<Representation>List</Representation>
+									<CommandBarLocation>None</CommandBarLocation>
+									<ChangeRowSet>false</ChangeRowSet>
+									<ChangeRowOrder>false</ChangeRowOrder>
+									<Height>8</Height>
+									<DataPath>РегламентныеЗадания</DataPath>
+									<RowFilter xsi:nil="true"/>
+									<ContextMenu name="РегламентныеЗаданияКонтекстноеМеню" id="634"/>
+									<AutoCommandBar name="РегламентныеЗаданияКоманднаяПанель" id="635"/>
+									<ExtendedTooltip name="РегламентныеЗаданияРасширеннаяПодсказка" id="636"/>
+									<SearchStringAddition name="РегламентныеЗаданияСтрокаПоиска" id="637">
+										<AdditionSource>
+											<Item>РегламентныеЗадания</Item>
+											<Type>SearchStringRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="РегламентныеЗаданияСтрокаПоискаКонтекстноеМеню" id="638"/>
+										<ExtendedTooltip name="РегламентныеЗаданияСтрокаПоискаРасширеннаяПодсказка" id="639"/>
+									</SearchStringAddition>
+									<ViewStatusAddition name="РегламентныеЗаданияСостояниеПросмотра" id="640">
+										<AdditionSource>
+											<Item>РегламентныеЗадания</Item>
+											<Type>ViewStatusRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="РегламентныеЗаданияСостояниеПросмотраКонтекстноеМеню" id="641"/>
+										<ExtendedTooltip name="РегламентныеЗаданияСостояниеПросмотраРасширеннаяПодсказка" id="642"/>
+									</ViewStatusAddition>
+									<SearchControlAddition name="РегламентныеЗаданияУправлениеПоиском" id="643">
+										<AdditionSource>
+											<Item>РегламентныеЗадания</Item>
+											<Type>SearchControl</Type>
+										</AdditionSource>
+										<ContextMenu name="РегламентныеЗаданияУправлениеПоискомКонтекстноеМеню" id="644"/>
+										<ExtendedTooltip name="РегламентныеЗаданияУправлениеПоискомРасширеннаяПодсказка" id="645"/>
+									</SearchControlAddition>
+									<ChildItems>
+										<InputField name="РегламентныеЗаданияПредставление" id="646">
+											<DataPath>РегламентныеЗадания.Представление</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="РегламентныеЗаданияПредставлениеКонтекстноеМеню" id="647"/>
+											<ExtendedTooltip name="РегламентныеЗаданияПредставлениеРасширеннаяПодсказка" id="648"/>
+										</InputField>
+										<CheckBoxField name="РегламентныеЗаданияВключено" id="649">
+											<DataPath>РегламентныеЗадания.Включено</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="РегламентныеЗаданияВключеноКонтекстноеМеню" id="650"/>
+											<ExtendedTooltip name="РегламентныеЗаданияВключеноРасширеннаяПодсказка" id="651"/>
+										</CheckBoxField>
+										<InputField name="РегламентныеЗаданияКаждыеМинут" id="652">
+											<DataPath>РегламентныеЗадания.КаждыеМинут</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="РегламентныеЗаданияКаждыеМинутКонтекстноеМеню" id="653"/>
+											<ExtendedTooltip name="РегламентныеЗаданияКаждыеМинутРасширеннаяПодсказка" id="654"/>
+										</InputField>
+										<InputField name="РегламентныеЗаданияПоследнийЗапуск" id="655">
+											<DataPath>РегламентныеЗадания.ПоследнийЗапуск</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="РегламентныеЗаданияПоследнийЗапускКонтекстноеМеню" id="656"/>
+											<ExtendedTooltip name="РегламентныеЗаданияПоследнийЗапускРасширеннаяПодсказка" id="657"/>
+										</InputField>
+										<InputField name="РегламентныеЗаданияИтог" id="658">
+											<DataPath>РегламентныеЗадания.Итог</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="РегламентныеЗаданияИтогКонтекстноеМеню" id="659"/>
+											<ExtendedTooltip name="РегламентныеЗаданияИтогРасширеннаяПодсказка" id="660"/>
+										</InputField>
+										<InputField name="РегламентныеЗаданияУправление" id="661">
+											<DataPath>РегламентныеЗадания.Управление</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="РегламентныеЗаданияУправлениеКонтекстноеМеню" id="662"/>
+											<ExtendedTooltip name="РегламентныеЗаданияУправлениеРасширеннаяПодсказка" id="663"/>
+										</InputField>
+									</ChildItems>
+								</Table>
+								<UsualGroup name="ГруппаРегламентыКнопки" id="664">
+									<Group>AlwaysHorizontal</Group>
+									<Behavior>Usual</Behavior>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаРегламентыКнопкиРасширеннаяПодсказка" id="665"/>
+									<ChildItems>
+										<Button name="ЗапуститьЗаданиеСейчасКнопка" id="666">
+											<Type>UsualButton</Type>
+											<CommandName>Form.Command.ЗапуститьЗаданиеСейчас</CommandName>
+											<ExtendedTooltip name="ЗапуститьЗаданиеСейчасКнопкаРасширеннаяПодсказка" id="667"/>
+										</Button>
+										<Button name="ОбновитьРегламентыКнопка" id="668">
+											<Type>UsualButton</Type>
+											<CommandName>Form.Command.ОбновитьОтправку</CommandName>
+											<ExtendedTooltip name="ОбновитьРегламентыКнопкаРасширеннаяПодсказка" id="669"/>
+										</Button>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
 				<Page name="СтраницаСервис" id="468">
 					<Title>
 						<v8:item>
@@ -1194,6 +1495,62 @@
 					</Title>
 					<ExtendedTooltip name="СтраницаАдминкаРасширеннаяПодсказка" id="522"/>
 					<ChildItems>
+						<UsualGroup name="ГруппаОчисткаЛогов" id="720">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Очистка логов</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Удаляет логи старше заданного числа дней: записи трассы приёма (регистр ЭАрМ_ТрассаПриема) и файлы - ТрассаПриема_*.log (логи сеансов и архивы) в папке пакетов Далиона, СБИС\СБИС_Запросы_*.jsonl, выгрузки логов error\Логи_/Ошибки_/Расхождения_*.txt, замеры zamery_*.csv. ТрассаПриема.log больше 50 МБ переименовывается в архив. Сначала показывает, что удалится, и спрашивает. Журнал обмена ЭДО - ниже, отдельно.</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>NormalSeparation</Representation>
+							<ExtendedTooltip name="ГруппаОчисткаЛоговРасширеннаяПодсказка" id="721"/>
+							<ChildItems>
+								<InputField name="ОчисткаЛогов_Дней" id="722">
+									<DataPath>ОчисткаЛогов_Дней</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Логи старше, дней</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Удалять логи старше стольких дней (по умолчанию 30). Свежие остаются.</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ContextMenu name="ОчисткаЛогов_ДнейКонтекстноеМеню" id="723"/>
+									<ExtendedTooltip name="ОчисткаЛогов_ДнейРасширеннаяПодсказка" id="724"/>
+								</InputField>
+								<UsualGroup name="ГруппаОчисткаЛоговКнопки" id="725">
+									<Group>AlwaysHorizontal</Group>
+									<Behavior>Usual</Behavior>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаОчисткаЛоговКнопкиРасширеннаяПодсказка" id="726"/>
+									<ChildItems>
+										<Button name="ПодсчитатьЛогиКнопка" id="727">
+											<Type>UsualButton</Type>
+											<CommandName>Form.Command.ПодсчитатьЛоги</CommandName>
+											<ExtendedTooltip name="ПодсчитатьЛогиКнопкаРасширеннаяПодсказка" id="728"/>
+										</Button>
+										<Button name="ОчиститьЛогиКнопка" id="729">
+											<Type>UsualButton</Type>
+											<CommandName>Form.Command.ОчиститьЛоги</CommandName>
+											<ExtendedTooltip name="ОчиститьЛогиКнопкаРасширеннаяПодсказка" id="730"/>
+										</Button>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
 						<UsualGroup name="ГруппаОчисткаЖурнала" id="523">
 							<Title>
 								<v8:item>
@@ -2199,6 +2556,295 @@
 				</v8:NumberQualifiers>
 			</Type>
 		</Attribute>
+		<Attribute name="Отправка_Включена" id="62">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Собирать и отправлять неотправленное</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Отправка_ВключенаБыло" id="63">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Флажок отправки при открытии</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="КомпьютерКлиента" id="64">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Компьютер, где поменяли флажок</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Отправка_Подпись" id="65">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Как работает сейчас</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Отправка_Ход" id="66">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Что происходит</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ИнтервалОтправкиОчереди" id="67">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Запуск каждые, минут</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>4</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ОтправкаСБИС_РазмерПачки" id="68">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Документов в одной пачке в СБИС</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>3</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ОтправкаСБИС_ПачекЗаЗапуск" id="69">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пачек за один запуск</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>3</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ОтправкаСБИС_ВОчередьЗаПроход" id="70">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ставить в очередь за проход, документов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>4</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="РегламентныеЗадания" id="71">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Регламентные задания</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Имя" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Имя</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Представление" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Задание</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Включено" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Включено</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="КаждыеМинут" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Каждые, мин</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>6</v8:Digits>
+							<v8:FractionDigits>1</v8:FractionDigits>
+							<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="ПоследнийЗапуск" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Последний запуск</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Итог" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Итог</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Управление" id="7">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Расписание / кто управляет</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ВключеноБыло" id="8">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Включено было</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="КаждыеМинутБыло" id="9">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Каждые было</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>6</v8:Digits>
+							<v8:FractionDigits>1</v8:FractionDigits>
+							<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ОчисткаЛогов_Дней" id="72">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Логи старше, дней</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>4</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
 	</Attributes>
 	<Commands>
 		<Command name="ЗаписатьНастройки" id="1">
@@ -2686,6 +3332,86 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ПроверитьМонитор</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОтправитьНеотправленноеСейчас" id="700">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отправить неотправленное сейчас</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Записать настройки и сразу запустить то, что делает регламент: сверка цепочек, постановка готовых в очередь, отправка в СБИС пачками, проверка подписей. Ход (пачка, документ, что сейчас) - ниже, раз в 2 секунды.</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОтправитьНеотправленноеСейчас</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОбновитьОтправку" id="701">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Перечитать, как работает отправка, её последний ход и таблицу регламентных заданий</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОбновитьОтправку</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ЗапуститьЗаданиеСейчас" id="702">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Запустить сейчас</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Запустить выбранное регламентное задание сейчас фоновым заданием</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗапуститьЗаданиеСейчас</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ПодсчитатьЛоги" id="703">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подсчитать логи</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показать, сколько записей трассы приёма и файлов логов старше указанного числа дней удалит очистка</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПодсчитатьЛоги</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОчиститьЛоги" id="704">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Очистить логи</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Удалить логи старше указанного числа дней - после вопроса с тем, что удалится</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОчиститьЛоги</Action>
 			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 	</Commands>

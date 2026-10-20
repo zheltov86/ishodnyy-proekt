@@ -295,6 +295,7 @@
 													<AllowRootChoice>false</AllowRootChoice>
 													<UpdateOnDataChange>DontUpdate</UpdateOnDataChange>
 													<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+														<Font ref="sys:DefaultGUIFont" height="8" kind="WindowsFont"/>
 													<ContextMenu name="СписокКонтекстноеМеню" id="2">
 														<ChildItems>
 															<Button name="СписокОтправитьУКД" id="3008">
